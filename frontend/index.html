@@ -48,8 +48,6 @@
     --radius-xl:    20px;
   }
 
-  html { scroll-behavior: smooth; }
-
   body {
     background: var(--bg);
     color: var(--ink);
@@ -62,501 +60,53 @@
 
   /* ── Auth Gate ─────────────────────────────────────────── */
   #auth-gate {
-    position: fixed; inset: 0;
-    background: var(--bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    transition: opacity 0.4s ease;
+    position: fixed; inset: 0; background: var(--bg);
+    display: flex; align-items: center; justify-content: center; z-index: 1000;
   }
-  #auth-gate.hidden { opacity: 0; pointer-events: none; }
+  #auth-gate.hidden { display: none; }
+  .auth-box { width: 400px; padding: 48px; background: var(--bg-card); border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); border: 1px solid var(--border); }
+  .auth-title { font-family: var(--font-h); font-size: 30px; font-weight: 700; color: var(--ink); margin-bottom: 10px; }
+  .auth-subtitle { font-size: 14px; color: var(--ink-mid); margin-bottom: 32px; }
+  .auth-input { width: 100%; padding: 12px 16px; background: var(--bg-card-alt); border: 1.5px solid var(--border-mid); border-radius: var(--radius); margin-bottom: 12px; outline: none; }
+  .auth-btn { width: 100%; padding: 13px; background: var(--ink); color: #fff; border: none; border-radius: var(--radius); font-weight: 600; cursor: pointer; }
+  .auth-error { color: var(--boost); font-size: 12px; margin-top: 10px; }
 
-  .auth-box {
-    width: 400px;
-    padding: 48px;
-    background: var(--bg-card);
-    border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-lg);
-    border: 1px solid var(--border);
-  }
-  .auth-eyebrow {
-    font-family: var(--font-cond);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--ink-light);
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .auth-eyebrow::before {
-    content: '';
-    display: inline-block;
-    width: 24px; height: 2px;
-    background: var(--boost);
-    border-radius: 2px;
-  }
-  .auth-title {
-    font-family: var(--font-h);
-    font-size: 30px;
-    font-weight: 700;
-    color: var(--ink);
-    margin-bottom: 10px;
-    line-height: 1.15;
-  }
-  .auth-subtitle {
-    font-size: 14px;
-    color: var(--ink-mid);
-    margin-bottom: 32px;
-    line-height: 1.65;
-  }
-  .auth-label {
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--ink-mid);
-    margin-bottom: 6px;
-    letter-spacing: 0.02em;
-    display: block;
-  }
-  .auth-input {
-    width: 100%;
-    padding: 12px 16px;
-    background: var(--bg-card-alt);
-    border: 1.5px solid var(--border-mid);
-    border-radius: var(--radius);
-    color: var(--ink);
-    font-family: var(--font-body);
-    font-size: 14px;
-    outline: none;
-    transition: border-color 0.2s, box-shadow 0.2s;
-    margin-bottom: 12px;
-  }
-  .auth-input:focus {
-    border-color: var(--ink);
-    box-shadow: 0 0 0 3px rgba(38,49,80,0.08);
-  }
-  .auth-btn {
-    width: 100%;
-    padding: 13px;
-    background: var(--ink);
-    color: #fff;
-    border: none;
-    border-radius: var(--radius);
-    font-family: var(--font-body);
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: opacity 0.2s;
-  }
-  .auth-btn:hover { opacity: 0.88; }
-  .auth-error {
-    font-size: 12px;
-    color: var(--boost);
-    margin-top: 10px;
-    min-height: 18px;
-    font-weight: 500;
-  }
-  .auth-note {
-    font-size: 12px;
-    color: var(--ink-faint);
-    margin-top: 24px;
-    padding-top: 20px;
-    border-top: 1px solid var(--border);
-    line-height: 1.6;
-  }
-
-  /* ── App ───────────────────────────────────────────────── */
+  /* ── Header & Layout ────────────────────────────────────── */
   #app { display: none; }
-  #app.visible { display: block; animation: fadeIn 0.4s ease both; }
-  @keyframes fadeIn {
-    from { opacity:0; transform:translateY(8px); }
-    to   { opacity:1; transform:translateY(0); }
-  }
-
-  /* ── Header ────────────────────────────────────────────── */
-  .header {
-    background: var(--bg-card);
-    border-bottom: 1px solid var(--border);
-    padding: 0 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 60px;
-    position: sticky; top: 0; z-index: 100;
-    box-shadow: var(--shadow-sm);
-  }
-  .header-left { display: flex; align-items: center; gap: 20px; }
-  .logo {
-    font-family: var(--font-h);
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--ink);
-  }
+  #app.visible { display: block; }
+  .header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow-sm); }
+  .logo { font-family: var(--font-h); font-size: 16px; font-weight: 700; color: var(--ink); }
   .logo span { color: var(--boost); }
-  .header-divider { width: 1px; height: 20px; background: var(--border-mid); }
-  .header-subtitle {
-    font-family: var(--font-cond);
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--ink-mid);
-    letter-spacing: 0.03em;
-  }
-  .status-pill {
-    display: flex; align-items: center; gap: 7px;
-    padding: 6px 12px;
-    background: var(--bg-card-alt);
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    font-size: 12px;
-    color: var(--ink-mid);
-    font-weight: 500;
-  }
-  .status-dot {
-    width: 7px; height: 7px;
-    border-radius: 50%;
-    background: var(--performer);
-    animation: blink 2.5s ease infinite;
-  }
-  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
 
-  /* ── Stats Bar ─────────────────────────────────────────── */
-  .stats-bar {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 16px;
-    padding: 24px 40px;
-  }
-  .stat-card {
-    background: var(--bg-card);
-    border-radius: var(--radius-lg);
-    padding: 20px 24px;
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow-sm);
-    transition: transform .15s, box-shadow .15s;
-  }
-  .stat-card:hover { transform: translateY(-1px); box-shadow: var(--shadow-md); }
-  .stat-label {
-    font-family: var(--font-cond);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ink-light);
-    margin-bottom: 8px;
-  }
-  .stat-value {
-    font-family: var(--font-h);
-    font-size: 36px;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1;
-  }
-  .stat-value.total    { color: var(--ink); }
-  .stat-value.boost    { color: var(--boost); }
-  .stat-value.monitor  { color: var(--monitor); }
-  .stat-value.performer{ color: var(--performer); }
-  .stat-bar {
-    margin-top: 12px; height: 3px;
-    border-radius: 2px;
-    background: var(--border); overflow: hidden;
-  }
-  .stat-bar-fill {
-    height: 100%; border-radius: 2px;
-    transition: width .8s cubic-bezier(.22,1,.36,1);
-  }
-  .stat-bar-fill.boost    { background: var(--boost); }
-  .stat-bar-fill.monitor  { background: var(--monitor); }
-  .stat-bar-fill.performer{ background: var(--performer); }
-  .stat-bar-fill.total    { background: var(--ink); }
+  .stats-bar { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; padding: 24px 40px; }
+  .stat-card { background: var(--bg-card); border-radius: var(--radius-lg); padding: 20px 24px; border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
+  .stat-label { font-family: var(--font-cond); font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 8px; }
+  .stat-value { font-family: var(--font-h); font-size: 36px; font-weight: 700; line-height: 1; }
 
-  /* ── Controls ──────────────────────────────────────────── */
-  .controls {
-    padding: 0 40px 20px;
-    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
-  }
-  .search-wrap { position: relative; flex:1; min-width:200px; max-width:280px; }
-  .search-icon {
-    position: absolute; left:13px; top:50%; transform:translateY(-50%);
-    color: var(--ink-light); font-size:14px; pointer-events:none;
-  }
-  .search-input {
-    width: 100%;
-    padding: 9px 14px 9px 36px;
-    background: var(--bg-card);
-    border: 1.5px solid var(--border-mid);
-    border-radius: var(--radius);
-    color: var(--ink);
-    font-family: var(--font-body);
-    font-size: 13px;
-    outline: none;
-    box-shadow: var(--shadow-sm);
-    transition: border-color .2s, box-shadow .2s;
-  }
-  .search-input:focus { border-color: var(--ink); box-shadow: 0 0 0 3px rgba(38,49,80,.07); }
-  .search-input::placeholder { color: var(--ink-faint); }
+  /* ── Main Content (Tables) ──────────────────────────────── */
+  .main-content { padding: 0 40px 40px; }
+  .region-section { margin-bottom: 40px; }
+  .region-title { font-family: var(--font-h); font-size: 20px; font-weight: 700; margin-bottom: 16px; color: var(--ink); border-bottom: 2px solid var(--border); padding-bottom: 8px; }
+  
+  .table-container { background: var(--bg-card); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; text-align: left; }
+  th { background: var(--bg-card-alt); padding: 14px 20px; font-family: var(--font-cond); font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--ink-light); letter-spacing: 0.05em; }
+  td { padding: 16px 20px; border-bottom: 1px solid var(--border); font-size: 14px; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #fbfdfe; }
 
-  .filter-group { display:flex; gap:6px; }
-  .filter-btn {
-    padding: 8px 16px;
-    border-radius: var(--radius);
-    border: 1.5px solid var(--border-mid);
-    background: var(--bg-card);
-    color: var(--ink-mid);
-    font-family: var(--font-body);
-    font-size: 13px; font-weight: 500;
-    cursor: pointer;
-    transition: all .15s;
-    box-shadow: var(--shadow-sm);
-    display: flex; align-items: center; gap:6px;
-  }
-  .filter-btn:hover { color:var(--ink); border-color:var(--ink); }
-  .filter-btn.active-all      { background:var(--ink); color:#fff; border-color:var(--ink); box-shadow:var(--shadow-md); }
-  .filter-btn.active-boost    { background:var(--boost-bg); color:var(--boost); border-color:var(--boost-border); }
-  .filter-btn.active-monitor  { background:var(--monitor-bg); color:var(--monitor); border-color:var(--monitor-border); }
-  .filter-btn.active-performer{ background:var(--performer-bg); color:var(--performer); border-color:var(--performer-border); }
+  .badge { display: inline-block; padding: 4px 12px; border-radius: 999px; font-family: var(--font-cond); font-size: 11px; font-weight: 700; text-transform: uppercase; }
+  .badge-BOOST { background: var(--boost-bg); color: var(--boost); border: 1px solid var(--boost-border); }
+  .badge-MONITOR { background: var(--monitor-bg); color: var(--monitor); border: 1px solid var(--monitor-border); }
+  .badge-PERFORMER { background: var(--performer-bg); color: var(--performer); border: 1px solid var(--performer-border); }
 
-  .sort-select {
-    padding: 9px 14px;
-    background: var(--bg-card);
-    border: 1.5px solid var(--border-mid);
-    border-radius: var(--radius);
-    color: var(--ink-mid);
-    font-family: var(--font-body);
-    font-size: 13px; font-weight: 500;
-    outline: none; cursor: pointer;
-    margin-left: auto;
-    box-shadow: var(--shadow-sm);
-  }
-  .results-count { font-size:12px; color:var(--ink-light); font-weight:500; white-space:nowrap; }
+  .controls { padding: 0 40px 20px; display: flex; gap: 12px; align-items: center; }
+  .search-input { padding: 10px 16px; border: 1.5px solid var(--border-mid); border-radius: var(--radius); width: 300px; outline: none; font-family: var(--font-body); }
 
-  /* ── Clinic Grid ───────────────────────────────────────── */
-  .clinic-grid {
-    padding: 0 40px 40px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px,1fr));
-    gap: 14px;
-  }
-
-  /* ── Clinic Card ───────────────────────────────────────── */
-  .clinic-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    overflow: hidden; cursor: pointer;
-    transition: transform .15s, box-shadow .15s;
-    box-shadow: var(--shadow-sm);
-    position: relative;
-  }
-  .clinic-card::before {
-    content: ''; position: absolute;
-    top: 0; left: 0; right: 0; height: 3px;
-    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-  }
-  .clinic-card.signal-BOOST::before    { background: var(--boost); }
-  .clinic-card.signal-MONITOR::before  { background: var(--monitor); }
-  .clinic-card.signal-PERFORMER::before{ background: var(--performer); }
-  .clinic-card.signal-INGEN_DATA::before{ background: var(--border-mid); }
-  .clinic-card:hover { transform:translateY(-2px); box-shadow:var(--shadow-md); }
-
-  .card-header {
-    padding: 20px 20px 14px;
-    display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
-  }
-  .card-name {
-    font-family: var(--font-h);
-    font-size: 15px; font-weight: 700;
-    color: var(--ink);
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-  }
-  .card-location { font-size:12px; color:var(--ink-light); margin-top:3px; }
-
-  .signal-badge {
-    padding: 4px 10px; border-radius: 999px;
-    font-family: var(--font-cond);
-    font-size: 11px; font-weight: 700;
-    letter-spacing: .06em; text-transform: uppercase;
-    white-space: nowrap; flex-shrink: 0;
-    border: 1.5px solid transparent;
-  }
-  .signal-badge.BOOST    { background:var(--boost-bg); color:var(--boost); border-color:var(--boost-border); }
-  .signal-badge.MONITOR  { background:var(--monitor-bg); color:var(--monitor); border-color:var(--monitor-border); }
-  .signal-badge.PERFORMER{ background:var(--performer-bg); color:var(--performer); border-color:var(--performer-border); }
-  .signal-badge.INGEN_DATA{ background:var(--bg-card-alt); color:var(--ink-light); border-color:var(--border); }
-
-  .card-stats {
-    padding: 0 20px 16px;
-    display: grid; grid-template-columns: repeat(3,1fr); gap:8px;
-  }
-  .mini-stat {
-    background: var(--bg-card-alt);
-    border-radius: var(--radius); padding: 10px 12px;
-    border: 1px solid var(--border);
-  }
-  .mini-label {
-    font-family: var(--font-cond);
-    font-size: 9px; font-weight: 600;
-    letter-spacing: .12em; text-transform: uppercase;
-    color: var(--ink-light); margin-bottom:4px; line-height:1.4;
-  }
-  .mini-value {
-    font-family: var(--font-h);
-    font-size: 22px; font-weight: 700;
-    color: var(--ink); letter-spacing:-.02em; line-height:1;
-  }
-
-  .week-trend { padding: 0 20px 16px; }
-  .trend-label {
-    font-family: var(--font-cond);
-    font-size: 9px; font-weight: 600;
-    letter-spacing: .12em; text-transform: uppercase;
-    color: var(--ink-light); margin-bottom:8px;
-  }
-  .trend-bars { display:flex; align-items:flex-end; gap:3px; height:36px; }
-  .trend-bar { flex:1; border-radius:3px 3px 0 0; min-height:3px; transition:opacity .2s; }
-  .trend-bar:hover { opacity:.7; }
-
-  .card-services { padding: 0 20px 18px; }
-  .services-label {
-    font-family: var(--font-cond);
-    font-size: 9px; font-weight: 600;
-    letter-spacing: .12em; text-transform: uppercase;
-    color: var(--ink-light); margin-bottom:7px;
-  }
-  .service-chips { display:flex; flex-wrap:wrap; gap:5px; }
-  .service-chip {
-    padding: 3px 9px;
-    background: var(--bg-card-alt);
-    border: 1px solid var(--border-mid);
-    border-radius: 999px;
-    font-size: 11px; font-weight: 500;
-    color: var(--ink-mid);
-    white-space: nowrap; overflow:hidden; text-overflow:ellipsis; max-width:180px;
-  }
-
-  /* ── Drawer ────────────────────────────────────────────── */
-  .drawer-overlay {
-    position:fixed; inset:0;
-    background: rgba(38,49,80,.25);
-    backdrop-filter: blur(6px);
-    z-index:200; opacity:0; pointer-events:none;
-    transition: opacity .25s;
-  }
-  .drawer-overlay.open { opacity:1; pointer-events:all; }
-
-  .drawer {
-    position:fixed; top:0; right:0; bottom:0;
-    width: min(540px,100vw);
-    background: var(--bg-card);
-    border-left: 1px solid var(--border-mid);
-    z-index:201; overflow-y:auto;
-    transform: translateX(100%);
-    transition: transform .32s cubic-bezier(.22,1,.36,1);
-    box-shadow: var(--shadow-lg);
-  }
-  .drawer.open { transform:translateX(0); }
-
-  .drawer-header {
-    padding: 28px 32px 22px;
-    border-bottom: 1px solid var(--border);
-    display:flex; align-items:flex-start; justify-content:space-between; gap:16px;
-    position:sticky; top:0; background:var(--bg-card); z-index:1;
-  }
-  .drawer-title {
-    font-family: var(--font-h);
-    font-size: 20px; font-weight: 700;
-    color: var(--ink); letter-spacing:-.01em;
-  }
-  .drawer-subtitle { font-size:13px; color:var(--ink-light); margin-top:4px; }
-  .drawer-close {
-    width:32px; height:32px; border-radius:50%;
-    border: 1.5px solid var(--border-mid);
-    background:transparent; color:var(--ink-mid);
-    cursor:pointer; display:flex; align-items:center; justify-content:center;
-    font-size:15px; transition:all .15s; flex-shrink:0;
-  }
-  .drawer-close:hover { background:var(--bg-card-alt); color:var(--ink); border-color:var(--ink); }
-  .drawer-body { padding:28px 32px; }
-
-  .drawer-section { margin-bottom:28px; }
-  .drawer-section-title {
-    font-family: var(--font-cond);
-    font-size:10px; font-weight:700;
-    letter-spacing:.16em; text-transform:uppercase;
-    color:var(--ink-light); margin-bottom:12px;
-    padding-bottom:10px; border-bottom:1px solid var(--border);
-  }
-  .rec-box {
-    padding:16px 18px;
-    background:var(--bg-card-alt);
-    border-radius:var(--radius);
-    border:1px solid var(--border-mid);
-    font-size:14px; line-height:1.7; color:var(--ink-mid);
-  }
-  .kpi-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-  .kpi-item {
-    background:var(--bg-card-alt); border-radius:var(--radius);
-    padding:14px 16px; border:1px solid var(--border);
-  }
-  .kpi-label {
-    font-family:var(--font-cond); font-size:9px; font-weight:600;
-    letter-spacing:.12em; text-transform:uppercase;
-    color:var(--ink-light); margin-bottom:6px;
-  }
-  .kpi-value {
-    font-family:var(--font-h); font-size:24px; font-weight:700;
-    color:var(--ink); letter-spacing:-.02em;
-  }
-  .service-table { width:100%; border-collapse:collapse; }
-  .service-table th {
-    text-align:left;
-    font-family:var(--font-cond); font-size:9px; font-weight:700;
-    letter-spacing:.12em; text-transform:uppercase;
-    color:var(--ink-light); padding:0 10px 10px 0;
-  }
-  .service-table td {
-    padding:10px 10px 10px 0; border-top:1px solid var(--border);
-    font-size:13px; color:var(--ink-mid); vertical-align:middle;
-  }
-  .service-table td:first-child { color:var(--ink); font-weight:500; }
-  .service-table td.num {
-    font-family:var(--font-h); font-size:14px; font-weight:700;
-    text-align:right; color:var(--ink); padding-right:0;
-  }
-  .cat-tag {
-    display:inline-block; padding:2px 8px; border-radius:999px;
-    font-family:var(--font-cond); font-size:10px; font-weight:600;
-    letter-spacing:.05em; text-transform:uppercase;
-    background:var(--bg-card-alt); color:var(--ink-light);
-    border:1px solid var(--border-mid);
-  }
-
-  /* ── States ────────────────────────────────────────────── */
-  .empty-state, .loading-state {
-    text-align:center; padding:80px 32px; grid-column:1/-1;
-  }
-  .empty-icon { font-size:36px; margin-bottom:16px; }
-  .empty-title { font-family:var(--font-h); font-size:18px; font-weight:700; color:var(--ink); margin-bottom:8px; }
-  .empty-text  { font-size:14px; color:var(--ink-mid); }
-  .loading-spinner {
-    width:32px; height:32px;
-    border:2.5px solid var(--border-mid);
-    border-top-color:var(--ink);
-    border-radius:50%;
-    animation:spin .75s linear infinite;
-    margin:0 auto 16px;
-  }
-  @keyframes spin { to { transform:rotate(360deg); } }
-  .loading-text { font-size:14px; color:var(--ink-mid); }
-
-  @media (max-width:900px) {
-    .header { padding:0 20px; }
-    .stats-bar { grid-template-columns:repeat(2,1fr); padding:16px 20px; gap:10px; }
-    .controls  { padding:0 20px 16px; }
-    .clinic-grid { padding:0 20px 32px; grid-template-columns:1fr; }
-    .sort-select, .results-count { display:none; }
+  @media (max-width: 900px) {
+    .stats-bar { grid-template-columns: repeat(2,1fr); padding: 16px 20px; }
+    .main-content, .controls { padding: 0 20px; }
+    .search-input { width: 100%; }
   }
 </style>
 </head>
@@ -564,279 +114,147 @@
 
 <div id="auth-gate">
   <div class="auth-box">
-    <div class="auth-eyebrow">Oris Dental × Amidays</div>
     <div class="auth-title">Kapasitetsanalyse</div>
-    <div class="auth-subtitle">Logg inn med din jobb-e-post for å se kapasitets- og etterspørselsdata for alle klinikker.</div>
-    <label class="auth-label">E-postadresse</label>
-    <input type="email" class="auth-input" id="auth-email" placeholder="navn@amidays.com" autocomplete="email">
-    <button class="auth-btn" id="auth-submit">Fortsett</button>
+    <div class="auth-subtitle">Logg inn med jobb-e-post.</div>
+    <input type="email" class="auth-input" id="auth-email" placeholder="navn@orisdental.no">
+    <button class="auth-btn" id="auth-submit">Logg inn</button>
     <div class="auth-error" id="auth-error"></div>
-    <div class="auth-note">Tilgang er begrenset til @amidays.com, @amidays.no og @orisdental.no. Kontakt Amidays for tilgang.</div>
   </div>
 </div>
 
 <div id="app">
   <header class="header">
-    <div class="header-left">
-      <div class="logo">Oris <span>Dental</span></div>
-      <div class="header-divider"></div>
-      <div class="header-subtitle">Kapasitets- og etterspørselsanalyse</div>
-    </div>
-    <div class="status-pill">
-      <div class="status-dot"></div>
-      <span id="last-updated-text">Laster data...</span>
-    </div>
+    <div class="logo">Oris <span>Dental</span></div>
+    <div id="last-updated" class="text-sm text-slate-500">Laster...</div>
   </header>
 
   <div class="stats-bar">
     <div class="stat-card">
       <div class="stat-label">Klinikker analysert</div>
-      <div class="stat-value total" id="stat-total">—</div>
-      <div class="stat-bar"><div class="stat-bar-fill total" id="bar-total" style="width:100%"></div></div>
+      <div class="stat-value" id="stat-total">0</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">🔴 Boost-kandidater</div>
-      <div class="stat-value boost" id="stat-boost">—</div>
-      <div class="stat-bar"><div class="stat-bar-fill boost" id="bar-boost" style="width:0%"></div></div>
+      <div class="stat-value" style="color:var(--boost)" id="stat-boost">0</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">🟡 Monitor</div>
-      <div class="stat-value monitor" id="stat-monitor">—</div>
-      <div class="stat-bar"><div class="stat-bar-fill monitor" id="bar-monitor" style="width:0%"></div></div>
+      <div class="stat-value" style="color:var(--monitor)" id="stat-monitor">0</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">🟢 Performer</div>
-      <div class="stat-value performer" id="stat-performer">—</div>
-      <div class="stat-bar"><div class="stat-bar-fill performer" id="bar-performer" style="width:0%"></div></div>
+      <div class="stat-value" style="color:var(--performer)" id="stat-performer">0</div>
     </div>
   </div>
 
   <div class="controls">
-    <div class="search-wrap">
-      <span class="search-icon">⌕</span>
-      <input class="search-input" type="text" id="search" placeholder="Søk klinikk, by eller region...">
-    </div>
-    <div class="filter-group">
-      <button class="filter-btn active-all" data-filter="all">Alle</button>
-      <button class="filter-btn" data-filter="BOOST">🔴 Boost</button>
-      <button class="filter-btn" data-filter="MONITOR">🟡 Monitor</button>
-      <button class="filter-btn" data-filter="PERFORMER">🟢 Performer</button>
-    </div>
-    <span class="results-count" id="results-count"></span>
-    <select class="sort-select" id="sort-select">
-      <option value="signal">Signal (Boost først)</option>
-      <option value="slots-desc">Flest ledige timer</option>
-      <option value="slots-asc">Færrest ledige timer</option>
-      <option value="name">Navn A–Å</option>
-    </select>
+    <input type="text" id="search" class="search-input" placeholder="Søk etter klinikk eller region...">
   </div>
 
-  <div class="clinic-grid" id="clinic-grid">
-    <div class="loading-state">
-      <div class="loading-spinner"></div>
-      <div class="loading-text">Henter kapasitetsdata...</div>
-    </div>
-  </div>
-</div>
-
-<div class="drawer-overlay" id="drawer-overlay"></div>
-<div class="drawer" id="drawer">
-  <div class="drawer-header">
-    <div>
-      <div class="drawer-title" id="drawer-title">—</div>
-      <div class="drawer-subtitle" id="drawer-subtitle">—</div>
-    </div>
-    <button class="drawer-close" id="drawer-close">✕</button>
-  </div>
-  <div class="drawer-body" id="drawer-body"></div>
+  <main class="main-content" id="main-content">
+    </main>
 </div>
 
 <script>
 const ALLOWED_DOMAINS = ['amidays.no','amidays.com','orisdental.no','oris.no'];
-const SESSION_KEY = 'oris_capacity_v2';
+let allClinics = [];
 
-function isAllowed(email) {
-  return ALLOWED_DOMAINS.includes(email.split('@')[1]?.toLowerCase());
-}
-function checkSession() {
-  try {
-    const s = JSON.parse(sessionStorage.getItem(SESSION_KEY)||'{}');
-    return s.email && isAllowed(s.email) && Date.now()-s.ts < 8*3600e3;
-  } catch { return false; }
-}
-function doAuth() {
-  const email = document.getElementById('auth-email').value.trim().toLowerCase();
-  const err   = document.getElementById('auth-error');
-  if (!email.includes('@')) { err.textContent='Skriv inn en gyldig e-postadresse.'; return; }
-  if (!isAllowed(email))    { err.textContent='Denne e-postadressen har ikke tilgang. Kontakt Amidays.'; return; }
-  sessionStorage.setItem(SESSION_KEY, JSON.stringify({email, ts:Date.now()}));
-  document.getElementById('auth-gate').classList.add('hidden');
-  document.getElementById('app').classList.add('visible');
-  loadData();
-}
-document.getElementById('auth-submit').addEventListener('click', doAuth);
-document.getElementById('auth-email').addEventListener('keydown', e=>{ if(e.key==='Enter') doAuth(); });
-if (checkSession()) {
-  document.getElementById('auth-gate').style.display='none';
-  document.getElementById('app').classList.add('visible');
-  loadData();
+// Auth logikk
+function checkAuth() {
+    const session = JSON.parse(sessionStorage.getItem('oris_auth') || '{}');
+    if (session.email && (Date.now() - session.ts < 8 * 3600e3)) {
+        showApp();
+    }
 }
 
-let allClinics=[], activeFilter='all', activeSort='signal', searchQuery='';
-const SIG_ORDER = {BOOST:0,MONITOR:1,PERFORMER:2,INGEN_DATA:3};
-const SIG_META  = {
-  BOOST:     {emoji:'🔴',label:'Boost',    css:'BOOST'},
-  MONITOR:   {emoji:'🟡',label:'Monitor',  css:'MONITOR'},
-  PERFORMER: {emoji:'🟢',label:'Performer',css:'PERFORMER'},
-  INGEN_DATA:{emoji:'⚪',label:'Ingen data',css:'INGEN_DATA'},
-};
+function showApp() {
+    document.getElementById('auth-gate').classList.add('hidden');
+    document.getElementById('app').classList.add('visible');
+    loadData();
+}
+
+document.getElementById('auth-submit').addEventListener('click', () => {
+    const email = document.getElementById('auth-email').value.trim().toLowerCase();
+    const domain = email.split('@')[1];
+    if (ALLOWED_DOMAINS.includes(domain)) {
+        sessionStorage.setItem('oris_auth', JSON.stringify({email, ts: Date.now()}));
+        showApp();
+    } else {
+        document.getElementById('auth-error').innerText = 'Ingen tilgang for dette domenet.';
+    }
+});
 
 async function loadData() {
-  try {
-    const data = await fetch('capacity.json?v='+Date.now()).then(r=>r.json());
-    allClinics = data.clinics||[];
-    const total=data.total_clinics??allClinics.length;
-    const boost=data.summary?.boost_count??0;
-    const mon  =data.summary?.monitor_count??0;
-    const perf =data.summary?.performer_count??0;
-    document.getElementById('stat-total').textContent    = total;
-    document.getElementById('stat-boost').textContent    = boost;
-    document.getElementById('stat-monitor').textContent  = mon;
-    document.getElementById('stat-performer').textContent= perf;
-    setTimeout(()=>{
-      document.getElementById('bar-boost').style.width    = total?(boost/total*100)+'%':'0%';
-      document.getElementById('bar-monitor').style.width  = total?(mon/total*100)+'%':'0%';
-      document.getElementById('bar-performer').style.width= total?(perf/total*100)+'%':'0%';
-    },100);
-    if (data.generated_at) {
-      const d=new Date(data.generated_at);
-      document.getElementById('last-updated-text').textContent =
-        'Oppdatert '+d.toLocaleDateString('nb-NO',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
-    } else {
-      document.getElementById('last-updated-text').textContent='Ingen data ennå';
-      document.querySelector('.status-dot').style.background='var(--monitor)';
+    try {
+        const response = await fetch('capacity.json?v=' + Date.now());
+        const data = await response.json();
+        
+        allClinics = data.clinics || [];
+        
+        // Oppdater Scorecards
+        document.getElementById('stat-total').innerText = data.total_clinics || allClinics.length;
+        document.getElementById('stat-boost').innerText = data.summary.boost_count;
+        document.getElementById('stat-monitor').innerText = data.summary.monitor_count;
+        document.getElementById('stat-performer').innerText = data.summary.performer_count;
+        
+        const d = new Date(data.generated_at);
+        document.getElementById('last-updated').innerText = `Sist oppdatert: ${d.toLocaleString('nb-NO')}`;
+
+        renderTables(allClinics);
+    } catch (e) {
+        console.error("Feil ved lasting av JSON", e);
     }
-    renderGrid();
-  } catch(e) {
-    document.getElementById('clinic-grid').innerHTML=`<div class="empty-state"><div class="empty-icon">⚠️</div><div class="empty-title">Kunne ikke laste data</div><div class="empty-text">Prøv å laste siden på nytt.</div></div>`;
-  }
 }
 
-function filtered() {
-  let list=[...allClinics];
-  if (activeFilter!=='all') list=list.filter(c=>c.signal===activeFilter);
-  if (searchQuery) {
-    const q=searchQuery.toLowerCase();
-    list=list.filter(c=>c.name.toLowerCase().includes(q)||(c.city||'').toLowerCase().includes(q)||(c.region||'').toLowerCase().includes(q));
-  }
-  list.sort((a,b)=>{
-    if(activeSort==='signal'){const d=(SIG_ORDER[a.signal]??3)-(SIG_ORDER[b.signal]??3);return d!==0?d:b.total_slots-a.total_slots;}
-    if(activeSort==='slots-desc') return b.total_slots-a.total_slots;
-    if(activeSort==='slots-asc')  return a.total_slots-b.total_slots;
-    if(activeSort==='name')       return a.name.localeCompare(b.name,'nb');
-    return 0;
-  });
-  return list;
+function renderTables(clinics) {
+    const container = document.getElementById('main-content');
+    const query = document.getElementById('search').value.toLowerCase();
+    
+    // Filtrering
+    const filtered = clinics.filter(c => 
+        c.name.toLowerCase().includes(query) || 
+        (c.region || '').toLowerCase().includes(query)
+    );
+
+    // Gruppering per region
+    const grouped = filtered.reduce((acc, c) => {
+        const r = c.region || "Andre";
+        if (!acc[r]) acc[r] = [];
+        acc[r].push(c);
+        return acc;
+    }, {});
+
+    container.innerHTML = Object.entries(grouped).map(([region, items]) => `
+        <section class="region-section">
+            <h2 class="region-title">${region}</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Klinikk</th>
+                            <th style="text-align:center">Ledig kapasitet (Neste 14 dager)</th>
+                            <th style="text-align:right">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${items.sort((a,b) => b.free_hours - a.free_hours).map(c => `
+                            <tr>
+                                <td style="font-weight:700; color:var(--ink)">${c.name}</td>
+                                <td style="text-align:center; font-weight:600">${c.free_hours} timer</td>
+                                <td style="text-align:right">
+                                    <span class="badge badge-${c.signal}">${c.signal}</span>
+                                </td>
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    `).join('');
 }
 
-function renderGrid() {
-  const list=filtered();
-  const grid=document.getElementById('clinic-grid');
-  document.getElementById('results-count').textContent=list.length+' klinikker';
-  if(!list.length){
-    const msg=allClinics.length===0?'Ingen data ennå. Kjør capacity_analyzer.py for å generere data.':'Ingen klinikker matcher søket.';
-    grid.innerHTML=`<div class="empty-state"><div class="empty-icon">🔍</div><div class="empty-title">Ingen resultater</div><div class="empty-text">${msg}</div></div>`;
-    return;
-  }
-  grid.innerHTML=list.map(buildCard).join('');
-  grid.querySelectorAll('.clinic-card').forEach(card=>{
-    card.addEventListener('click',()=>{
-      const c=allClinics.find(x=>x.slug===card.dataset.slug);
-      if(c) openDrawer(c);
-    });
-  });
-}
-
-function buildCard(c) {
-  const sig=SIG_META[c.signal]||SIG_META.INGEN_DATA;
-  const trend=c.week_trend||{};
-  const maxV=Math.max(...Object.values(trend).map(Number),1);
-  const colors=['#4a90e2','#4a90e2','#7cb4e8','#7cb4e8','#D08C00','#D08C00','#E8341A','#E8341A'];
-  const bars=Array.from({length:8},(_,i)=>{
-    const v=Number(trend[i]??0);
-    const h=Math.round((v/maxV)*100);
-    return `<div class="trend-bar" style="height:${Math.max(h,4)}%;background:${colors[i]};opacity:${v>0?.85:.12}" title="Uke ${i+1}: ${v} slots"></div>`;
-  }).join('');
-  const chips=(c.top_underboooked||[]).slice(0,3).map(s=>`<span class="service-chip">${s.name}</span>`).join('');
-  const loc=[c.city,c.region].filter(Boolean).join(' · ');
-  return `
-  <div class="clinic-card signal-${c.signal}" data-slug="${c.slug}">
-    <div class="card-header">
-      <div><div class="card-name">${c.name}</div><div class="card-location">${loc||'—'}</div></div>
-      <div class="signal-badge ${sig.css}">${sig.emoji} ${sig.label}</div>
-    </div>
-    <div class="card-stats">
-      <div class="mini-stat"><div class="mini-label">Totalt ledige</div><div class="mini-value">${c.total_slots}</div></div>
-      <div class="mini-stat"><div class="mini-label">Uke 1–2</div><div class="mini-value">${c.slots_week_1_2}</div></div>
-      <div class="mini-stat"><div class="mini-label">Uke 5–8</div><div class="mini-value">${c.slots_week_5_8}</div></div>
-    </div>
-    <div class="week-trend">
-      <div class="trend-label">Ledighetstrender — uke 1 → 8</div>
-      <div class="trend-bars">${bars}</div>
-    </div>
-    ${chips?`<div class="card-services"><div class="services-label">Mest underbookede behandlinger</div><div class="service-chips">${chips}</div></div>`:''}
-  </div>`;
-}
-
-const REC={
-  BOOST:    'Klinikken har høy tilgjengelighet og lav booking pressure. Øk betalt mediespend her for å drive flere bookinger.',
-  MONITOR:  'Middels beleggning. Følg med på utviklingen de neste ukene før du justerer budsjettet.',
-  PERFORMER:'Klinikken fyller raskt med lav tilgjengelighet. Medietrykk ikke nødvendig nå — budsjettet gir bedre avkastning andre steder.',
-  INGEN_DATA:'Ingen timeslot-data tilgjengelig for denne klinikken.',
-};
-
-function openDrawer(c) {
-  const sig=SIG_META[c.signal]||SIG_META.INGEN_DATA;
-  document.getElementById('drawer-title').textContent=c.name;
-  document.getElementById('drawer-subtitle').textContent=[c.city,c.region].filter(Boolean).join(' · ')+' · '+sig.emoji+' '+sig.label;
-  const services=(c.services||[]).filter(s=>s.total_slots>0).sort((a,b)=>b.total_slots-a.total_slots);
-  const pressure=c.total_slots>0?Math.round((c.slots_week_1_2/c.total_slots)*100):0;
-  const rows=services.map(s=>`<tr><td>${s.service_name}</td><td><span class="cat-tag">${s.category}</span></td><td class="num">${s.total_slots}</td><td class="num">${s.slots_week_1_2}</td><td class="num">${s.slots_week_5_8}</td></tr>`).join('');
-  document.getElementById('drawer-body').innerHTML=`
-    <div class="drawer-section">
-      <div class="drawer-section-title">Budsjettanbefaling</div>
-      <div class="rec-box">${REC[c.signal]||''}</div>
-    </div>
-    <div class="drawer-section">
-      <div class="drawer-section-title">Nøkkeltall</div>
-      <div class="kpi-grid">
-        ${[['Totalt ledige (8 uker)',c.total_slots],['Ledige uke 1–2',c.slots_week_1_2],['Ledige uke 5–8',c.slots_week_5_8],['Booking pressure',pressure+'%']]
-          .map(([l,v])=>`<div class="kpi-item"><div class="kpi-label">${l}</div><div class="kpi-value">${v}</div></div>`).join('')}
-      </div>
-    </div>
-    ${services.length?`<div class="drawer-section"><div class="drawer-section-title">Behandlingstyper</div><table class="service-table"><thead><tr><th>Behandling</th><th>Kategori</th><th style="text-align:right">Totalt</th><th style="text-align:right">Uke 1–2</th><th style="text-align:right">Uke 5–8</th></tr></thead><tbody>${rows}</tbody></table></div>`:''}`;
-  document.getElementById('drawer-overlay').classList.add('open');
-  document.getElementById('drawer').classList.add('open');
-}
-
-function closeDrawer() {
-  document.getElementById('drawer-overlay').classList.remove('open');
-  document.getElementById('drawer').classList.remove('open');
-}
-document.getElementById('drawer-close').addEventListener('click',closeDrawer);
-document.getElementById('drawer-overlay').addEventListener('click',closeDrawer);
-
-document.querySelectorAll('.filter-btn').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    document.querySelectorAll('.filter-btn').forEach(b=>b.className='filter-btn');
-    activeFilter=btn.dataset.filter;
-    const map={all:'active-all',BOOST:'active-boost',MONITOR:'active-monitor',PERFORMER:'active-performer'};
-    btn.classList.add(map[activeFilter]||'active-all');
-    renderGrid();
-  });
-});
-document.getElementById('search').addEventListener('input',e=>{searchQuery=e.target.value.trim();renderGrid();});
-document.getElementById('sort-select').addEventListener('change',e=>{activeSort=e.target.value;renderGrid();});
+document.getElementById('search').addEventListener('input', () => renderTables(allClinics));
+checkAuth();
 </script>
 </body>
 </html>
