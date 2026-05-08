@@ -1,13 +1,246 @@
 {
-  "generated_at": null,
-  "weeks_analyzed": 8,
-  "total_clinics": 0,
-  "api_calls_made": 0,
-  "clinics": [],
-  "summary": {
-    "boost_count": 0,
-    "monitor_count": 0,
-    "performer_count": 0,
-    "no_data_count": 0
-  }
+  "generated_at": "2026-05-09T01:43:06.175201+02:00",
+  "clinics": [
+    {
+      "name": "Arken \u00c5sane",
+      "slug": "arken-asane",
+      "free_hours": 74.0,
+      "signal": "BOOST",
+      "daily_trend": {
+        "2026-05-09": 3.0,
+        "2026-05-11": 7.0,
+        "2026-05-12": 5.5,
+        "2026-05-13": 5.0,
+        "2026-05-15": 8.0,
+        "2026-05-16": 10.5,
+        "2026-05-18": 4.0,
+        "2026-05-19": 5.5,
+        "2026-05-20": 8.5,
+        "2026-05-21": 7.5,
+        "2026-05-22": 9.5
+      }
+    },
+    {
+      "name": "Bryn",
+      "slug": "bryn",
+      "free_hours": 43.5,
+      "signal": "BOOST",
+      "daily_trend": {
+        "2026-05-11": 3.5,
+        "2026-05-12": 4.0,
+        "2026-05-13": 1.5,
+        "2026-05-15": 6.0,
+        "2026-05-18": 4.5,
+        "2026-05-19": 6.5,
+        "2026-05-20": 3.5,
+        "2026-05-21": 6.5,
+        "2026-05-22": 7.5
+      }
+    },
+    {
+      "name": "Broegelmannhuset",
+      "slug": "broegelmannhuset",
+      "free_hours": 27.0,
+      "signal": "MONITOR",
+      "daily_trend": {
+        "2026-05-12": 1.5,
+        "2026-05-13": 3.0,
+        "2026-05-15": 0.5,
+        "2026-05-18": 6.0,
+        "2026-05-19": 1.5,
+        "2026-05-20": 5.5,
+        "2026-05-21": 2.0,
+        "2026-05-22": 7.0
+      }
+    },
+    {
+      "name": "Fredrikstad",
+      "slug": "fredrikstad",
+      "free_hours": 24.0,
+      "signal": "MONITOR",
+      "daily_trend": {
+        "2026-05-11": 4.0,
+        "2026-05-12": 4.0,
+        "2026-05-19": 2.5,
+        "2026-05-20": 6.0,
+        "2026-05-21": 2.5,
+        "2026-05-22": 5.0
+      }
+    },
+    {
+      "name": "Bod\u00f8",
+      "slug": "bodo",
+      "free_hours": 18.0,
+      "signal": "PERFORMER",
+      "daily_trend": {
+        "2026-05-11": 1.0,
+        "2026-05-12": 2.0,
+        "2026-05-15": 0.5,
+        "2026-05-18": 2.5,
+        "2026-05-19": 3.5,
+        "2026-05-20": 3.0,
+        "2026-05-21": 2.5,
+        "2026-05-22": 3.0
+      }
+    },
+    {
+      "name": "Galleri Oslo",
+      "slug": "galleri-oslo",
+      "free_hours": 17.5,
+      "signal": "PERFORMER",
+      "daily_trend": {
+        "2026-05-11": 1.0,
+        "2026-05-12": 2.0,
+        "2026-05-13": 0.5,
+        "2026-05-15": 1.5,
+        "2026-05-18": 3.0,
+        "2026-05-19": 1.0,
+        "2026-05-20": 3.5,
+        "2026-05-21": 2.0,
+        "2026-05-22": 3.0
+      }
+    },
+    {
+      "name": "Gr\u00f8nnegata Tannlegesenter",
+      "slug": "gronnegata-tannlegesenter",
+      "free_hours": 8.0,
+      "signal": "PERFORMER",
+      "daily_trend": {
+        "2026-05-11": 2.0,
+        "2026-05-13": 0.5,
+        "2026-05-15": 1.0,
+        "2026-05-18": 1.0,
+        "2026-05-20": 1.5,
+        "2026-05-21": 0.5,
+        "2026-05-22": 1.5
+      }
+    },
+    {
+      "name": "Haugesund",
+      "slug": "haugesund",
+      "free_hours": 8.0,
+      "signal": "PERFORMER",
+      "daily_trend": {
+        "2026-05-12": 1.0,
+        "2026-05-13": 0.5,
+        "2026-05-18": 1.0,
+        "2026-05-19": 0.5,
+        "2026-05-20": 1.0,
+        "2026-05-21": 1.0,
+        "2026-05-22": 3.0
+      }
+    },
+    {
+      "name": "Drammen",
+      "slug": "drammen",
+      "free_hours": 3.5,
+      "signal": "PERFORMER",
+      "daily_trend": {
+        "2026-05-11": 1.5,
+        "2026-05-18": 0.5,
+        "2026-05-19": 0.5,
+        "2026-05-20": 1.0
+      }
+    },
+    {
+      "name": "Eik\u00e5s",
+      "slug": "eikas",
+      "free_hours": 3.5,
+      "signal": "PERFORMER",
+      "daily_trend": {
+        "2026-05-11": 1.0,
+        "2026-05-12": 0.5,
+        "2026-05-13": 0.5,
+        "2026-05-15": 0.5,
+        "2026-05-18": 0.5,
+        "2026-05-20": 0.5
+      }
+    },
+    {
+      "name": "Drammen avd. Landfall\u00f8ya",
+      "slug": "drammen-avd-landfalloya",
+      "free_hours": 3.0,
+      "signal": "PERFORMER",
+      "daily_trend": {
+        "2026-05-12": 1.0,
+        "2026-05-13": 0.5,
+        "2026-05-15": 0.5,
+        "2026-05-18": 0.5,
+        "2026-05-21": 0.5
+      }
+    },
+    {
+      "name": "Gressvik",
+      "slug": "gressvik",
+      "free_hours": 2.0,
+      "signal": "PERFORMER",
+      "daily_trend": {
+        "2026-05-12": 1.0,
+        "2026-05-22": 1.0
+      }
+    },
+    {
+      "name": "Bryne",
+      "slug": "bryne",
+      "free_hours": 1.5,
+      "signal": "PERFORMER",
+      "daily_trend": {
+        "2026-05-11": 0.5,
+        "2026-05-22": 1.0
+      }
+    },
+    {
+      "name": "Aker Brygge",
+      "slug": "aker-brygge",
+      "free_hours": 1.0,
+      "signal": "PERFORMER",
+      "daily_trend": {
+        "2026-05-18": 0.5,
+        "2026-05-21": 0.5
+      }
+    },
+    {
+      "name": "Arendal Spesialistklinikk",
+      "slug": "arendal-spesialistklinikk",
+      "free_hours": 0.5,
+      "signal": "PERFORMER",
+      "daily_trend": {
+        "2026-05-13": 0.5
+      }
+    },
+    {
+      "name": "Brosundet",
+      "slug": "brosundet",
+      "free_hours": 0.5,
+      "signal": "PERFORMER",
+      "daily_trend": {
+        "2026-05-13": 0.5
+      }
+    },
+    {
+      "name": "Harstad Torv",
+      "slug": "harstad-torv",
+      "free_hours": 0.5,
+      "signal": "PERFORMER",
+      "daily_trend": {
+        "2026-05-12": 0.5
+      }
+    },
+    {
+      "name": "Harstadtannlegene",
+      "slug": "harstadtannlegene",
+      "free_hours": 0.5,
+      "signal": "PERFORMER",
+      "daily_trend": {
+        "2026-05-19": 0.5
+      }
+    },
+    {
+      "name": "Hamar",
+      "slug": "hamar",
+      "free_hours": 0.0,
+      "signal": "PERFORMER",
+      "daily_trend": {}
+    }
+  ]
 }
