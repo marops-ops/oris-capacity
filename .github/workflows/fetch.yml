@@ -1,0 +1,41 @@
+name: Fetch Capacity Data
+
+on:
+  schedule:
+    # Kjører 06:00 og 14:00 Oslo-tid (UTC+2 sommer / UTC+1 vinter)
+    - cron: "0 4,12 * * *"
+  workflow_dispatch: # Tillat manuell kjøring fra GitHub UI
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Nødvendig for å committe capacity.json
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install requests playwright beautifulsoup4
+          playwright install chromium
+          playwright install-deps chromium
+
+      - name: Run capacity analyzer
+        env:
+          ORIS_BEARER_TOKEN: ${{ secrets.ORIS_BEARER_TOKEN }}
+        run: python scraper/capacity_analyzer.py
+
+      - name: Commit and push capacity.json
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/capacity.json
+          git diff --staged --quiet || git commit -m "chore: update capacity data $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push

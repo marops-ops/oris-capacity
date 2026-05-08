@@ -1,0 +1,13 @@
+{
+  "generated_at": null,
+  "weeks_analyzed": 8,
+  "total_clinics": 0,
+  "api_calls_made": 0,
+  "clinics": [],
+  "summary": {
+    "boost_count": 0,
+    "monitor_count": 0,
+    "performer_count": 0,
+    "no_data_count": 0
+  }
+}

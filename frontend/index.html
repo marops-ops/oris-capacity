@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oris Dental — Kapasitetsanalyse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  /* ── Reset & Base ─────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:          #0a0c0f;
+    --surface:     #111318;
+    --surface-2:   #181c22;
+    --border:      #1e2329;
+    --border-2:    #262c35;
+    --text:        #e8ecf0;
+    --text-muted:  #5a6474;
+    --text-dim:    #8a95a3;
+
+    --boost:       #ff3b3b;
+    --boost-bg:    rgba(255,59,59,0.08);
+    --boost-border:rgba(255,59,59,0.20);
+
+    --monitor:     #f5a623;
+    --monitor-bg:  rgba(245,166,35,0.08);
+    --monitor-border:rgba(245,166,35,0.20);
+
+    --performer:   #27c16e;
+    --performer-bg:rgba(39,193,110,0.08);
+    --performer-border:rgba(39,193,110,0.20);
+
+    --accent:      #4a90e2;
+    --accent-dim:  rgba(74,144,226,0.15);
+
+    --font-display: 'Syne', sans-serif;
+    --font-mono:    'DM Mono', monospace;
+
+    --radius:      6px;
+    --radius-lg:   10px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-display);
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Auth Gate ────────────────────────────────────────── */
+  #auth-gate {
+    position: fixed; inset: 0;
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.4s ease;
+  }
+  #auth-gate.hidden { opacity: 0; pointer-events: none; }
+
+  .auth-box {
+    width: 360px;
+    padding: 40px;
+    background: var(--surface);
+    border: 1px solid var(--border-2);
+    border-radius: var(--radius-lg);
+  }
+  .auth-logo {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+  .auth-logo span { color: var(--boost); }
+  .auth-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 6px;
+    letter-spacing: -0.02em;
+  }
+  .auth-subtitle {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+    line-height: 1.6;
+  }
+  .auth-input {
+    width: 100%;
+    padding: 11px 14px;
+    background: var(--bg);
+    border: 1px solid var(--border-2);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.2s;
+    margin-bottom: 10px;
+  }
+  .auth-input:focus { border-color: var(--accent); }
+  .auth-btn {
+    width: 100%;
+    padding: 11px;
+    background: var(--text);
+    color: var(--bg);
+    border: none;
+    border-radius: var(--radius);
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .auth-btn:hover { opacity: 0.88; }
+  .auth-error {
+    font-size: 12px;
+    color: var(--boost);
+    margin-top: 10px;
+    min-height: 18px;
+    font-family: var(--font-mono);
+  }
+  .auth-note {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 20px;
+    line-height: 1.6;
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+  }
+
+  /* ── App Shell ────────────────────────────────────────── */
+  #app { display: none; }
+  #app.visible { display: block; animation: fadeUp 0.5s ease both; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── Header ───────────────────────────────────────────── */
+  .header {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background: rgba(10,12,15,0.92);
+    backdrop-filter: blur(12px);
+    z-index: 100;
+  }
+  .header-left { display: flex; align-items: center; gap: 16px; }
+  .brand {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .brand span { color: var(--text); }
+  .divider { width: 1px; height: 16px; background: var(--border-2); }
+  .page-title { font-size: 13px; color: var(--text-dim); }
+  .last-updated {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .pulse {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--performer);
+    animation: pulse 2s ease infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  /* ── Stats Bar ────────────────────────────────────────── */
+  .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid var(--border);
+  }
+  .stat-item {
+    padding: 20px 32px;
+    border-right: 1px solid var(--border);
+    transition: background 0.2s;
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+  .stat-value {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+  .stat-value.boost    { color: var(--boost); }
+  .stat-value.monitor  { color: var(--monitor); }
+  .stat-value.performer{ color: var(--performer); }
+  .stat-value.total    { color: var(--text); }
+
+  /* ── Controls ─────────────────────────────────────────── */
+  .controls {
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .search-wrap {
+    position: relative;
+    flex: 1;
+    min-width: 200px;
+    max-width: 320px;
+  }
+  .search-icon {
+    position: absolute;
+    left: 12px; top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 12px;
+    pointer-events: none;
+  }
+  .search-input {
+    width: 100%;
+    padding: 8px 12px 8px 32px;
+    background: var(--surface);
+    border: 1px solid var(--border-2);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .search-input:focus { border-color: var(--accent); }
+  .search-input::placeholder { color: var(--text-muted); }
+
+  .filter-group { display: flex; gap: 4px; }
+  .filter-btn {
+    padding: 7px 14px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-2);
+    background: transparent;
+    color: var(--text-dim);
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .filter-btn:hover { border-color: var(--border-2); color: var(--text); }
+  .filter-btn.active-boost    { background: var(--boost-bg); border-color: var(--boost-border); color: var(--boost); }
+  .filter-btn.active-monitor  { background: var(--monitor-bg); border-color: var(--monitor-border); color: var(--monitor); }
+  .filter-btn.active-performer{ background: var(--performer-bg); border-color: var(--performer-border); color: var(--performer); }
+  .filter-btn.active-all      { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+
+  .sort-select {
+    padding: 7px 12px;
+    background: var(--surface);
+    border: 1px solid var(--border-2);
+    border-radius: var(--radius);
+    color: var(--text-dim);
+    font-family: var(--font-display);
+    font-size: 12px;
+    outline: none;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  .sort-select option { background: var(--surface); }
+
+  .results-count {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+
+  /* ── Clinic Grid ──────────────────────────────────────── */
+  .clinic-grid {
+    padding: 24px 32px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 12px;
+  }
+
+  /* ── Clinic Card ──────────────────────────────────────── */
+  .clinic-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: border-color 0.2s, transform 0.15s;
+    cursor: pointer;
+  }
+  .clinic-card:hover {
+    transform: translateY(-1px);
+    border-color: var(--border-2);
+  }
+  .clinic-card.signal-BOOST    { border-left: 3px solid var(--boost); }
+  .clinic-card.signal-MONITOR  { border-left: 3px solid var(--monitor); }
+  .clinic-card.signal-PERFORMER{ border-left: 3px solid var(--performer); }
+  .clinic-card.signal-INGEN_DATA{ border-left: 3px solid var(--border-2); }
+
+  .card-header {
+    padding: 16px 18px 12px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .card-meta { flex: 1; min-width: 0; }
+  .card-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .card-location {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 2px;
+    font-family: var(--font-mono);
+  }
+
+  .signal-badge {
+    padding: 4px 9px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .signal-badge.BOOST     { background: var(--boost-bg); color: var(--boost); border: 1px solid var(--boost-border); }
+  .signal-badge.MONITOR   { background: var(--monitor-bg); color: var(--monitor); border: 1px solid var(--monitor-border); }
+  .signal-badge.PERFORMER { background: var(--performer-bg); color: var(--performer); border: 1px solid var(--performer-border); }
+  .signal-badge.INGEN_DATA{ background: var(--surface-2); color: var(--text-muted); border: 1px solid var(--border); }
+
+  .card-stats {
+    padding: 0 18px 14px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+  }
+  .mini-stat {
+    background: var(--surface-2);
+    border-radius: 6px;
+    padding: 10px 10px 8px;
+  }
+  .mini-label {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+  .mini-value {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    font-family: var(--font-mono);
+    color: var(--text);
+  }
+
+  /* ── Week Trend Bar ───────────────────────────────────── */
+  .week-trend {
+    padding: 0 18px 14px;
+  }
+  .trend-label {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+  .trend-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 32px;
+  }
+  .trend-bar {
+    flex: 1;
+    border-radius: 2px 2px 0 0;
+    min-height: 2px;
+    transition: opacity 0.2s;
+  }
+  .trend-bar:hover { opacity: 0.8; }
+
+  /* ── Underbooked Services ─────────────────────────────── */
+  .card-services {
+    padding: 0 18px 16px;
+  }
+  .services-label {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 7px;
+  }
+  .service-chips { display: flex; flex-wrap: wrap; gap: 4px; }
+  .service-chip {
+    padding: 3px 8px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    font-size: 10px;
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 160px;
+  }
+
+  /* ── Detail Drawer ────────────────────────────────────── */
+  .drawer-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s;
+    backdrop-filter: blur(4px);
+  }
+  .drawer-overlay.open { opacity: 1; pointer-events: all; }
+
+  .drawer {
+    position: fixed;
+    top: 0; right: 0; bottom: 0;
+    width: min(520px, 100vw);
+    background: var(--surface);
+    border-left: 1px solid var(--border-2);
+    z-index: 201;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .drawer.open { transform: translateX(0); }
+
+  .drawer-header {
+    padding: 24px 28px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    position: sticky;
+    top: 0;
+    background: var(--surface);
+    z-index: 1;
+  }
+  .drawer-title {
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text);
+  }
+  .drawer-subtitle {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 3px;
+    font-family: var(--font-mono);
+  }
+  .drawer-close {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--border-2);
+    background: transparent;
+    color: var(--text-dim);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.15s;
+    flex-shrink: 0;
+  }
+  .drawer-close:hover { background: var(--surface-2); color: var(--text); }
+
+  .drawer-body { padding: 24px 28px; }
+
+  .drawer-section { margin-bottom: 28px; }
+  .drawer-section-title {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* ── Service Table in Drawer ──────────────────────────── */
+  .service-table { width: 100%; border-collapse: collapse; }
+  .service-table th {
+    text-align: left;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 0 8px 8px 0;
+  }
+  .service-table td {
+    padding: 8px 8px 8px 0;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    vertical-align: middle;
+  }
+  .service-table td:first-child { color: var(--text); }
+  .service-table td.num {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    text-align: right;
+    padding-right: 0;
+  }
+  .cat-tag {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: var(--surface-2);
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+  }
+
+  /* ── Empty State ──────────────────────────────────────── */
+  .empty-state {
+    text-align: center;
+    padding: 80px 32px;
+    color: var(--text-muted);
+  }
+  .empty-icon { font-size: 32px; margin-bottom: 16px; }
+  .empty-title { font-size: 15px; font-weight: 700; color: var(--text-dim); margin-bottom: 6px; }
+  .empty-text { font-size: 13px; }
+
+  /* ── Loading State ────────────────────────────────────── */
+  .loading-state {
+    text-align: center;
+    padding: 80px 32px;
+  }
+  .loading-spinner {
+    width: 28px; height: 28px;
+    border: 2px solid var(--border-2);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 16px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .loading-text { font-size: 13px; color: var(--text-muted); font-family: var(--font-mono); }
+
+  /* ── Responsive ───────────────────────────────────────── */
+  @media (max-width: 768px) {
+    .header { padding: 14px 16px; }
+    .stats-bar { grid-template-columns: repeat(2, 1fr); }
+    .stat-item { padding: 16px; }
+    .controls { padding: 12px 16px; }
+    .clinic-grid { padding: 16px; grid-template-columns: 1fr; }
+    .sort-select { display: none; }
+    .results-count { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── Auth Gate ──────────────────────────────────────────────────────── -->
+<div id="auth-gate">
+  <div class="auth-box">
+    <div class="auth-logo">Oris <span>×</span> Amidays</div>
+    <div class="auth-title">Kapasitetsanalyse</div>
+    <div class="auth-subtitle">Skriv inn din e-postadresse for å fortsette. Tilgang er begrenset til Amidays og Oris Dental.</div>
+    <input type="email" class="auth-input" id="auth-email" placeholder="din@epost.no" autocomplete="email">
+    <button class="auth-btn" id="auth-submit">Fortsett →</button>
+    <div class="auth-error" id="auth-error"></div>
+    <div class="auth-note">Data oppdateres automatisk to ganger daglig. Kontakt Amidays for tilgang.</div>
+  </div>
+</div>
+
+<!-- ── App ────────────────────────────────────────────────────────────── -->
+<div id="app">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-left">
+      <div class="brand">Oris <span>Dental</span></div>
+      <div class="divider"></div>
+      <div class="page-title">Kapasitets- og etterspørselsanalyse</div>
+    </div>
+    <div class="last-updated">
+      <div class="pulse"></div>
+      <span id="last-updated-text">Laster data...</span>
+    </div>
+  </header>
+
+  <!-- Stats Bar -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-label">Klinikker analysert</div>
+      <div class="stat-value total" id="stat-total">—</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-label">🔴 Boost-kandidater</div>
+      <div class="stat-value boost" id="stat-boost">—</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-label">🟡 Monitor</div>
+      <div class="stat-value monitor" id="stat-monitor">—</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-label">🟢 Performer</div>
+      <div class="stat-value performer" id="stat-performer">—</div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <div class="controls">
+    <div class="search-wrap">
+      <span class="search-icon">⌕</span>
+      <input class="search-input" type="text" id="search" placeholder="Søk klinikk eller by...">
+    </div>
+    <div class="filter-group">
+      <button class="filter-btn active-all" data-filter="all">Alle</button>
+      <button class="filter-btn" data-filter="BOOST">🔴 Boost</button>
+      <button class="filter-btn" data-filter="MONITOR">🟡 Monitor</button>
+      <button class="filter-btn" data-filter="PERFORMER">🟢 Performer</button>
+    </div>
+    <span class="results-count" id="results-count"></span>
+    <select class="sort-select" id="sort-select">
+      <option value="signal">Sorter: Signal (Boost først)</option>
+      <option value="slots-desc">Sorter: Flest ledige timer</option>
+      <option value="slots-asc">Sorter: Færrest ledige timer</option>
+      <option value="name">Sorter: Navn A–Å</option>
+    </select>
+  </div>
+
+  <!-- Clinic Grid -->
+  <div class="clinic-grid" id="clinic-grid">
+    <div class="loading-state" style="grid-column:1/-1">
+      <div class="loading-spinner"></div>
+      <div class="loading-text">Henter kapasitetsdata...</div>
+    </div>
+  </div>
+
+</div><!-- /app -->
+
+<!-- ── Detail Drawer ───────────────────────────────────────────────────── -->
+<div class="drawer-overlay" id="drawer-overlay"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-header">
+    <div>
+      <div class="drawer-title" id="drawer-title">Klinikknavn</div>
+      <div class="drawer-subtitle" id="drawer-subtitle">Region · By</div>
+    </div>
+    <button class="drawer-close" id="drawer-close">✕</button>
+  </div>
+  <div class="drawer-body" id="drawer-body"></div>
+</div>
+
+<script>
+// ── Auth Logic ─────────────────────────────────────────────────────────────────
+const ALLOWED_DOMAINS = ['amidays.no', 'orisdental.no', 'oris.no'];
+const SESSION_KEY = 'oris_capacity_auth';
+
+function isAllowedEmail(email) {
+  const domain = email.split('@')[1]?.toLowerCase();
+  return ALLOWED_DOMAINS.includes(domain);
+}
+
+function checkAuth() {
+  const stored = sessionStorage.getItem(SESSION_KEY);
+  if (stored) {
+    try {
+      const { email, ts } = JSON.parse(stored);
+      if (isAllowedEmail(email) && Date.now() - ts < 8 * 3600 * 1000) {
+        return true;
+      }
+    } catch(e) {}
+  }
+  return false;
+}
+
+function doAuth() {
+  const email = document.getElementById('auth-email').value.trim().toLowerCase();
+  const err   = document.getElementById('auth-error');
+
+  if (!email || !email.includes('@')) {
+    err.textContent = 'Skriv inn en gyldig e-postadresse.';
+    return;
+  }
+  if (!isAllowedEmail(email)) {
+    err.textContent = 'Denne e-postadressen har ikke tilgang. Kontakt Amidays.';
+    return;
+  }
+
+  sessionStorage.setItem(SESSION_KEY, JSON.stringify({ email, ts: Date.now() }));
+  document.getElementById('auth-gate').classList.add('hidden');
+  document.getElementById('app').classList.add('visible');
+  loadData();
+}
+
+document.getElementById('auth-submit').addEventListener('click', doAuth);
+document.getElementById('auth-email').addEventListener('keydown', e => {
+  if (e.key === 'Enter') doAuth();
+});
+
+// Auto-login if session still valid
+if (checkAuth()) {
+  document.getElementById('auth-gate').classList.add('hidden');
+  document.getElementById('app').classList.add('visible');
+  loadData();
+}
+
+// ── Data & State ───────────────────────────────────────────────────────────────
+let allClinics = [];
+let activeFilter = 'all';
+let activeSort   = 'signal';
+let searchQuery  = '';
+
+const SIGNAL_ORDER = { 'BOOST': 0, 'MONITOR': 1, 'PERFORMER': 2, 'INGEN_DATA': 3 };
+const SIGNAL_LABELS = {
+  'BOOST':     { emoji: '🔴', label: 'Boost', css: 'BOOST' },
+  'MONITOR':   { emoji: '🟡', label: 'Monitor', css: 'MONITOR' },
+  'PERFORMER': { emoji: '🟢', label: 'Performer', css: 'PERFORMER' },
+  'INGEN_DATA':{ emoji: '⚪', label: 'Ingen data', css: 'INGEN_DATA' },
+};
+
+async function loadData() {
+  try {
+    const resp = await fetch('capacity.json?v=' + Date.now());
+    const data = await resp.json();
+
+    allClinics = data.clinics || [];
+
+    // Stats bar
+    document.getElementById('stat-total').textContent    = data.total_clinics ?? allClinics.length;
+    document.getElementById('stat-boost').textContent    = data.summary?.boost_count ?? 0;
+    document.getElementById('stat-monitor').textContent  = data.summary?.monitor_count ?? 0;
+    document.getElementById('stat-performer').textContent= data.summary?.performer_count ?? 0;
+
+    // Last updated
+    if (data.generated_at) {
+      const d = new Date(data.generated_at);
+      const opts = { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' };
+      document.getElementById('last-updated-text').textContent =
+        'Sist oppdatert ' + d.toLocaleDateString('nb-NO', opts);
+    } else {
+      document.getElementById('last-updated-text').textContent = 'Data ikke tilgjengelig';
+    }
+
+    renderGrid();
+
+  } catch(e) {
+    document.getElementById('clinic-grid').innerHTML = `
+      <div class="empty-state" style="grid-column:1/-1">
+        <div class="empty-icon">⚠</div>
+        <div class="empty-title">Kunne ikke laste data</div>
+        <div class="empty-text">Prøv å laste siden på nytt.</div>
+      </div>`;
+  }
+}
+
+// ── Render ─────────────────────────────────────────────────────────────────────
+function getFilteredSorted() {
+  let list = [...allClinics];
+
+  // Filter by signal
+  if (activeFilter !== 'all') {
+    list = list.filter(c => c.signal === activeFilter);
+  }
+
+  // Search
+  if (searchQuery) {
+    const q = searchQuery.toLowerCase();
+    list = list.filter(c =>
+      c.name.toLowerCase().includes(q) ||
+      (c.city || '').toLowerCase().includes(q) ||
+      (c.region || '').toLowerCase().includes(q)
+    );
+  }
+
+  // Sort
+  list.sort((a, b) => {
+    if (activeSort === 'signal') {
+      const diff = (SIGNAL_ORDER[a.signal] ?? 3) - (SIGNAL_ORDER[b.signal] ?? 3);
+      return diff !== 0 ? diff : b.total_slots - a.total_slots;
+    }
+    if (activeSort === 'slots-desc') return b.total_slots - a.total_slots;
+    if (activeSort === 'slots-asc')  return a.total_slots - b.total_slots;
+    if (activeSort === 'name')       return a.name.localeCompare(b.name, 'nb');
+    return 0;
+  });
+
+  return list;
+}
+
+function renderGrid() {
+  const list = getFilteredSorted();
+  const grid = document.getElementById('clinic-grid');
+  document.getElementById('results-count').textContent = `${list.length} klinikker`;
+
+  if (list.length === 0) {
+    const msg = allClinics.length === 0
+      ? 'Ingen data lastet ennå. Kjør capacity_analyzer.py for å generere data.'
+      : 'Ingen klinikker matcher filteret.';
+    grid.innerHTML = `
+      <div class="empty-state" style="grid-column:1/-1">
+        <div class="empty-icon">🔍</div>
+        <div class="empty-title">Ingen resultater</div>
+        <div class="empty-text">${msg}</div>
+      </div>`;
+    return;
+  }
+
+  grid.innerHTML = list.map(c => buildCard(c)).join('');
+
+  // Attach click handlers
+  grid.querySelectorAll('.clinic-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const slug = card.dataset.slug;
+      const clinic = allClinics.find(c => c.slug === slug);
+      if (clinic) openDrawer(clinic);
+    });
+  });
+}
+
+function buildCard(c) {
+  const sig = SIGNAL_LABELS[c.signal] || SIGNAL_LABELS['INGEN_DATA'];
+  const maxSlots = Math.max(...Object.values(c.week_trend || {}).map(Number), 1);
+
+  // Week trend bars
+  const bars = Array.from({ length: 8 }, (_, i) => {
+    const count  = Number(c.week_trend?.[i] ?? 0);
+    const height = Math.round((count / maxSlots) * 100);
+    const color  = i < 2 ? '#4a90e2' : i < 5 ? '#f5a623' : '#ff3b3b';
+    return `<div class="trend-bar" style="height:${Math.max(height,4)}%;background:${color};opacity:${count>0?1:0.15}" title="Uke ${i+1}: ${count} slots"></div>`;
+  }).join('');
+
+  // Top underbooked chips
+  const chips = (c.top_underboooked || []).slice(0, 3).map(s =>
+    `<span class="service-chip" title="${s.name} (${s.slots} ledige)">${s.name}</span>`
+  ).join('');
+
+  const location = [c.city, c.region].filter(Boolean).join(' · ');
+
+  return `
+  <div class="clinic-card signal-${c.signal}" data-slug="${c.slug}">
+    <div class="card-header">
+      <div class="card-meta">
+        <div class="card-name">${c.name}</div>
+        <div class="card-location">${location || 'Ukjent sted'}</div>
+      </div>
+      <div class="signal-badge ${sig.css}">${sig.emoji} ${sig.label}</div>
+    </div>
+    <div class="card-stats">
+      <div class="mini-stat">
+        <div class="mini-label">Totalt<br>ledige</div>
+        <div class="mini-value">${c.total_slots}</div>
+      </div>
+      <div class="mini-stat">
+        <div class="mini-label">Uke<br>1–2</div>
+        <div class="mini-value">${c.slots_week_1_2}</div>
+      </div>
+      <div class="mini-stat">
+        <div class="mini-label">Uke<br>5–8</div>
+        <div class="mini-value">${c.slots_week_5_8}</div>
+      </div>
+    </div>
+    <div class="week-trend">
+      <div class="trend-label">Ledighetstrender — uke 1 → 8</div>
+      <div class="trend-bars">${bars}</div>
+    </div>
+    ${chips ? `<div class="card-services">
+      <div class="services-label">Mest underbookede behandlinger</div>
+      <div class="service-chips">${chips}</div>
+    </div>` : ''}
+  </div>`;
+}
+
+// ── Detail Drawer ──────────────────────────────────────────────────────────────
+function openDrawer(clinic) {
+  const sig = SIGNAL_LABELS[clinic.signal] || SIGNAL_LABELS['INGEN_DATA'];
+  document.getElementById('drawer-title').textContent = clinic.name;
+  document.getElementById('drawer-subtitle').textContent =
+    [clinic.city, clinic.region].filter(Boolean).join(' · ') + ' · ' + sig.emoji + ' ' + sig.label;
+
+  const services = (clinic.services || [])
+    .filter(s => s.total_slots > 0)
+    .sort((a, b) => b.total_slots - a.total_slots);
+
+  const bookingPressure = clinic.total_slots > 0
+    ? Math.round((clinic.slots_week_1_2 / clinic.total_slots) * 100)
+    : 0;
+
+  const signalExplain = {
+    'BOOST':     'Klinikken har mange ledige timer og fyller sakte. Øk betalt mediespend her for å drive flere bookinger.',
+    'MONITOR':   'Middels beleggning. Følg med på utviklingen de neste ukene.',
+    'PERFORMER': 'Klinikken fyller raskt og har lav tilgjengelighet. Medietrykk ikke nødvendig nå.',
+    'INGEN_DATA':'Ingen timeslot-data tilgjengelig for denne klinikken.',
+  };
+
+  const rows = services.map(s => `
+    <tr>
+      <td>${s.service_name}</td>
+      <td><span class="cat-tag">${s.category}</span></td>
+      <td class="num">${s.total_slots}</td>
+      <td class="num">${s.slots_week_1_2}</td>
+      <td class="num">${s.slots_week_5_8}</td>
+    </tr>`).join('');
+
+  document.getElementById('drawer-body').innerHTML = `
+
+    <div class="drawer-section">
+      <div class="drawer-section-title">Anbefaling</div>
+      <div style="padding:14px;background:var(--surface-2);border-radius:var(--radius);border:1px solid var(--border-2);font-size:13px;line-height:1.7;color:var(--text-dim)">
+        ${signalExplain[clinic.signal] || ''}
+      </div>
+    </div>
+
+    <div class="drawer-section">
+      <div class="drawer-section-title">Nøkkeltall</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+        ${[
+          ['Totalt ledige timer (8 uker)', clinic.total_slots],
+          ['Ledige timer uke 1–2', clinic.slots_week_1_2],
+          ['Ledige timer uke 5–8', clinic.slots_week_5_8],
+          ['Booking pressure (nær-andel)', bookingPressure + '%'],
+        ].map(([label, val]) => `
+          <div style="background:var(--surface-2);border-radius:var(--radius);padding:12px;border:1px solid var(--border)">
+            <div style="font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:5px">${label}</div>
+            <div style="font-size:20px;font-weight:800;font-family:var(--font-mono);letter-spacing:-.02em">${val}</div>
+          </div>`
+        ).join('')}
+      </div>
+    </div>
+
+    ${services.length > 0 ? `
+    <div class="drawer-section">
+      <div class="drawer-section-title">Behandlingstyper — ledige timer</div>
+      <table class="service-table">
+        <thead>
+          <tr>
+            <th>Behandling</th>
+            <th>Kategori</th>
+            <th style="text-align:right">Totalt</th>
+            <th style="text-align:right">Uke 1–2</th>
+            <th style="text-align:right">Uke 5–8</th>
+          </tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>` : ''}
+
+  `;
+
+  document.getElementById('drawer-overlay').classList.add('open');
+  document.getElementById('drawer').classList.add('open');
+}
+
+function closeDrawer() {
+  document.getElementById('drawer-overlay').classList.remove('open');
+  document.getElementById('drawer').classList.remove('open');
+}
+document.getElementById('drawer-close').addEventListener('click', closeDrawer);
+document.getElementById('drawer-overlay').addEventListener('click', closeDrawer);
+
+// ── Filters & Search ───────────────────────────────────────────────────────────
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => {
+      b.className = 'filter-btn';
+    });
+    const f = btn.dataset.filter;
+    activeFilter = f;
+    if (f === 'all')       btn.classList.add('active-all');
+    else if (f === 'BOOST')     btn.classList.add('active-boost');
+    else if (f === 'MONITOR')   btn.classList.add('active-monitor');
+    else if (f === 'PERFORMER') btn.classList.add('active-performer');
+    renderGrid();
+  });
+});
+
+document.getElementById('search').addEventListener('input', e => {
+  searchQuery = e.target.value.trim();
+  renderGrid();
+});
+
+document.getElementById('sort-select').addEventListener('change', e => {
+  activeSort = e.target.value;
+  renderGrid();
+});
+</script>
+</body>
+</html>
