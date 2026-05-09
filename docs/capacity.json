@@ -1,246 +1,354 @@
 {
-  "generated_at": "2026-05-09T02:05:13.757845+02:00",
+  "generated_at": "2026-05-09T02:08:57.423459+02:00",
+  "total_clinics": 49,
+  "summary": {
+    "boost_count": 6,
+    "monitor_count": 8,
+    "performer_count": 35
+  },
   "clinics": [
     {
-      "name": "Arken \u00c5sane",
-      "slug": "arken-asane",
-      "free_hours": 74.0,
-      "signal": "BOOST",
-      "daily_trend": {
-        "2026-05-09": 3.0,
-        "2026-05-11": 7.0,
-        "2026-05-12": 5.5,
-        "2026-05-13": 5.0,
-        "2026-05-15": 8.0,
-        "2026-05-16": 10.5,
-        "2026-05-18": 4.0,
-        "2026-05-19": 5.5,
-        "2026-05-20": 8.5,
-        "2026-05-21": 7.5,
-        "2026-05-22": 9.5
-      }
-    },
-    {
-      "name": "Bryn",
-      "slug": "bryn",
-      "free_hours": 43.5,
-      "signal": "BOOST",
-      "daily_trend": {
-        "2026-05-11": 3.5,
-        "2026-05-12": 4.0,
-        "2026-05-13": 1.5,
-        "2026-05-15": 6.0,
-        "2026-05-18": 4.5,
-        "2026-05-19": 6.5,
-        "2026-05-20": 3.5,
-        "2026-05-21": 6.5,
-        "2026-05-22": 7.5
-      }
-    },
-    {
-      "name": "Broegelmannhuset",
-      "slug": "broegelmannhuset",
-      "free_hours": 27.0,
-      "signal": "MONITOR",
-      "daily_trend": {
-        "2026-05-12": 1.5,
-        "2026-05-13": 3.0,
-        "2026-05-15": 0.5,
-        "2026-05-18": 6.0,
-        "2026-05-19": 1.5,
-        "2026-05-20": 5.5,
-        "2026-05-21": 2.0,
-        "2026-05-22": 7.0
-      }
-    },
-    {
-      "name": "Fredrikstad",
-      "slug": "fredrikstad",
-      "free_hours": 24.0,
-      "signal": "MONITOR",
-      "daily_trend": {
-        "2026-05-11": 4.0,
-        "2026-05-12": 4.0,
-        "2026-05-19": 2.5,
-        "2026-05-20": 6.0,
-        "2026-05-21": 2.5,
-        "2026-05-22": 5.0
-      }
-    },
-    {
-      "name": "Bod\u00f8",
-      "slug": "bodo",
-      "free_hours": 18.0,
-      "signal": "PERFORMER",
-      "daily_trend": {
-        "2026-05-11": 1.0,
-        "2026-05-12": 2.0,
-        "2026-05-15": 0.5,
-        "2026-05-18": 2.5,
-        "2026-05-19": 3.5,
-        "2026-05-20": 3.0,
-        "2026-05-21": 2.5,
-        "2026-05-22": 3.0
-      }
-    },
-    {
-      "name": "Galleri Oslo",
-      "slug": "galleri-oslo",
-      "free_hours": 17.5,
-      "signal": "PERFORMER",
-      "daily_trend": {
-        "2026-05-11": 1.0,
-        "2026-05-12": 2.0,
-        "2026-05-13": 0.5,
-        "2026-05-15": 1.5,
-        "2026-05-18": 3.0,
-        "2026-05-19": 1.0,
-        "2026-05-20": 3.5,
-        "2026-05-21": 2.0,
-        "2026-05-22": 3.0
-      }
-    },
-    {
-      "name": "Gr\u00f8nnegata Tannlegesenter",
-      "slug": "gronnegata-tannlegesenter",
-      "free_hours": 8.0,
-      "signal": "PERFORMER",
-      "daily_trend": {
-        "2026-05-11": 2.0,
-        "2026-05-13": 0.5,
-        "2026-05-15": 1.0,
-        "2026-05-18": 1.0,
-        "2026-05-20": 1.5,
-        "2026-05-21": 0.5,
-        "2026-05-22": 1.5
-      }
-    },
-    {
-      "name": "Haugesund",
-      "slug": "haugesund",
-      "free_hours": 8.0,
-      "signal": "PERFORMER",
-      "daily_trend": {
-        "2026-05-12": 1.0,
-        "2026-05-13": 0.5,
-        "2026-05-18": 1.0,
-        "2026-05-19": 0.5,
-        "2026-05-20": 1.0,
-        "2026-05-21": 1.0,
-        "2026-05-22": 3.0
-      }
-    },
-    {
-      "name": "Drammen",
-      "slug": "drammen",
-      "free_hours": 3.5,
-      "signal": "PERFORMER",
-      "daily_trend": {
-        "2026-05-11": 1.5,
-        "2026-05-18": 0.5,
-        "2026-05-19": 0.5,
-        "2026-05-20": 1.0
-      }
-    },
-    {
-      "name": "Eik\u00e5s",
-      "slug": "eikas",
-      "free_hours": 3.5,
-      "signal": "PERFORMER",
-      "daily_trend": {
-        "2026-05-11": 1.0,
-        "2026-05-12": 0.5,
-        "2026-05-13": 0.5,
-        "2026-05-15": 0.5,
-        "2026-05-18": 0.5,
-        "2026-05-20": 0.5
-      }
-    },
-    {
-      "name": "Drammen avd. Landfall\u00f8ya",
-      "slug": "drammen-avd-landfalloya",
-      "free_hours": 3.0,
-      "signal": "PERFORMER",
-      "daily_trend": {
-        "2026-05-12": 1.0,
-        "2026-05-13": 0.5,
-        "2026-05-15": 0.5,
-        "2026-05-18": 0.5,
-        "2026-05-21": 0.5
-      }
-    },
-    {
-      "name": "Gressvik",
-      "slug": "gressvik",
-      "free_hours": 2.0,
-      "signal": "PERFORMER",
-      "daily_trend": {
-        "2026-05-12": 1.0,
-        "2026-05-22": 1.0
-      }
-    },
-    {
-      "name": "Bryne",
-      "slug": "bryne",
-      "free_hours": 1.5,
-      "signal": "PERFORMER",
-      "daily_trend": {
-        "2026-05-11": 0.5,
-        "2026-05-22": 1.0
-      }
-    },
-    {
       "name": "Aker Brygge",
-      "slug": "aker-brygge",
+      "region": "Oslo",
       "free_hours": 1.0,
       "signal": "PERFORMER",
-      "daily_trend": {
-        "2026-05-18": 0.5,
-        "2026-05-21": 0.5
-      }
+      "total_slots": 1
     },
     {
       "name": "Arendal Spesialistklinikk",
-      "slug": "arendal-spesialistklinikk",
-      "free_hours": 0.5,
+      "region": "Agder",
+      "free_hours": 0.0,
       "signal": "PERFORMER",
-      "daily_trend": {
-        "2026-05-13": 0.5
-      }
+      "total_slots": 0
+    },
+    {
+      "name": "Arken Åsane",
+      "region": "Vestland",
+      "free_hours": 74.0,
+      "signal": "BOOST",
+      "total_slots": 74
+    },
+    {
+      "name": "Bodø",
+      "region": "Nordland",
+      "free_hours": 18.0,
+      "signal": "MONITOR",
+      "total_slots": 18
+    },
+    {
+      "name": "Broegelmannhuset",
+      "region": "Vestland",
+      "free_hours": 27.0,
+      "signal": "MONITOR",
+      "total_slots": 27
     },
     {
       "name": "Brosundet",
-      "slug": "brosundet",
+      "region": "Alesund",
       "free_hours": 0.5,
       "signal": "PERFORMER",
-      "daily_trend": {
-        "2026-05-13": 0.5
-      }
+      "total_slots": 0
     },
     {
-      "name": "Harstad Torv",
-      "slug": "harstad-torv",
-      "free_hours": 0.5,
-      "signal": "PERFORMER",
-      "daily_trend": {
-        "2026-05-12": 0.5
-      }
+      "name": "Bryn",
+      "region": "Oslo",
+      "free_hours": 43.5,
+      "signal": "BOOST",
+      "total_slots": 43
     },
     {
-      "name": "Harstadtannlegene",
-      "slug": "harstadtannlegene",
-      "free_hours": 0.5,
+      "name": "Bryne",
+      "region": "Bryne",
+      "free_hours": 1.5,
       "signal": "PERFORMER",
-      "daily_trend": {
-        "2026-05-19": 0.5
-      }
+      "total_slots": 1
+    },
+    {
+      "name": "Drammen",
+      "region": "Buskerud",
+      "free_hours": 3.5,
+      "signal": "PERFORMER",
+      "total_slots": 3
+    },
+    {
+      "name": "Drammen avd. Landfalløya",
+      "region": "Buskerud",
+      "free_hours": 3.0,
+      "signal": "PERFORMER",
+      "total_slots": 3
+    },
+    {
+      "name": "Eikås",
+      "region": "Nord Vest",
+      "free_hours": 3.5,
+      "signal": "PERFORMER",
+      "total_slots": 3
+    },
+    {
+      "name": "Fredrikstad",
+      "region": "Ostfold",
+      "free_hours": 24.0,
+      "signal": "MONITOR",
+      "total_slots": 24
+    },
+    {
+      "name": "Galleri Oslo",
+      "region": "Oslo",
+      "free_hours": 17.5,
+      "signal": "MONITOR",
+      "total_slots": 17
+    },
+    {
+      "name": "Gressvik",
+      "region": "Ostfold",
+      "free_hours": 2.0,
+      "signal": "PERFORMER",
+      "total_slots": 2
+    },
+    {
+      "name": "Grønnegata Tannlegesenter",
+      "region": "Troms",
+      "free_hours": 8.0,
+      "signal": "PERFORMER",
+      "total_slots": 8
     },
     {
       "name": "Hamar",
-      "slug": "hamar",
+      "region": "Innlandet",
       "free_hours": 0.0,
       "signal": "PERFORMER",
-      "daily_trend": {}
+      "total_slots": 0
+    },
+    {
+      "name": "Harstad Torv",
+      "region": "Troms",
+      "free_hours": 0.5,
+      "signal": "PERFORMER",
+      "total_slots": 0
+    },
+    {
+      "name": "Harstadtannlegene",
+      "region": "Troms",
+      "free_hours": 0.5,
+      "signal": "PERFORMER",
+      "total_slots": 0
+    },
+    {
+      "name": "Haugesund",
+      "region": "Haugesund",
+      "free_hours": 8.0,
+      "signal": "PERFORMER",
+      "total_slots": 8
+    },
+    {
+      "name": "Hinna Park",
+      "region": "Stavanger",
+      "free_hours": 2.5,
+      "signal": "PERFORMER",
+      "total_slots": 2
+    },
+    {
+      "name": "Homansbyen",
+      "region": "Oslo",
+      "free_hours": 2.5,
+      "signal": "PERFORMER",
+      "total_slots": 2
+    },
+    {
+      "name": "Hvalertannlegene",
+      "region": "Ostfold",
+      "free_hours": 0.0,
+      "signal": "PERFORMER",
+      "total_slots": 0
+    },
+    {
+      "name": "Indre Arna",
+      "region": "Vestland",
+      "free_hours": 1.0,
+      "signal": "PERFORMER",
+      "total_slots": 1
+    },
+    {
+      "name": "Knapstad",
+      "region": "Ostfold",
+      "free_hours": 8.0,
+      "signal": "PERFORMER",
+      "total_slots": 8
+    },
+    {
+      "name": "Kolsås",
+      "region": "Akershus",
+      "free_hours": 3.5,
+      "signal": "PERFORMER",
+      "total_slots": 3
+    },
+    {
+      "name": "Kristiansand",
+      "region": "Agder",
+      "free_hours": 24.0,
+      "signal": "MONITOR",
+      "total_slots": 24
+    },
+    {
+      "name": "Leutenhaven",
+      "region": "Trondelag",
+      "free_hours": 66.5,
+      "signal": "BOOST",
+      "total_slots": 66
+    },
+    {
+      "name": "Lillehammer",
+      "region": "Innlandet",
+      "free_hours": 26.5,
+      "signal": "MONITOR",
+      "total_slots": 26
+    },
+    {
+      "name": "Løkkeveien",
+      "region": "Sor Vest",
+      "free_hours": 8.5,
+      "signal": "PERFORMER",
+      "total_slots": 8
+    },
+    {
+      "name": "Lykkegården (Tidligere Trondheim Torg)",
+      "region": "Trondelag",
+      "free_hours": 72.0,
+      "signal": "BOOST",
+      "total_slots": 72
+    },
+    {
+      "name": "Lysaker",
+      "region": "Akershus",
+      "free_hours": 5.5,
+      "signal": "PERFORMER",
+      "total_slots": 5
+    },
+    {
+      "name": "Madla",
+      "region": "Sor Vest",
+      "free_hours": 2.5,
+      "signal": "PERFORMER",
+      "total_slots": 2
+    },
+    {
+      "name": "Måløy",
+      "region": "Nord Vest",
+      "free_hours": 0.0,
+      "signal": "PERFORMER",
+      "total_slots": 0
+    },
+    {
+      "name": "Sandnes",
+      "region": "Sor Vest",
+      "free_hours": 6.5,
+      "signal": "PERFORMER",
+      "total_slots": 6
+    },
+    {
+      "name": "Sarpsborg",
+      "region": "Ostfold",
+      "free_hours": 19.0,
+      "signal": "MONITOR",
+      "total_slots": 19
+    },
+    {
+      "name": "Sirkus Shopping",
+      "region": "Trondelag",
+      "free_hours": 36.0,
+      "signal": "BOOST",
+      "total_slots": 36
+    },
+    {
+      "name": "Skøyen",
+      "region": "Oslo",
+      "free_hours": 6.0,
+      "signal": "PERFORMER",
+      "total_slots": 6
+    },
+    {
+      "name": "Slemmestad",
+      "region": "Akershus",
+      "free_hours": 0.5,
+      "signal": "PERFORMER",
+      "total_slots": 0
+    },
+    {
+      "name": "Søgne",
+      "region": "Agder",
+      "free_hours": 14.5,
+      "signal": "PERFORMER",
+      "total_slots": 14
+    },
+    {
+      "name": "Stoa i Arendal",
+      "region": "Agder",
+      "free_hours": 37.0,
+      "signal": "BOOST",
+      "total_slots": 37
+    },
+    {
+      "name": "Stokmarknes",
+      "region": "Nordland",
+      "free_hours": 0.5,
+      "signal": "PERFORMER",
+      "total_slots": 0
+    },
+    {
+      "name": "Stord Leirvik",
+      "region": "Vestland",
+      "free_hours": 1.5,
+      "signal": "PERFORMER",
+      "total_slots": 1
+    },
+    {
+      "name": "Strandgaten",
+      "region": "Vestland",
+      "free_hours": 0.0,
+      "signal": "PERFORMER",
+      "total_slots": 0
+    },
+    {
+      "name": "Tannteam Spesialistklinikk",
+      "region": "Vestland",
+      "free_hours": 4.5,
+      "signal": "PERFORMER",
+      "total_slots": 4
+    },
+    {
+      "name": "Tårnplassen",
+      "region": "Vestland",
+      "free_hours": 17.5,
+      "signal": "MONITOR",
+      "total_slots": 17
+    },
+    {
+      "name": "Tønsberg",
+      "region": "Vestfold",
+      "free_hours": 10.5,
+      "signal": "PERFORMER",
+      "total_slots": 10
+    },
+    {
+      "name": "Vågsbygd",
+      "region": "Agder",
+      "free_hours": 5.5,
+      "signal": "PERFORMER",
+      "total_slots": 5
+    },
+    {
+      "name": "Vestkanten",
+      "region": "Vestland",
+      "free_hours": 2.5,
+      "signal": "PERFORMER",
+      "total_slots": 2
+    },
+    {
+      "name": "Vøyenenga",
+      "region": "Akershus",
+      "free_hours": 2.0,
+      "signal": "PERFORMER",
+      "total_slots": 2
     }
   ]
 }
