@@ -20,8 +20,16 @@
   }
 
   body { background: var(--bg); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
-  .header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
-  .logo { font-family: var(--font-h); font-size: 18px; font-weight: 700; color: var(--ink); }
+  
+  /* Header med sentrert overskrift */
+  .header { 
+    background: var(--bg-card); border-bottom: 1px solid var(--border); 
+    padding: 0 40px; display: flex; align-items: center; justify-content: space-between; 
+    height: 60px; position: sticky; top: 0; z-index: 100; 
+  }
+  .logo { font-family: var(--font-h); font-size: 18px; font-weight: 700; color: var(--ink); flex: 1; }
+  .header-title { font-family: var(--font-h); font-size: 20px; font-weight: 700; text-align: center; flex: 2; }
+  .header-right { flex: 1; text-align: right; font-size: 12px; color: var(--ink-light); }
 
   .stats-bar { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; padding: 24px 40px; }
   .stat-card { 
@@ -30,28 +38,34 @@
   }
   .stat-card:hover { transform: translateY(-2px); }
   
-  /* Svake bakgrunnsfarger på scorecards */
   .stat-card[data-filter="BOOST"] { background: #FEF0ED; }
   .stat-card[data-filter="MONITOR"] { background: #FEF8E7; }
   .stat-card[data-filter="PERFORMER"] { background: #E8F7EF; }
   .stat-card.active { border-color: var(--ink); }
 
-  .stat-label { font-family: var(--font-cond); font-size: 11px; font-weight: 600; text-transform: uppercase; color: var(--ink-light); margin-bottom: 8px; }
+  .stat-label { font-family: var(--font-cond); font-size: 11px; font-weight: 600; text-transform: uppercase; color: var(--ink-light); margin-bottom: 4px; }
+  .stat-desc { font-size: 11px; color: var(--ink-mid); margin-bottom: 8px; font-weight: 400; display: block; }
   .stat-value { font-family: var(--font-h); font-size: 36px; font-weight: 700; line-height: 1; }
 
   .main-content { padding: 0 40px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; align-items: start; }
+  .region-section { margin-bottom: 10px; }
   .region-title { font-family: var(--font-h); font-size: 18px; font-weight: 700; margin-bottom: 12px; color: var(--ink-mid); border-bottom: 1px solid var(--border-mid); padding-bottom: 6px; }
-  .table-container { background: var(--bg-card); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); }
+  
+  .table-container { background: var(--bg-card); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
   table { width: 100%; border-collapse: collapse; }
   th { background: #f9fbfc; padding: 12px 16px; font-family: var(--font-cond); font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--ink-light); text-align: left; }
   td { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 13px; }
   
   .badge { display: inline-block; padding: 3px 10px; border-radius: 999px; font-family: var(--font-cond); font-size: 10px; font-weight: 700; text-transform: uppercase; }
-  .badge-BOOST { background: #E8341A; color: #fff; }
-  .badge-MONITOR { background: #D08C00; color: #fff; }
-  .badge-PERFORMER { background: #1A8A52; color: #fff; }
+  .badge-BOOST { background: var(--boost); color: #fff; }
+  .badge-MONITOR { background: var(--monitor); color: #fff; }
+  .badge-PERFORMER { background: var(--performer); color: #fff; }
 
-  @media (max-width: 1100px) { .main-content { grid-template-columns: 1fr; } .stats-bar { grid-template-columns: repeat(2,1fr); } }
+  @media (max-width: 1100px) { 
+    .main-content { grid-template-columns: 1fr; } 
+    .stats-bar { grid-template-columns: repeat(2,1fr); }
+    .header-title { display: none; } /* Skjuler tittel på små skjermer for plass */
+  }
 </style>
 </head>
 <body>
@@ -59,24 +73,29 @@
 <div id="app">
   <header class="header">
     <div class="logo">Oris Dental</div>
-    <div id="last-updated" style="font-size: 12px; color: var(--ink-light)">Laster...</div>
+    <div class="header-title">Kapasitetsanalyse</div>
+    <div class="header-right" id="last-updated">Laster...</div>
   </header>
 
   <div class="stats-bar">
     <div class="stat-card active" data-filter="all">
       <div class="stat-label">Klinikker analysert</div>
+      <span class="stat-desc">Oversikt over alle klinikker</span>
       <div class="stat-value" id="stat-total">0</div>
     </div>
     <div class="stat-card" data-filter="BOOST">
-      <div class="stat-label">Lav fyllingsgrad</div>
+      <div class="stat-label">Lavt belegg</div>
+      <span class="stat-desc">(Klinikken trenger flere pasienter)</span>
       <div class="stat-value" style="color:var(--boost)" id="stat-boost">0</div>
     </div>
     <div class="stat-card" data-filter="MONITOR">
-      <div class="stat-label">Grei fyllingsgrad</div>
+      <div class="stat-label">Middels belegg</div>
+      <span class="stat-desc">(Følg med på utviklingen)</span>
       <div class="stat-value" style="color:var(--monitor)" id="stat-monitor">0</div>
     </div>
     <div class="stat-card" data-filter="PERFORMER">
-      <div class="stat-label">Høy fyllingsgrad</div>
+      <div class="stat-label">Høyt belegg</div>
+      <span class="stat-desc">(Alt fungerer som det skal)</span>
       <div class="stat-value" style="color:var(--performer)" id="stat-performer">0</div>
     </div>
   </div>
@@ -122,7 +141,11 @@ function render() {
                             <tr>
                                 <td style="font-weight:700;">${c.name}</td>
                                 <td style="text-align:center;">${c.free_hours} t</td>
-                                <td style="text-align:right"><span class="badge badge-${c.signal}">${c.signal === 'BOOST' ? 'Lav' : c.signal === 'MONITOR' ? 'Grei' : 'Høy'}</span></td>
+                                <td style="text-align:right">
+                                    <span class="badge badge-${c.signal}">
+                                        ${c.signal === 'BOOST' ? 'Lavt' : c.signal === 'MONITOR' ? 'Middels' : 'Høyt'}
+                                    </span>
+                                </td>
                             </tr>
                         `).join('')}
                     </tbody>
