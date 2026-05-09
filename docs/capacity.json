@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-09T16:23:30.679753+02:00",
-  "total_clinics": 53,
+  "generated_at": "2026-05-09T16:44:08.305145+02:00",
+  "total_clinics": 61,
   "summary": {
-    "boost_count": 7,
-    "monitor_count": 10,
-    "performer_count": 36
+    "boost_count": 9,
+    "monitor_count": 11,
+    "performer_count": 41
   },
   "clinics": [
     {
@@ -176,6 +176,30 @@
       "signal": "MONITOR"
     },
     {
+      "name": "Løkkeveien",
+      "region": "Sor Vest",
+      "free_hours": 8.5,
+      "signal": "PERFORMER"
+    },
+    {
+      "name": "Lykkegården (Tidligere Trondheim Torg)",
+      "region": "Trondelag",
+      "free_hours": 72.0,
+      "signal": "BOOST"
+    },
+    {
+      "name": "Lysaker",
+      "region": "Akershus",
+      "free_hours": 5.5,
+      "signal": "PERFORMER"
+    },
+    {
+      "name": "Madla",
+      "region": "Sor Vest",
+      "free_hours": 2.5,
+      "signal": "PERFORMER"
+    },
+    {
       "name": "Måløy",
       "region": "Nord Vest",
       "free_hours": 1.0,
@@ -252,6 +276,30 @@
       "region": "Trondelag",
       "free_hours": 36.0,
       "signal": "BOOST"
+    },
+    {
+      "name": "Sandnes",
+      "region": "Sor Vest",
+      "free_hours": 6.5,
+      "signal": "PERFORMER"
+    },
+    {
+      "name": "Sarpsborg",
+      "region": "Ostfold",
+      "free_hours": 19.0,
+      "signal": "MONITOR"
+    },
+    {
+      "name": "Sirkus Shopping",
+      "region": "Trondelag",
+      "free_hours": 36.0,
+      "signal": "BOOST"
+    },
+    {
+      "name": "Skøyen",
+      "region": "Oslo",
+      "free_hours": 6.0,
+      "signal": "PERFORMER"
     },
     {
       "name": "Slemmestad",
