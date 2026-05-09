@@ -48,7 +48,7 @@ def analyze():
         return
 
     results = []
-    print(f"\nStarter analyse av {len(clinics)} klinikker...\n")
+    print(f"\nStarter dyp analyse av {len(clinics)} klinikker med 2s pause...\n")
 
     for i, clinic in enumerate(clinics):
         name = clinic.get("name", "Ukjent")
@@ -56,8 +56,8 @@ def analyze():
         if not opus_id: continue
 
         try:
-            # ØKT PAUSE: 0.8 sekunder per klinikk for å unngå blokkering
-            time.sleep(0.8) 
+            # LANG PAUSE: 2 sekunder for å sikre at vi får med alle
+            time.sleep(2.0) 
             
             s_resp = session.get(f"{API_BASE}/services", params={
                 "clinic_id": opus_id, 
@@ -97,8 +97,7 @@ def analyze():
                 "name": name,
                 "region": region,
                 "free_hours": round(free_hours, 1),
-                "signal": signal,
-                "total_slots": int(free_hours)
+                "signal": signal
             })
             print(f"✓ [{i+1}/{len(clinics)}] {name}: {free_hours}t")
 
@@ -106,7 +105,6 @@ def analyze():
             print(f"  ✗ Feil på {name}: {e}")
             continue
 
-    # Summary MÅ være med for at dashboardet skal fungere
     output = {
         "generated_at": now.isoformat(),
         "total_clinics": len(results),
@@ -121,7 +119,6 @@ def analyze():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
-    
     print(f"\n✓ Ferdig! Lagret {len(results)} klinikker.")
 
 if __name__ == "__main__":

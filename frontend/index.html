@@ -10,62 +10,46 @@
 
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
-    --bg:           #C9E9F3;
-    --bg-card:      #ffffff;
-    --bg-card-alt:  #EEF7FB;
-    --ink:          #263150;
-    --ink-mid:      #4a5a7a;
-    --ink-light:    #7a8faa;
-    --border:       rgba(38,49,80,0.10);
-    --border-mid:   rgba(38,49,80,0.18);
-    --boost:        #E8341A;
-    --monitor:      #D08C00;
-    --performer:    #1A8A52;
-    --font-h:       'Play', sans-serif;
-    --font-body:    'Barlow', sans-serif;
-    --font-cond:    'Barlow Condensed', sans-serif;
-    --radius-lg:    14px;
-    --shadow-sm:    0 1px 3px rgba(38,49,80,0.08);
+    --bg: #C9E9F3; --bg-card: #ffffff;
+    --ink: #263150; --ink-mid: #4a5a7a; --ink-light: #7a8faa;
+    --border: rgba(38,49,80,0.10); --border-mid: rgba(38,49,80,0.18);
+    --boost: #E8341A; --monitor: #D08C00; --performer: #1A8A52;
+    --font-h: 'Play', sans-serif; --font-body: 'Barlow', sans-serif; --font-cond: 'Barlow Condensed', sans-serif;
+    --radius-lg: 14px;
   }
 
-  body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 14px; -webkit-font-smoothing: antialiased; }
-
-  #app { display: none; }
-  #app.visible { display: block; }
-
+  body { background: var(--bg); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
   .header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
   .logo { font-family: var(--font-h); font-size: 18px; font-weight: 700; color: var(--ink); }
 
-  /* Scorecards som knapper */
   .stats-bar { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; padding: 24px 40px; }
   .stat-card { 
-    background: var(--bg-card); border-radius: var(--radius-lg); padding: 20px 24px; 
-    border: 2px solid transparent; box-shadow: var(--shadow-sm); cursor: pointer;
-    transition: all 0.2s ease;
+    background: var(--bg-card); border-radius: var(--radius-lg); padding: 20px 24px; border: 2px solid transparent; 
+    box-shadow: 0 1px 3px rgba(38,49,80,0.08); cursor: pointer; transition: all 0.2s ease;
   }
-  .stat-card:hover { transform: translateY(-2px); border-color: var(--border-mid); }
-  .stat-card.active { border-color: var(--ink); box-shadow: 0 0 0 2px rgba(38,49,80,0.1); }
+  .stat-card:hover { transform: translateY(-2px); }
   
-  .stat-label { font-family: var(--font-cond); font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 8px; }
+  /* Svake bakgrunnsfarger på scorecards */
+  .stat-card[data-filter="BOOST"] { background: #FEF0ED; }
+  .stat-card[data-filter="MONITOR"] { background: #FEF8E7; }
+  .stat-card[data-filter="PERFORMER"] { background: #E8F7EF; }
+  .stat-card.active { border-color: var(--ink); }
+
+  .stat-label { font-family: var(--font-cond); font-size: 11px; font-weight: 600; text-transform: uppercase; color: var(--ink-light); margin-bottom: 8px; }
   .stat-value { font-family: var(--font-h); font-size: 36px; font-weight: 700; line-height: 1; }
 
-  .main-content { padding: 0 40px 40px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; align-items: start; }
+  .main-content { padding: 0 40px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; align-items: start; }
   .region-title { font-family: var(--font-h); font-size: 18px; font-weight: 700; margin-bottom: 12px; color: var(--ink-mid); border-bottom: 1px solid var(--border-mid); padding-bottom: 6px; }
-  
-  .table-container { background: var(--bg-card); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--border); }
-  table { width: 100%; border-collapse: collapse; text-align: left; }
-  th { background: var(--bg-card-alt); padding: 12px 16px; font-family: var(--font-cond); font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--ink-light); }
+  .table-container { background: var(--bg-card); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; }
+  th { background: #f9fbfc; padding: 12px 16px; font-family: var(--font-cond); font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--ink-light); text-align: left; }
   td { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 13px; }
   
-  .badge { display: inline-block; padding: 3px 10px; border-radius: 999px; font-family: var(--font-cond); font-size: 10px; font-weight: 700; text-transform: uppercase; border: 1px solid rgba(0,0,0,0.1); }
-  .badge-BOOST { background: #FEF0ED; color: var(--boost); }
-  .badge-MONITOR { background: #FEF8E7; color: var(--monitor); }
-  .badge-PERFORMER { background: #E8F7EF; color: var(--performer); }
-
-  .controls { padding: 0 40px 20px; }
-  .search-input { padding: 10px 16px; border: 1.5px solid var(--border-mid); border-radius: 8px; width: 300px; outline: none; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 999px; font-family: var(--font-cond); font-size: 10px; font-weight: 700; text-transform: uppercase; }
+  .badge-BOOST { background: #E8341A; color: #fff; }
+  .badge-MONITOR { background: #D08C00; color: #fff; }
+  .badge-PERFORMER { background: #1A8A52; color: #fff; }
 
   @media (max-width: 1100px) { .main-content { grid-template-columns: 1fr; } .stats-bar { grid-template-columns: repeat(2,1fr); } }
 </style>
@@ -79,26 +63,22 @@
   </header>
 
   <div class="stats-bar">
-    <div class="stat-card active" data-filter="all" id="card-all">
+    <div class="stat-card active" data-filter="all">
       <div class="stat-label">Klinikker analysert</div>
       <div class="stat-value" id="stat-total">0</div>
     </div>
-    <div class="stat-card" data-filter="BOOST" id="card-boost">
-      <div class="stat-label">🔴 Boost</div>
+    <div class="stat-card" data-filter="BOOST">
+      <div class="stat-label">Lav fyllingsgrad</div>
       <div class="stat-value" style="color:var(--boost)" id="stat-boost">0</div>
     </div>
-    <div class="stat-card" data-filter="MONITOR" id="card-monitor">
-      <div class="stat-label">🟡 Monitor</div>
+    <div class="stat-card" data-filter="MONITOR">
+      <div class="stat-label">Grei fyllingsgrad</div>
       <div class="stat-value" style="color:var(--monitor)" id="stat-monitor">0</div>
     </div>
-    <div class="stat-card" data-filter="PERFORMER" id="card-performer">
-      <div class="stat-label">🟢 Performer</div>
+    <div class="stat-card" data-filter="PERFORMER">
+      <div class="stat-label">Høy fyllingsgrad</div>
       <div class="stat-value" style="color:var(--performer)" id="stat-performer">0</div>
     </div>
-  </div>
-
-  <div class="controls">
-    <input type="text" id="search" class="search-input" placeholder="Søk klinikk eller region...">
   </div>
 
   <main class="main-content" id="main-content"></main>
@@ -109,15 +89,13 @@ let allClinics = [];
 let activeFilter = 'all';
 
 async function loadData() {
-    const response = await fetch('capacity.json?v=' + Date.now());
-    const data = await response.json();
+    const res = await fetch('capacity.json?v=' + Date.now());
+    const data = await res.json();
     allClinics = data.clinics || [];
-    
     document.getElementById('stat-total').innerText = data.total_clinics;
     document.getElementById('stat-boost').innerText = data.summary.boost_count;
     document.getElementById('stat-monitor').innerText = data.summary.monitor_count;
     document.getElementById('stat-performer').innerText = data.summary.performer_count;
-    
     const d = new Date(data.generated_at);
     document.getElementById('last-updated').innerText = `Sist oppdatert: ${d.toLocaleString('nb-NO')}`;
     render();
@@ -125,15 +103,7 @@ async function loadData() {
 
 function render() {
     const container = document.getElementById('main-content');
-    const search = document.getElementById('search').value.toLowerCase();
-    
-    // Kombinert filtrering
-    const filtered = allClinics.filter(c => {
-        const matchesFilter = activeFilter === 'all' || c.signal === activeFilter;
-        const matchesSearch = c.name.toLowerCase().includes(search) || (c.region || '').toLowerCase().includes(search);
-        return matchesFilter && matchesSearch;
-    });
-
+    const filtered = allClinics.filter(c => activeFilter === 'all' || c.signal === activeFilter);
     const grouped = filtered.reduce((acc, c) => {
         const r = c.region || "Andre";
         if (!acc[r]) acc[r] = [];
@@ -146,13 +116,13 @@ function render() {
             <h2 class="region-title">${region} (${items.length})</h2>
             <div class="table-container">
                 <table>
-                    <thead><tr><th>Klinikk</th><th style="text-align:center">Ledig (14 dgr)</th><th style="text-align:right">Status</th></tr></thead>
+                    <thead><tr><th>Klinikk</th><th style="text-align:center">Ledige timer</th><th style="text-align:right">Status</th></tr></thead>
                     <tbody>
                         ${items.sort((a,b) => b.free_hours - a.free_hours).map(c => `
                             <tr>
                                 <td style="font-weight:700;">${c.name}</td>
                                 <td style="text-align:center;">${c.free_hours} t</td>
-                                <td style="text-align:right"><span class="badge badge-${c.signal}">${c.signal}</span></td>
+                                <td style="text-align:right"><span class="badge badge-${c.signal}">${c.signal === 'BOOST' ? 'Lav' : c.signal === 'MONITOR' ? 'Grei' : 'Høy'}</span></td>
                             </tr>
                         `).join('')}
                     </tbody>
@@ -162,7 +132,6 @@ function render() {
     `).join('');
 }
 
-// Event Listeners for boksene
 document.querySelectorAll('.stat-card').forEach(card => {
     card.addEventListener('click', () => {
         document.querySelectorAll('.stat-card').forEach(c => c.classList.remove('active'));
@@ -172,8 +141,6 @@ document.querySelectorAll('.stat-card').forEach(card => {
     });
 });
 
-document.getElementById('search').addEventListener('input', render);
-document.getElementById('app').classList.add('visible');
 loadData();
 </script>
 </body>
