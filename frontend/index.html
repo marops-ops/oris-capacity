@@ -15,121 +15,62 @@
     --bg:           #C9E9F3;
     --bg-card:      #ffffff;
     --bg-card-alt:  #EEF7FB;
-    --bg-input:     #ffffff;
     --ink:          #263150;
     --ink-mid:      #4a5a7a;
     --ink-light:    #7a8faa;
-    --ink-faint:    #b0c0d0;
     --border:       rgba(38,49,80,0.10);
     --border-mid:   rgba(38,49,80,0.18);
-
     --boost:        #E8341A;
-    --boost-bg:     #FEF0ED;
-    --boost-border: rgba(232,52,26,0.20);
-
     --monitor:      #D08C00;
-    --monitor-bg:   #FEF8E7;
-    --monitor-border: rgba(208,140,0,0.22);
-
     --performer:    #1A8A52;
-    --performer-bg: #E8F7EF;
-    --performer-border: rgba(26,138,82,0.22);
-
-    --shadow-sm:    0 1px 3px rgba(38,49,80,0.08), 0 1px 2px rgba(38,49,80,0.06);
-    --shadow-md:    0 4px 16px rgba(38,49,80,0.10), 0 1px 4px rgba(38,49,80,0.06);
-    --shadow-lg:    0 12px 40px rgba(38,49,80,0.14), 0 2px 8px rgba(38,49,80,0.06);
-
     --font-h:       'Play', sans-serif;
     --font-body:    'Barlow', sans-serif;
     --font-cond:    'Barlow Condensed', sans-serif;
-
-    --radius:       8px;
     --radius-lg:    14px;
-    --radius-xl:    20px;
+    --shadow-sm:    0 1px 3px rgba(38,49,80,0.08);
   }
 
-  body {
-    background: var(--bg);
-    color: var(--ink);
-    font-family: var(--font-body);
-    font-size: 14px;
-    line-height: 1.5;
-    min-height: 100vh;
-    -webkit-font-smoothing: antialiased;
-  }
+  body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 14px; -webkit-font-smoothing: antialiased; }
 
-  /* ── Auth Gate ─────────────────────────────────────────── */
-  #auth-gate {
-    position: fixed; inset: 0; background: var(--bg);
-    display: flex; align-items: center; justify-content: center; z-index: 1000;
-  }
-  #auth-gate.hidden { display: none; }
-  .auth-box { width: 400px; padding: 48px; background: var(--bg-card); border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); border: 1px solid var(--border); }
-  .auth-title { font-family: var(--font-h); font-size: 30px; font-weight: 700; color: var(--ink); margin-bottom: 10px; }
-  .auth-subtitle { font-size: 14px; color: var(--ink-mid); margin-bottom: 32px; }
-  .auth-input { width: 100%; padding: 12px 16px; background: var(--bg-card-alt); border: 1.5px solid var(--border-mid); border-radius: var(--radius); margin-bottom: 12px; outline: none; }
-  .auth-btn { width: 100%; padding: 13px; background: var(--ink); color: #fff; border: none; border-radius: var(--radius); font-weight: 600; cursor: pointer; }
-  .auth-error { color: var(--boost); font-size: 12px; margin-top: 10px; }
-
-  /* ── Header ────────────────────────────────────────────── */
   #app { display: none; }
   #app.visible { display: block; }
-  .header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow-sm); }
-  
-  /* FIX: Logo er nå helt blå (samme farge på Oris og Dental) */
-  .logo { font-family: var(--font-h); font-size: 18px; font-weight: 700; color: var(--ink); letter-spacing: -0.02em; }
 
+  .header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
+  .logo { font-family: var(--font-h); font-size: 18px; font-weight: 700; color: var(--ink); }
+
+  /* Scorecards som knapper */
   .stats-bar { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; padding: 24px 40px; }
-  .stat-card { background: var(--bg-card); border-radius: var(--radius-lg); padding: 20px 24px; border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
+  .stat-card { 
+    background: var(--bg-card); border-radius: var(--radius-lg); padding: 20px 24px; 
+    border: 2px solid transparent; box-shadow: var(--shadow-sm); cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .stat-card:hover { transform: translateY(-2px); border-color: var(--border-mid); }
+  .stat-card.active { border-color: var(--ink); box-shadow: 0 0 0 2px rgba(38,49,80,0.1); }
+  
   .stat-label { font-family: var(--font-cond); font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 8px; }
   .stat-value { font-family: var(--font-h); font-size: 36px; font-weight: 700; line-height: 1; }
 
-  /* ── Main Content - Grid for regioner ─────────────────── */
-  .main-content { 
-    padding: 0 40px 40px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* To kolonner */
-    gap: 30px;
-    align-items: start;
-  }
-
-  .region-section { margin-bottom: 10px; }
+  .main-content { padding: 0 40px 40px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; align-items: start; }
   .region-title { font-family: var(--font-h); font-size: 18px; font-weight: 700; margin-bottom: 12px; color: var(--ink-mid); border-bottom: 1px solid var(--border-mid); padding-bottom: 6px; }
   
   .table-container { background: var(--bg-card); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--border); }
   table { width: 100%; border-collapse: collapse; text-align: left; }
-  th { background: var(--bg-card-alt); padding: 12px 16px; font-family: var(--font-cond); font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--ink-light); letter-spacing: 0.05em; }
+  th { background: var(--bg-card-alt); padding: 12px 16px; font-family: var(--font-cond); font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--ink-light); }
   td { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 13px; }
-  tr:last-child td { border-bottom: none; }
-  tr:hover td { background: #fbfdfe; }
+  
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 999px; font-family: var(--font-cond); font-size: 10px; font-weight: 700; text-transform: uppercase; border: 1px solid rgba(0,0,0,0.1); }
+  .badge-BOOST { background: #FEF0ED; color: var(--boost); }
+  .badge-MONITOR { background: #FEF8E7; color: var(--monitor); }
+  .badge-PERFORMER { background: #E8F7EF; color: var(--performer); }
 
-  .badge { display: inline-block; padding: 3px 10px; border-radius: 999px; font-family: var(--font-cond); font-size: 10px; font-weight: 700; text-transform: uppercase; }
-  .badge-BOOST { background: var(--boost-bg); color: var(--boost); border: 1px solid var(--boost-border); }
-  .badge-MONITOR { background: var(--monitor-bg); color: var(--monitor); border: 1px solid var(--monitor-border); }
-  .badge-PERFORMER { background: var(--performer-bg); color: var(--performer); border: 1px solid var(--performer-border); }
+  .controls { padding: 0 40px 20px; }
+  .search-input { padding: 10px 16px; border: 1.5px solid var(--border-mid); border-radius: 8px; width: 300px; outline: none; }
 
-  .controls { padding: 0 40px 20px; display: flex; gap: 12px; align-items: center; }
-  .search-input { padding: 10px 16px; border: 1.5px solid var(--border-mid); border-radius: var(--radius); width: 300px; outline: none; font-family: var(--font-body); }
-
-  /* Responsivitet for mobil */
-  @media (max-width: 1100px) {
-    .main-content { grid-template-columns: 1fr; }
-    .stats-bar { grid-template-columns: repeat(2,1fr); padding: 16px 20px; }
-    .main-content, .controls { padding: 0 20px; }
-  }
+  @media (max-width: 1100px) { .main-content { grid-template-columns: 1fr; } .stats-bar { grid-template-columns: repeat(2,1fr); } }
 </style>
 </head>
 <body>
-
-<div id="auth-gate">
-  <div class="auth-box">
-    <div class="auth-title">Kapasitetsanalyse</div>
-    <div class="auth-subtitle">Logg inn med jobb-e-post.</div>
-    <input type="email" class="auth-input" id="auth-email" placeholder="navn@orisdental.no">
-    <button class="auth-btn" id="auth-submit">Logg inn</button>
-    <div class="auth-error" id="auth-error"></div>
-  </div>
-</div>
 
 <div id="app">
   <header class="header">
@@ -138,19 +79,19 @@
   </header>
 
   <div class="stats-bar">
-    <div class="stat-card">
+    <div class="stat-card active" data-filter="all" id="card-all">
       <div class="stat-label">Klinikker analysert</div>
       <div class="stat-value" id="stat-total">0</div>
     </div>
-    <div class="stat-card">
+    <div class="stat-card" data-filter="BOOST" id="card-boost">
       <div class="stat-label">🔴 Boost</div>
       <div class="stat-value" style="color:var(--boost)" id="stat-boost">0</div>
     </div>
-    <div class="stat-card">
+    <div class="stat-card" data-filter="MONITOR" id="card-monitor">
       <div class="stat-label">🟡 Monitor</div>
       <div class="stat-value" style="color:var(--monitor)" id="stat-monitor">0</div>
     </div>
-    <div class="stat-card">
+    <div class="stat-card" data-filter="PERFORMER" id="card-performer">
       <div class="stat-label">🟢 Performer</div>
       <div class="stat-value" style="color:var(--performer)" id="stat-performer">0</div>
     </div>
@@ -160,59 +101,38 @@
     <input type="text" id="search" class="search-input" placeholder="Søk klinikk eller region...">
   </div>
 
-  <main class="main-content" id="main-content">
-    </main>
+  <main class="main-content" id="main-content"></main>
 </div>
 
 <script>
-const ALLOWED_DOMAINS = ['amidays.no','amidays.com','orisdental.no','oris.no'];
 let allClinics = [];
-
-function checkAuth() {
-    const session = JSON.parse(sessionStorage.getItem('oris_auth') || '{}');
-    if (session.email && (Date.now() - session.ts < 8 * 3600e3)) { showApp(); }
-}
-
-function showApp() {
-    document.getElementById('auth-gate').classList.add('hidden');
-    document.getElementById('app').classList.add('visible');
-    loadData();
-}
-
-document.getElementById('auth-submit').addEventListener('click', () => {
-    const email = document.getElementById('auth-email').value.trim().toLowerCase();
-    const domain = email.split('@')[1];
-    if (ALLOWED_DOMAINS.includes(domain)) {
-        sessionStorage.setItem('oris_auth', JSON.stringify({email, ts: Date.now()}));
-        showApp();
-    } else {
-        document.getElementById('auth-error').innerText = 'Ingen tilgang.';
-    }
-});
+let activeFilter = 'all';
 
 async function loadData() {
-    try {
-        const response = await fetch('capacity.json?v=' + Date.now());
-        const data = await response.json();
-        allClinics = data.clinics || [];
-        
-        document.getElementById('stat-total').innerText = data.total_clinics || allClinics.length;
-        document.getElementById('stat-boost').innerText = data.summary.boost_count;
-        document.getElementById('stat-monitor').innerText = data.summary.monitor_count;
-        document.getElementById('stat-performer').innerText = data.summary.performer_count;
-        
-        const d = new Date(data.generated_at);
-        document.getElementById('last-updated').innerText = `Sist oppdatert: ${d.toLocaleString('nb-NO')}`;
-        renderTables(allClinics);
-    } catch (e) { console.error(e); }
+    const response = await fetch('capacity.json?v=' + Date.now());
+    const data = await response.json();
+    allClinics = data.clinics || [];
+    
+    document.getElementById('stat-total').innerText = data.total_clinics;
+    document.getElementById('stat-boost').innerText = data.summary.boost_count;
+    document.getElementById('stat-monitor').innerText = data.summary.monitor_count;
+    document.getElementById('stat-performer').innerText = data.summary.performer_count;
+    
+    const d = new Date(data.generated_at);
+    document.getElementById('last-updated').innerText = `Sist oppdatert: ${d.toLocaleString('nb-NO')}`;
+    render();
 }
 
-function renderTables(clinics) {
+function render() {
     const container = document.getElementById('main-content');
-    const query = document.getElementById('search').value.toLowerCase();
-    const filtered = clinics.filter(c => 
-        c.name.toLowerCase().includes(query) || (c.region || '').toLowerCase().includes(query)
-    );
+    const search = document.getElementById('search').value.toLowerCase();
+    
+    // Kombinert filtrering
+    const filtered = allClinics.filter(c => {
+        const matchesFilter = activeFilter === 'all' || c.signal === activeFilter;
+        const matchesSearch = c.name.toLowerCase().includes(search) || (c.region || '').toLowerCase().includes(search);
+        return matchesFilter && matchesSearch;
+    });
 
     const grouped = filtered.reduce((acc, c) => {
         const r = c.region || "Andre";
@@ -223,24 +143,16 @@ function renderTables(clinics) {
 
     container.innerHTML = Object.entries(grouped).map(([region, items]) => `
         <section class="region-section">
-            <h2 class="region-title">${region}</h2>
+            <h2 class="region-title">${region} (${items.length})</h2>
             <div class="table-container">
                 <table>
-                    <thead>
-                        <tr>
-                            <th>Klinikk</th>
-                            <th style="text-align:center">Ledig (14 dgr)</th>
-                            <th style="text-align:right">Status</th>
-                        </tr>
-                    </thead>
+                    <thead><tr><th>Klinikk</th><th style="text-align:center">Ledig (14 dgr)</th><th style="text-align:right">Status</th></tr></thead>
                     <tbody>
                         ${items.sort((a,b) => b.free_hours - a.free_hours).map(c => `
                             <tr>
                                 <td style="font-weight:700;">${c.name}</td>
                                 <td style="text-align:center;">${c.free_hours} t</td>
-                                <td style="text-align:right">
-                                    <span class="badge badge-${c.signal}">${c.signal}</span>
-                                </td>
+                                <td style="text-align:right"><span class="badge badge-${c.signal}">${c.signal}</span></td>
                             </tr>
                         `).join('')}
                     </tbody>
@@ -250,8 +162,19 @@ function renderTables(clinics) {
     `).join('');
 }
 
-document.getElementById('search').addEventListener('input', () => renderTables(allClinics));
-checkAuth();
+// Event Listeners for boksene
+document.querySelectorAll('.stat-card').forEach(card => {
+    card.addEventListener('click', () => {
+        document.querySelectorAll('.stat-card').forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+        activeFilter = card.dataset.filter;
+        render();
+    });
+});
+
+document.getElementById('search').addEventListener('input', render);
+document.getElementById('app').classList.add('visible');
+loadData();
 </script>
 </body>
 </html>
