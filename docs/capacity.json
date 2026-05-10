@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-10T11:18:22.451180+02:00",
+  "generated_at": "2026-05-10T13:02:03.324522+02:00",
   "total_clinics": 60,
   "summary": {
     "boost_count": 9,
@@ -28,7 +28,7 @@
     {
       "name": "Bodø",
       "region": "Nordland",
-      "free_hours": 17.0,
+      "free_hours": 16.0,
       "signal": "MONITOR"
     },
     {
@@ -148,7 +148,7 @@
     {
       "name": "Kolsås",
       "region": "Akershus",
-      "free_hours": 3.5,
+      "free_hours": 4.0,
       "signal": "PERFORMER"
     },
     {
@@ -160,7 +160,7 @@
     {
       "name": "Leutenhaven",
       "region": "Trondelag",
-      "free_hours": 66.0,
+      "free_hours": 65.5,
       "signal": "BOOST"
     },
     {
@@ -292,7 +292,7 @@
     {
       "name": "Skøyen",
       "region": "Oslo",
-      "free_hours": 5.5,
+      "free_hours": 5.0,
       "signal": "PERFORMER"
     },
     {
