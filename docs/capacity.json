@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-09T22:29:07.193376+02:00",
-  "total_clinics": 61,
+  "generated_at": "2026-05-10T11:18:22.451180+02:00",
+  "total_clinics": 60,
   "summary": {
     "boost_count": 9,
-    "monitor_count": 11,
+    "monitor_count": 10,
     "performer_count": 41
   },
   "clinics": [
@@ -22,7 +22,7 @@
     {
       "name": "Arken Åsane",
       "region": "Vestland",
-      "free_hours": 66.5,
+      "free_hours": 65.5,
       "signal": "BOOST"
     },
     {
@@ -36,12 +36,6 @@
       "region": "Vestland",
       "free_hours": 27.0,
       "signal": "MONITOR"
-    },
-    {
-      "name": "Brosundet",
-      "region": "Alesund",
-      "free_hours": 0.5,
-      "signal": "PERFORMER"
     },
     {
       "name": "Bryn",
@@ -106,7 +100,7 @@
     {
       "name": "Harstad Torv",
       "region": "Troms",
-      "free_hours": 0.5,
+      "free_hours": 0.0,
       "signal": "PERFORMER"
     },
     {
@@ -166,7 +160,7 @@
     {
       "name": "Leutenhaven",
       "region": "Trondelag",
-      "free_hours": 66.5,
+      "free_hours": 66.0,
       "signal": "BOOST"
     },
     {
@@ -208,13 +202,13 @@
     {
       "name": "Mo i Rana",
       "region": "Nordland",
-      "free_hours": 41.0,
+      "free_hours": 40.5,
       "signal": "BOOST"
     },
     {
       "name": "Moa",
       "region": "Alesund",
-      "free_hours": 17.0,
+      "free_hours": 16.0,
       "signal": "MONITOR"
     },
     {
@@ -262,8 +256,8 @@
     {
       "name": "Rommen",
       "region": "Oslo",
-      "free_hours": 15.0,
-      "signal": "MONITOR"
+      "free_hours": 14.5,
+      "signal": "PERFORMER"
     },
     {
       "name": "Ryen",
@@ -274,7 +268,7 @@
     {
       "name": "Sanden",
       "region": "Trondelag",
-      "free_hours": 36.0,
+      "free_hours": 35.5,
       "signal": "BOOST"
     },
     {
