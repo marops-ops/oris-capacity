@@ -28,12 +28,17 @@ HEADERS = {
     "Sec-Fetch-Site": "same-site",
 }
 
-EXCLUDE = [
-    "implantat", "implant", "kirurg", "ortodon", "invisalign", "kjeveort",
-    "sting", "ceph", "cbct", "røntgen", "xray", "odontofobi", "spesialist",
-    "rotfylling", "endodon", "pulp", "biopsi", "narkose", "sedering",
-    "henvisning", "bleking", "whitening", "veneer", "fasett", "estetisk",
-    "snorking", "søvn", "tannregulering", "retainer", "ekstraksjon", "visdom",
+# Alle varianter av "tannundersøkelse" på tvers av klinikker
+EXAMINATION_KEYWORDS = [
+    "undersøk", "undersok",
+    "ny pas", "ny-pas", "nypas",
+    " pas ", "-pas-", "pas ",
+    "rutine", "kontroll",
+    "førstegangs", "forstegangs",
+    "first", "new pat",
+    "examination", "konsultasjon",
+    "basis", "standard undersøk",
+    "tannhelsestatus", "min tannhelse",
 ]
 
 def get_bearer_token():
@@ -59,18 +64,24 @@ def get_months(days):
         current = current.replace(month=current.month+1) if current.month < 12 else current.replace(year=current.year+1, month=1)
     return sorted(months)
 
-def is_excluded(name):
-    n = name.lower()
-    return any(k in n for k in EXCLUDE)
-
 def pick_service(services):
-    general = [s for s in services if not is_excluded(s.get("name", ""))]
-    if general:
-        return min(general, key=lambda s: s.get("duration", 999))
-    return min(services, key=lambda s: s.get("duration", 999)) if services else None
+    """
+    Finn tannundersøkelse/ny pasient-service.
+    Velger korteste blant treff.
+    Returnerer None hvis ingen treff — klinikken hoppes over.
+    """
+    candidates = []
+    for s in services:
+        name = s.get("name", "").lower().strip()
+        if any(k in name for k in EXAMINATION_KEYWORDS):
+            candidates.append(s)
+
+    if not candidates:
+        return None
+
+    return min(candidates, key=lambda s: s.get("duration", 999))
 
 def compute_signal(free_hours):
-    """Signal basert på ledige timer — samme logikk som Gemini."""
     if free_hours >= 30:
         return "LAVT"
     if free_hours >= 10:
@@ -103,7 +114,8 @@ def analyze():
         print(f"✗ {e}")
         return
 
-    results = []
+    results      = []
+    no_match     = []
 
     for i, clinic in enumerate(clinics):
         name    = clinic.get("name", "Ukjent")
@@ -132,6 +144,9 @@ def analyze():
 
             service = pick_service(services)
             if not service:
+                all_names = [s.get("name") for s in services]
+                print(f"  ⚠ Ingen undersøkelse funnet. Services: {all_names}")
+                no_match.append({"name": name, "services": all_names})
                 continue
 
             print(f"  → '{service.get('name')}' ({service.get('duration')} min)")
@@ -154,7 +169,9 @@ def analyze():
 
             valid_slots = [
                 s for s in all_slots
-                if now < datetime.fromisoformat(s["time_from"].replace("Z", "+00:00")).astimezone(OSLO_TZ) <= cutoff
+                if now < datetime.fromisoformat(
+                    s["time_from"].replace("Z", "+00:00")
+                ).astimezone(OSLO_TZ) <= cutoff
             ]
 
             free_slots = len(valid_slots)
@@ -177,6 +194,11 @@ def analyze():
         except Exception as e:
             print(f"  ✗ {e}")
             continue
+
+    if no_match:
+        print(f"\n⚠ {len(no_match)} klinikker uten undersøkelse-match:")
+        for c in no_match:
+            print(f"  {c['name']}: {c['services']}")
 
     signal_order = {"LAVT": 0, "MIDDELS": 1, "HØYT": 2}
     results.sort(key=lambda r: (signal_order.get(r["signal"], 3), -r["free_hours"]))
