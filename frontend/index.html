@@ -35,228 +35,101 @@
   html { scroll-behavior: smooth; }
   body { background: var(--bg); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; min-height: 100vh; }
 
-  /* ── Auth Gate ─────────────────────────────────────────── */
   #auth-gate {
-    position: fixed; inset: 0;
-    background: var(--bg);
+    position: fixed; inset: 0; background: var(--bg);
     display: flex; align-items: center; justify-content: center;
     z-index: 1000; transition: opacity 0.3s ease;
   }
   #auth-gate.hidden { opacity: 0; pointer-events: none; }
-
-  .auth-box {
-    width: 380px; padding: 44px;
-    background: var(--bg-card);
-    border-radius: 20px;
-    box-shadow: 0 12px 40px rgba(38,49,80,0.14);
-    border: 1px solid var(--border);
-  }
-  .auth-eyebrow {
-    font-family: var(--font-cond); font-size: 11px; font-weight: 600;
-    letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-light);
-    margin-bottom: 18px; display: flex; align-items: center; gap: 10px;
-  }
-  .auth-eyebrow::before {
-    content: ''; display: inline-block;
-    width: 24px; height: 2px; background: var(--lavt); border-radius: 2px;
-  }
-  .auth-title {
-    font-family: var(--font-h); font-size: 28px; font-weight: 700;
-    color: var(--ink); margin-bottom: 8px; line-height: 1.2;
-  }
-  .auth-subtitle {
-    font-size: 13px; color: var(--ink-mid); margin-bottom: 28px; line-height: 1.6;
-  }
-  .auth-label {
-    display: block; font-size: 12px; font-weight: 600;
-    color: var(--ink-mid); margin-bottom: 6px;
-  }
-  .auth-input {
-    width: 100%; padding: 11px 14px;
-    background: #EEF7FB; border: 1.5px solid var(--border-mid);
-    border-radius: 8px; color: var(--ink);
-    font-family: var(--font-body); font-size: 14px;
-    outline: none; margin-bottom: 12px;
-    transition: border-color 0.2s;
-  }
+  .auth-box { width: 380px; padding: 44px; background: var(--bg-card); border-radius: 20px; box-shadow: 0 12px 40px rgba(38,49,80,0.14); border: 1px solid var(--border); }
+  .auth-eyebrow { font-family: var(--font-cond); font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+  .auth-eyebrow::before { content: ''; display: inline-block; width: 24px; height: 2px; background: var(--lavt); border-radius: 2px; }
+  .auth-title { font-family: var(--font-h); font-size: 28px; font-weight: 700; color: var(--ink); margin-bottom: 8px; line-height: 1.2; }
+  .auth-subtitle { font-size: 13px; color: var(--ink-mid); margin-bottom: 28px; line-height: 1.6; }
+  .auth-label { display: block; font-size: 12px; font-weight: 600; color: var(--ink-mid); margin-bottom: 6px; }
+  .auth-input { width: 100%; padding: 11px 14px; background: #EEF7FB; border: 1.5px solid var(--border-mid); border-radius: 8px; color: var(--ink); font-family: var(--font-body); font-size: 14px; outline: none; margin-bottom: 12px; transition: border-color 0.2s; }
   .auth-input:focus { border-color: var(--ink); }
-  .auth-btn {
-    width: 100%; padding: 12px;
-    background: var(--ink); color: #fff; border: none;
-    border-radius: 8px; font-family: var(--font-body);
-    font-size: 14px; font-weight: 600; cursor: pointer;
-    transition: opacity 0.2s;
-  }
+  .auth-btn { width: 100%; padding: 12px; background: var(--ink); color: #fff; border: none; border-radius: 8px; font-family: var(--font-body); font-size: 14px; font-weight: 600; cursor: pointer; transition: opacity 0.2s; }
   .auth-btn:hover { opacity: 0.88; }
   .auth-error { font-size: 12px; color: var(--lavt); margin-top: 8px; min-height: 18px; font-weight: 500; }
-  .auth-note {
-    font-size: 11px; color: var(--ink-light); margin-top: 20px;
-    padding-top: 16px; border-top: 1px solid var(--border); line-height: 1.6;
-  }
+  .auth-note { font-size: 11px; color: var(--ink-light); margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); line-height: 1.6; }
 
-  /* ── App ───────────────────────────────────────────────── */
   #app { display: none; }
   #app.visible { display: block; animation: fadeIn 0.4s ease both; }
   @keyframes fadeIn { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
 
-  /* ── Header ────────────────────────────────────────────── */
-  .header {
-    background: var(--bg-card);
-    border-bottom: 1px solid var(--border);
-    padding: 0 40px;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 60px; position: sticky; top: 0; z-index: 100;
-    box-shadow: var(--shadow);
-  }
+  .header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow); }
   .logo { font-family: var(--font-h); font-size: 18px; font-weight: 700; color: var(--ink); flex: 1; }
   .header-title { font-family: var(--font-h); font-size: 18px; font-weight: 700; text-align: center; flex: 2; }
   .header-right { flex: 1; text-align: right; font-size: 12px; color: var(--ink-light); display: flex; align-items: center; justify-content: flex-end; gap: 6px; }
   .live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--hoyt); animation: blink 2.5s ease infinite; }
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
 
-  /* ── Stats Bar ─────────────────────────────────────────── */
-  .stats-bar {
-    display: grid; grid-template-columns: repeat(4,1fr);
-    gap: 16px; padding: 24px 40px;
-  }
-  .stat-card {
-    background: var(--bg-card);
-    border-radius: var(--radius-lg);
-    padding: 20px 24px;
-    border: 2px solid transparent;
-    box-shadow: var(--shadow);
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
+  .stats-bar { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; padding: 24px 40px; }
+  .stat-card { background: var(--bg-card); border-radius: var(--radius-lg); padding: 20px 24px; border: 2px solid transparent; box-shadow: var(--shadow); cursor: pointer; transition: all 0.2s ease; }
   .stat-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
   .stat-card[data-filter="LAVT"]    { background: var(--lavt-bg); }
   .stat-card[data-filter="MIDDELS"] { background: var(--middels-bg); }
   .stat-card[data-filter="HØYT"]   { background: var(--hoyt-bg); }
   .stat-card.active { border-color: var(--ink); box-shadow: var(--shadow-md); }
-
-  .stat-label {
-    font-family: var(--font-cond); font-size: 11px; font-weight: 600;
-    text-transform: uppercase; letter-spacing: 0.12em;
-    color: var(--ink-light); margin-bottom: 2px;
-  }
+  .stat-label { font-family: var(--font-cond); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink-light); margin-bottom: 2px; }
   .stat-desc { font-size: 11px; color: var(--ink-mid); margin-bottom: 10px; display: block; font-weight: 400; }
   .stat-value { font-family: var(--font-h); font-size: 36px; font-weight: 700; line-height: 1; color: var(--ink); }
   .stat-value.lavt    { color: var(--lavt); }
   .stat-value.middels { color: var(--middels); }
   .stat-value.hoyt    { color: var(--hoyt); }
 
-  /* ── Search ────────────────────────────────────────────── */
-  .search-bar {
-    padding: 0 40px 20px;
-    display: flex; align-items: center; gap: 12px;
-  }
+  .search-bar { padding: 0 40px 20px; display: flex; align-items: center; gap: 12px; }
   .search-wrap { position: relative; flex: 1; max-width: 320px; }
   .search-icon { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); color: var(--ink-light); pointer-events: none; }
-  .search-input {
-    width: 100%; padding: 9px 14px 9px 36px;
-    background: var(--bg-card); border: 1.5px solid var(--border-mid);
-    border-radius: 8px; color: var(--ink);
-    font-family: var(--font-body); font-size: 13px;
-    outline: none; box-shadow: var(--shadow);
-    transition: border-color 0.2s;
-  }
+  .search-input { width: 100%; padding: 9px 14px 9px 36px; background: var(--bg-card); border: 1.5px solid var(--border-mid); border-radius: 8px; color: var(--ink); font-family: var(--font-body); font-size: 13px; outline: none; box-shadow: var(--shadow); transition: border-color 0.2s; }
   .search-input:focus { border-color: var(--ink); }
   .search-input::placeholder { color: var(--ink-light); }
   .results-count { font-size: 12px; color: var(--ink-light); margin-left: auto; }
 
-  /* ── Main Grid ─────────────────────────────────────────── */
-  .main-content {
-    padding: 0 40px 40px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    align-items: start;
-  }
+  .main-content { padding: 0 40px 40px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; align-items: start; }
 
-  /* ── Region Section ────────────────────────────────────── */
   .region-section { margin-bottom: 10px; }
-  .region-title {
-    font-family: var(--font-h); font-size: 16px; font-weight: 700;
-    margin-bottom: 10px; color: var(--ink-mid);
-    border-bottom: 1px solid var(--border-mid); padding-bottom: 6px;
-    display: flex; align-items: baseline; gap: 8px;
-  }
-  .region-count {
-    font-family: var(--font-cond); font-size: 12px;
-    font-weight: 500; color: var(--ink-light);
-  }
+  .region-title { font-family: var(--font-h); font-size: 16px; font-weight: 700; margin-bottom: 10px; color: var(--ink-mid); border-bottom: 1px solid var(--border-mid); padding-bottom: 6px; display: flex; align-items: baseline; gap: 8px; }
+  .region-count { font-family: var(--font-cond); font-size: 12px; font-weight: 500; color: var(--ink-light); }
 
-  /* ── Table ─────────────────────────────────────────────── */
-  .table-container {
-    background: var(--bg-card); border-radius: var(--radius-lg);
-    overflow: hidden; border: 1px solid var(--border);
-    box-shadow: var(--shadow);
-  }
+  .table-container { background: var(--bg-card); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow); }
   table { width: 100%; border-collapse: collapse; }
-  th {
-    background: #f4f9fb; padding: 11px 16px;
-    font-family: var(--font-cond); font-size: 10px; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.12em;
-    color: var(--ink-light); text-align: left;
-    border-bottom: 1px solid var(--border);
-  }
-  td {
-    padding: 12px 16px; border-bottom: 1px solid var(--border);
-    font-size: 13px; color: var(--ink-mid);
-    transition: background 0.15s;
-  }
+  th { background: #f4f9fb; padding: 11px 16px; font-family: var(--font-cond); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink-light); text-align: left; border-bottom: 1px solid var(--border); }
+  td { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--ink-mid); transition: background 0.15s; }
   tr:last-child td { border-bottom: none; }
-  tr:hover td { background: #f9fbfc; }
+  tr.clinic-row:hover td { background: #f9fbfc; }
   td.name-cell { font-weight: 700; color: var(--ink); }
   td.num-cell { font-family: var(--font-h); font-size: 14px; font-weight: 700; color: var(--ink); text-align: center; }
   td.badge-cell { text-align: right; }
 
-  /* ── Badge ─────────────────────────────────────────────── */
-  .badge {
-    display: inline-block; padding: 3px 10px; border-radius: 999px;
-    font-family: var(--font-cond); font-size: 10px; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.05em;
-  }
-  .badge-LAVT    { background: var(--lavt); color: #fff; }
-  .badge-MIDDELS { background: var(--middels); color: #fff; }
-  .badge-HØYT   { background: var(--hoyt); color: #fff; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 999px; font-family: var(--font-cond); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+  .badge-lavt    { background: var(--lavt); color: #fff; }
+  .badge-middels { background: var(--middels); color: #fff; }
+  .badge-hoyt    { background: var(--hoyt); color: #fff; }
 
-  /* ── Tooltip-rad ───────────────────────────────────────── */
   .detail-row { display: none; }
   .detail-row.open { display: table-row; }
-  .detail-cell {
-    padding: 10px 16px 14px;
-    background: #f4f9fb;
-    font-size: 12px; color: var(--ink-mid);
-    border-bottom: 1px solid var(--border);
-  }
+  .detail-cell { padding: 10px 16px 14px; background: #f4f9fb; font-size: 12px; color: var(--ink-mid); border-bottom: 1px solid var(--border); }
   .detail-grid { display: flex; gap: 24px; flex-wrap: wrap; }
   .detail-item { display: flex; flex-direction: column; gap: 2px; }
   .detail-item-label { font-family: var(--font-cond); font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-light); }
   .detail-item-value { font-family: var(--font-h); font-size: 16px; font-weight: 700; color: var(--ink); }
 
-  /* ── Empty / Loading ───────────────────────────────────── */
   .empty-state { text-align: center; padding: 60px; color: var(--ink-mid); grid-column: 1/-1; }
   .empty-title { font-family: var(--font-h); font-size: 18px; margin-bottom: 8px; }
-  .loading-spinner {
-    width: 28px; height: 28px; border: 2.5px solid var(--border-mid);
-    border-top-color: var(--ink); border-radius: 50%;
-    animation: spin .75s linear infinite; margin: 0 auto 14px;
-  }
+  .loading-spinner { width: 28px; height: 28px; border: 2.5px solid var(--border-mid); border-top-color: var(--ink); border-radius: 50%; animation: spin .75s linear infinite; margin: 0 auto 14px; }
   @keyframes spin { to { transform: rotate(360deg); } }
 
-  /* ── Responsive ────────────────────────────────────────── */
   @media (max-width: 1100px) {
     .main-content { grid-template-columns: 1fr; }
     .stats-bar { grid-template-columns: repeat(2,1fr); }
-
     .header, .stats-bar, .search-bar, .main-content { padding-left: 20px; padding-right: 20px; }
   }
 </style>
 </head>
 <body>
 
-<!-- Auth Gate -->
 <div id="auth-gate">
   <div class="auth-box">
     <div class="auth-eyebrow">Oris Dental × Amidays</div>
@@ -270,7 +143,6 @@
   </div>
 </div>
 
-<!-- App -->
 <div id="app">
   <header class="header">
     <div class="logo">Oris Dental</div>
@@ -321,9 +193,8 @@
 </div>
 
 <script>
-// ── Auth ───────────────────────────────────────────────────────────────────────
 const ALLOWED = ['amidays.no','amidays.com','orisdental.no','oris.no'];
-const SESSION_KEY = 'oris_cap_v3';
+const SESSION_KEY = 'oris_cap_v4';
 
 function isAllowed(email) { return ALLOWED.includes(email.split('@')[1]?.toLowerCase()); }
 function checkSession() {
@@ -350,29 +221,21 @@ if (checkSession()) {
   loadData();
 }
 
-// ── State ──────────────────────────────────────────────────────────────────────
-let allClinics   = [];
-let activeFilter = 'all';
-let searchQuery  = '';
-let openRow      = null;
+let allClinics = [], activeFilter = 'all', searchQuery = '', openRow = null;
 
-// ── Load ───────────────────────────────────────────────────────────────────────
 async function loadData() {
   try {
     const data = await fetch('capacity.json?v='+Date.now()).then(r=>r.json());
     allClinics = data.clinics || [];
-
     document.getElementById('stat-total').textContent   = data.total_clinics ?? allClinics.length;
     document.getElementById('stat-lavt').textContent    = data.summary?.lavt_count ?? 0;
     document.getElementById('stat-middels').textContent = data.summary?.middels_count ?? 0;
     document.getElementById('stat-hoyt').textContent    = data.summary?.hoyt_count ?? 0;
-
     if (data.generated_at) {
       const d = new Date(data.generated_at);
       document.getElementById('last-updated').textContent =
         'Oppdatert ' + d.toLocaleDateString('nb-NO',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
     }
-
     render();
   } catch(e) {
     document.getElementById('main-content').innerHTML =
@@ -380,7 +243,6 @@ async function loadData() {
   }
 }
 
-// ── Render ─────────────────────────────────────────────────────────────────────
 function getFiltered() {
   let list = [...allClinics];
   if (activeFilter !== 'all') list = list.filter(c => c.signal === activeFilter);
@@ -408,7 +270,6 @@ function render() {
     return;
   }
 
-  // Grupper per region
   const grouped = list.reduce((acc, c) => {
     const r = c.region || 'Andre';
     if (!acc[r]) acc[r] = [];
@@ -416,7 +277,6 @@ function render() {
     return acc;
   }, {});
 
-  // Sorter regioner alfabetisk, men "Andre" sist
   const regions = Object.keys(grouped).sort((a,b) => {
     if (a==='Andre') return 1;
     if (b==='Andre') return -1;
@@ -424,7 +284,33 @@ function render() {
   });
 
   container.innerHTML = regions.map(region => {
-    const items = grouped[region].sort((a,b) => a.occupancy_pct - b.occupancy_pct);
+    const items = grouped[region].sort((a,b) => b.free_slots - a.free_slots);
+    const rows = items.map((c, idx) => {
+      const rowId    = 'dr-' + region.replace(/\s/g,'') + '-' + idx;
+      const sigLabel = c.signal === 'LAVT' ? 'Lavt' : c.signal === 'MIDDELS' ? 'Middels' : 'Høyt';
+      const sigClass = c.signal === 'LAVT' ? 'badge-lavt' : c.signal === 'MIDDELS' ? 'badge-middels' : 'badge-hoyt';
+      return `
+        <tr class="clinic-row" data-rowid="${rowId}" style="cursor:pointer">
+          <td class="name-cell">${c.name}</td>
+          <td class="num-cell">${c.free_hours} t</td>
+          <td class="badge-cell"><span class="badge ${sigClass}">${sigLabel}</span></td>
+        </tr>
+        <tr class="detail-row" id="${rowId}">
+          <td class="detail-cell" colspan="3">
+            <div class="detail-grid">
+              <div class="detail-item">
+                <span class="detail-item-label">Ledige slots</span>
+                <span class="detail-item-value">${c.free_slots}</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-item-label">Proxy-service</span>
+                <span class="detail-item-value" style="font-size:13px;font-family:var(--font-body);font-weight:500">${c.service_used}</span>
+              </div>
+            </div>
+          </td>
+        </tr>`;
+    }).join('');
+
     return `
     <section class="region-section">
       <h2 class="region-title">
@@ -433,60 +319,16 @@ function render() {
       </h2>
       <div class="table-container">
         <table>
-          <thead>
-            <tr>
-              <th>Klinikk</th>
-              <th style="text-align:center">Ledige timer</th>
-              
-              <th style="text-align:right">Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${items.map(c => `
-              <tr class="clinic-row" data-slug="${c.slug}" style="cursor:pointer">
-                <td class="name-cell">${c.name}</td>
-                <td class="num-cell">${c.free_hours} t</td>
-                
-                <td class="badge-cell">
-                  <span class="badge badge-${c.signal}">
-                    ${c.signal === 'LAVT' ? 'Lavt' : c.signal === 'MIDDELS' ? 'Middels' : 'Høyt'}
-                  </span>
-                </td>
-              </tr>
-              <tr class="detail-row" id="detail-${c.slug}">
-                <td class="detail-cell" colspan="4">
-                  <div class="detail-grid">
-                    <div class="detail-item">
-                      <span class="detail-item-label">Ledige slots</span>
-                      <span class="detail-item-value">${c.free_slots}</span>
-                    </div>
-                    <div class="detail-item">
-                      <span class="detail-item-label">Behandlere</span>
-                      <span class="detail-item-value">${c.specialists}</span>
-                    </div>
-                    <div class="detail-item">
-                      <span class="detail-item-label">Belegg</span>
-                      <span class="detail-item-value">${c.occupancy_pct}%</span>
-                    </div>
-                    <div class="detail-item">
-                      <span class="detail-item-label">Proxy-service</span>
-                      <span class="detail-item-value" style="font-size:13px;font-family:var(--font-body)">${c.service_used}</span>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-            `).join('')}
-          </tbody>
+          <thead><tr><th>Klinikk</th><th style="text-align:center">Ledige timer</th><th style="text-align:right">Status</th></tr></thead>
+          <tbody>${rows}</tbody>
         </table>
       </div>
     </section>`;
   }).join('');
 
-  // Klikk for å åpne detaljer
   document.querySelectorAll('.clinic-row').forEach(row => {
     row.addEventListener('click', () => {
-      const slug   = row.dataset.slug;
-      const detail = document.getElementById('detail-'+slug);
+      const detail = document.getElementById(row.dataset.rowid);
       if (openRow && openRow !== detail) openRow.classList.remove('open');
       detail.classList.toggle('open');
       openRow = detail.classList.contains('open') ? detail : null;
@@ -494,7 +336,6 @@ function render() {
   });
 }
 
-// ── Stat-card filtrering ───────────────────────────────────────────────────────
 document.querySelectorAll('.stat-card').forEach(card => {
   card.addEventListener('click', () => {
     document.querySelectorAll('.stat-card').forEach(c => c.classList.remove('active'));
@@ -505,7 +346,6 @@ document.querySelectorAll('.stat-card').forEach(card => {
   });
 });
 
-// ── Søk ───────────────────────────────────────────────────────────────────────
 document.getElementById('search').addEventListener('input', e => {
   searchQuery = e.target.value.trim();
   openRow = null;
