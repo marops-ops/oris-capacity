@@ -437,7 +437,7 @@ function render() {
             <tr>
               <th>Klinikk</th>
               <th style="text-align:center">Ledige timer</th>
-              <th style="text-align:center">Belegg</th>
+              
               <th style="text-align:right">Status</th>
             </tr>
           </thead>
@@ -446,7 +446,7 @@ function render() {
               <tr class="clinic-row" data-slug="${c.slug}" style="cursor:pointer">
                 <td class="name-cell">${c.name}</td>
                 <td class="num-cell">${c.free_hours} t</td>
-                <td class="num-cell">${c.occupancy_pct}%</td>
+                
                 <td class="badge-cell">
                   <span class="badge badge-${c.signal}">
                     ${c.signal === 'LAVT' ? 'Lavt' : c.signal === 'MIDDELS' ? 'Middels' : 'Høyt'}
