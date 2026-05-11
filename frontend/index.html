@@ -251,7 +251,6 @@ a.region-link:hover{color:var(--ink)}
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
 <script>
 // ── Auth ───────────────────────────────────────────────────────────────────────
 const PW='x9Kp#mQ2vL', SK='oris_cap_v5', TTL=24*3600e3;
@@ -322,14 +321,29 @@ async function loadData(){
 // ── Map ────────────────────────────────────────────────────────────────────────
 // Map region name from data → GeoJSON fylke name
 const REGION_MAP = {
-  'Oslo':'Oslo','Akershus':'Akershus','Viken':'Viken','Innlandet':'Innlandet',
-  'Vestfold':'Vestfold og Telemark','Telemark':'Vestfold og Telemark',
-  'Agder':'Agder','Rogaland':'Rogaland','Vestland':'Vestland',
-  'Møre Og Romsdal':'Møre og Romsdal','Trondelag':'Trøndelag',
-  'Nordland':'Nordland','Troms':'Troms og Finnmark','Finnmark':'Troms og Finnmark',
-  'Buskerud':'Viken','Ostfold':'Viken','Sor Vest':'Rogaland',
-  'Nord Vest':'Møre og Romsdal','Haugesund':'Rogaland','Stavanger':'Rogaland',
-  'Bryne':'Rogaland','Alesund':'Møre og Romsdal','Andre':'',
+  'Oslo':'Oslo',
+  'Akershus':'Akershus',
+  'Viken':'Viken',
+  'Innlandet':'Innlandet',
+  'Vestfold':'Vestfold og Telemark',
+  'Telemark':'Telemark',
+  'Agder':'Agder',
+  'Rogaland':'Rogaland',
+  'Vestland':'Vestland',
+  'Møre Og Romsdal':'Møre og Romsdal',
+  'Trondelag':'Trøndelag',
+  'Nordland':'Nordland',
+  'Troms':'Troms',
+  'Finnmark':'Finnmark',
+  'Buskerud':'Buskerud',
+  'Ostfold':'Østfold',
+  'Sor Vest':'Rogaland',
+  'Nord Vest':'Møre og Romsdal',
+  'Haugesund':'Rogaland',
+  'Stavanger':'Rogaland',
+  'Bryne':'Rogaland',
+  'Alesund':'Møre og Romsdal',
+  'Andre':'',
 };
 
 // Reverse: GeoJSON fylke name → signal
@@ -357,13 +371,10 @@ let geoData=null, svgMap=null, projection=null, pathGen=null;
 
 async function loadMap(){
   try{
-    // Use a Norway TopoJSON from CDN
-    const topo=await fetch('https://cdn.jsdelivr.net/npm/norway-topojson@1.0.0/norway-counties-2020.json').then(r=>r.json());
-    const features=topojson.feature(topo, Object.values(topo.objects)[0]).features;
-    geoData=features;
+    const geojson=await fetch('norway.geojson').then(r=>r.json());
+    geoData=geojson.features;
     drawMap();
   }catch(e){
-    // Fallback: simple placeholder
     document.getElementById('map-wrap').innerHTML='<div style="padding:40px;text-align:center;font-size:12px;color:var(--ink-light)">Kart ikke tilgjengelig</div>';
   }
 }
@@ -389,17 +400,17 @@ function drawMap(){
     .attr('fill','#dce8ee')
     .attr('stroke','#263150')
     .attr('stroke-width',0.6)
-    .attr('data-name',d=>d.properties.name||d.properties.NAME||'')
+    .attr('data-name',d=>d.properties.name||'')
     .on('click',function(event,d){
-      const name=d.properties.name||d.properties.NAME||'';
+      const name=d.properties.name||'';
       handleFylkeClick(name);
     })
     .on('mouseover',function(event,d){
-      const name=d.properties.name||d.properties.NAME||'';
+      const name=d.properties.name||'';
       if(name!==selectedFylke)d3.select(this).attr('stroke-width',1.5);
     })
     .on('mouseout',function(event,d){
-      const name=d.properties.name||d.properties.NAME||'';
+      const name=d.properties.name||'';
       if(name!==selectedFylke)d3.select(this).attr('stroke-width',0.6);
     });
 
@@ -409,7 +420,7 @@ function drawMap(){
 function updateMapColors(){
   if(!svgMap)return;
   svgMap.selectAll('path.fylke-path').each(function(d){
-    const name=d.properties.name||d.properties.NAME||'';
+    const name=d.properties.name||'';
     const sig=getFylkeSignal(name);
     const isSelected=name===selectedFylke;
     d3.select(this)
