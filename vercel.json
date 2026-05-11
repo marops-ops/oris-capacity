@@ -16,6 +16,10 @@
       "dest": "/docs/capacity.json"
     },
     {
+      "src": "/norway.geojson",
+      "dest": "/docs/norway.geojson"
+    },
+    {
       "src": "/(.*)",
       "dest": "/frontend/$1"
     }
