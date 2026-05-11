@@ -52,7 +52,6 @@
   .auth-btn { width: 100%; padding: 12px; background: var(--ink); color: #fff; border: none; border-radius: 8px; font-family: var(--font-body); font-size: 14px; font-weight: 600; cursor: pointer; transition: opacity 0.2s; }
   .auth-btn:hover { opacity: 0.88; }
   .auth-error { font-size: 12px; color: var(--lavt); margin-top: 8px; min-height: 18px; font-weight: 500; }
-  .auth-note { font-size: 11px; color: var(--ink-light); margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); line-height: 1.6; }
 
   #app { display: none; }
   #app.visible { display: block; animation: fadeIn 0.4s ease both; }
@@ -134,12 +133,11 @@
   <div class="auth-box">
     <div class="auth-eyebrow">Oris Dental × Amidays</div>
     <div class="auth-title">Kapasitetsanalyse</div>
-    <div class="auth-subtitle">Logg inn med din jobb-e-post for å fortsette.</div>
-    <label class="auth-label">E-postadresse</label>
-    <input type="email" class="auth-input" id="auth-email" placeholder="navn@amidays.com" autocomplete="email">
+    <div class="auth-subtitle">Fyll inn passord for å fortsette.</div>
+    <label class="auth-label">Passord</label>
+    <input type="password" class="auth-input" id="auth-password" placeholder="••••••••••" autocomplete="current-password">
     <button class="auth-btn" id="auth-submit">Fortsett</button>
     <div class="auth-error" id="auth-error"></div>
-    <div class="auth-note">Tilgang er begrenset til @amidays.com, @amidays.no og @orisdental.no.</div>
   </div>
 </div>
 
@@ -193,30 +191,35 @@
 </div>
 
 <script>
-const ALLOWED = ['amidays.no','amidays.com','orisdental.no','oris.no'];
-const SESSION_KEY = 'oris_cap_v4';
+const CORRECT_PASSWORD = 'x9Kp#mQ2vL';
+const STORAGE_KEY      = 'oris_cap_auth';
+const TTL              = 24 * 60 * 60 * 1000; // 24 timer
 
-function isAllowed(email) { return ALLOWED.includes(email.split('@')[1]?.toLowerCase()); }
-function checkSession() {
+function checkAuth() {
   try {
-    const s = JSON.parse(sessionStorage.getItem(SESSION_KEY)||'{}');
-    return s.email && isAllowed(s.email) && Date.now()-s.ts < 8*3600e3;
+    const s = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    return s.ok && Date.now() - s.ts < TTL;
   } catch { return false; }
 }
+
 function doAuth() {
-  const email = document.getElementById('auth-email').value.trim().toLowerCase();
-  const err   = document.getElementById('auth-error');
-  if (!email.includes('@')) { err.textContent='Skriv inn en gyldig e-postadresse.'; return; }
-  if (!isAllowed(email))    { err.textContent='Denne e-postadressen har ikke tilgang.'; return; }
-  sessionStorage.setItem(SESSION_KEY, JSON.stringify({email, ts:Date.now()}));
+  const pw  = document.getElementById('auth-password').value;
+  const err = document.getElementById('auth-error');
+  if (pw !== CORRECT_PASSWORD) {
+    err.textContent = 'Feil passord.';
+    return;
+  }
+  localStorage.setItem(STORAGE_KEY, JSON.stringify({ ok: true, ts: Date.now() }));
   document.getElementById('auth-gate').classList.add('hidden');
   document.getElementById('app').classList.add('visible');
   loadData();
 }
+
 document.getElementById('auth-submit').addEventListener('click', doAuth);
-document.getElementById('auth-email').addEventListener('keydown', e => { if(e.key==='Enter') doAuth(); });
-if (checkSession()) {
-  document.getElementById('auth-gate').style.display='none';
+document.getElementById('auth-password').addEventListener('keydown', e => { if (e.key === 'Enter') doAuth(); });
+
+if (checkAuth()) {
+  document.getElementById('auth-gate').style.display = 'none';
   document.getElementById('app').classList.add('visible');
   loadData();
 }
@@ -225,7 +228,7 @@ let allClinics = [], activeFilter = 'all', searchQuery = '', openRow = null;
 
 async function loadData() {
   try {
-    const data = await fetch('capacity.json?v='+Date.now()).then(r=>r.json());
+    const data = await fetch('capacity.json?v=' + Date.now()).then(r => r.json());
     allClinics = data.clinics || [];
     document.getElementById('stat-total').textContent   = data.total_clinics ?? allClinics.length;
     document.getElementById('stat-lavt').textContent    = data.summary?.lavt_count ?? 0;
@@ -234,7 +237,7 @@ async function loadData() {
     if (data.generated_at) {
       const d = new Date(data.generated_at);
       document.getElementById('last-updated').textContent =
-        'Oppdatert ' + d.toLocaleDateString('nb-NO',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
+        'Oppdatert ' + d.toLocaleDateString('nb-NO', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
     }
     render();
   } catch(e) {
@@ -284,9 +287,9 @@ function render() {
   });
 
   container.innerHTML = regions.map(region => {
-    const items = grouped[region].sort((a,b) => b.free_slots - a.free_slots);
-    const rows = items.map((c, idx) => {
-      const rowId    = 'dr-' + region.replace(/\s/g,'') + '-' + idx;
+    const items = grouped[region].sort((a,b) => b.free_hours - a.free_hours);
+    const rows  = items.map((c, idx) => {
+      const rowId    = 'dr-' + region.replace(/\W/g,'') + '-' + idx;
       const sigLabel = c.signal === 'LAVT' ? 'Lavt' : c.signal === 'MIDDELS' ? 'Middels' : 'Høyt';
       const sigClass = c.signal === 'LAVT' ? 'badge-lavt' : c.signal === 'MIDDELS' ? 'badge-middels' : 'badge-hoyt';
       return `
