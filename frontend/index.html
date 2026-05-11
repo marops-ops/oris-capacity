@@ -13,9 +13,9 @@
   --bg:#C9E9F3;--bg-card:#fff;--bg-alt:#EEF7FB;
   --ink:#263150;--ink-mid:#4a5a7a;--ink-light:#7a8faa;--ink-faint:#b0c0d0;
   --border:rgba(38,49,80,.10);--border-mid:rgba(38,49,80,.18);
-  --lavt:#E8341A;--lavt-bg:#FEF0ED;--lavt-border:rgba(232,52,26,.2);
-  --middels:#D08C00;--middels-bg:#FEF8E7;--middels-border:rgba(208,140,0,.22);
-  --hoyt:#1A8A52;--hoyt-bg:#E8F7EF;--hoyt-border:rgba(26,138,82,.22);
+  --lavt:#E8341A;--lavt-bg:#FEF0ED;
+  --middels:#D08C00;--middels-bg:#FEF8E7;
+  --hoyt:#1A8A52;--hoyt-bg:#E8F7EF;
   --font-h:'Play',sans-serif;--font-body:'Barlow',sans-serif;--font-cond:'Barlow Condensed',sans-serif;
   --r:8px;--rl:14px;--rx:20px;
   --sh:0 1px 3px rgba(38,49,80,.08);--shm:0 4px 16px rgba(38,49,80,.10);--shl:0 12px 40px rgba(38,49,80,.14)
@@ -23,7 +23,6 @@
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:14px;line-height:1.5;min-height:100vh;-webkit-font-smoothing:antialiased}
 
-/* AUTH */
 #auth-gate{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:1000;transition:opacity .3s}
 #auth-gate.hidden{opacity:0;pointer-events:none}
 .auth-box{width:380px;padding:44px;background:var(--bg-card);border-radius:var(--rx);box-shadow:var(--shl);border:1px solid var(--border)}
@@ -38,12 +37,10 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-siz
 .auth-btn:hover{opacity:.88}
 .auth-error{font-size:12px;color:var(--lavt);margin-top:8px;min-height:18px;font-weight:500}
 
-/* APP */
 #app{display:none}
 #app.visible{display:block;animation:fadeIn .4s ease both}
 @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 
-/* HEADER */
 .header{background:var(--bg-card);border-bottom:1px solid var(--border);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:60px;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
 .logo{font-family:var(--font-h);font-size:18px;font-weight:700;color:var(--ink);flex:1}
 .header-title{font-family:var(--font-h);font-size:18px;font-weight:700;text-align:center;flex:2}
@@ -51,15 +48,13 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-siz
 .live-dot{width:7px;height:7px;border-radius:50%;background:var(--hoyt);animation:blink 2.5s ease infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 
-/* TABS */
-.tabs{display:flex;gap:0;padding:0 40px;background:var(--bg-card);border-bottom:1px solid var(--border)}
+.tabs{display:flex;padding:0 40px;background:var(--bg-card);border-bottom:1px solid var(--border)}
 .tab-btn{padding:14px 24px;font-family:var(--font-body);font-size:13px;font-weight:600;color:var(--ink-light);background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;transition:all .15s;margin-bottom:-1px}
 .tab-btn:hover{color:var(--ink)}
 .tab-btn.active{color:var(--ink);border-bottom-color:var(--ink)}
 .tab-panel{display:none}
 .tab-panel.active{display:block}
 
-/* STATS BAR */
 .stats-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:24px 40px}
 .stat-card{background:var(--bg-card);border-radius:var(--rl);padding:20px 24px;border:2px solid transparent;box-shadow:var(--sh);cursor:pointer;transition:all .2s}
 .stat-card:hover{transform:translateY(-2px);box-shadow:var(--shm)}
@@ -74,7 +69,6 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-siz
 .stat-value.middels{color:var(--middels)}
 .stat-value.hoyt{color:var(--hoyt)}
 
-/* SEARCH */
 .search-bar{padding:0 40px 20px;display:flex;align-items:center;gap:12px}
 .search-wrap{position:relative;flex:1;max-width:320px}
 .search-icon{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--ink-light);pointer-events:none}
@@ -83,22 +77,32 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-siz
 .search-input::placeholder{color:var(--ink-light)}
 .results-count{font-size:12px;color:var(--ink-light);margin-left:auto}
 
-/* TAB 1 — PRIORITET */
-.priority-layout{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:0 40px 40px;align-items:start}
-.priority-tables{}
+.priority-layout{display:grid;grid-template-columns:1fr 420px;gap:24px;padding:0 40px 40px;align-items:start}
 .priority-section{margin-bottom:20px}
 .priority-section-title{font-family:var(--font-h);font-size:15px;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:10px}
-.priority-section-title .dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
 .dot-lavt{background:var(--lavt)}
 .dot-middels{background:var(--middels)}
 
-/* TAB 2 — REGIONSOVERSIKT */
+.map-panel{position:sticky;top:84px}
+.map-container{background:var(--bg-card);border-radius:var(--rl);border:1px solid var(--border);box-shadow:var(--sh);overflow:hidden}
+.map-header{padding:16px 20px 10px;border-bottom:1px solid var(--border)}
+.map-title{font-family:var(--font-h);font-size:13px;font-weight:700;color:var(--ink)}
+.map-subtitle{font-size:11px;color:var(--ink-light);margin-top:2px}
+.map-legend{display:flex;gap:14px;padding:10px 20px;flex-wrap:wrap;border-top:1px solid var(--border)}
+.legend-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--ink-mid)}
+.legend-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.map-tooltip{padding:12px 16px;border-top:1px solid var(--border);min-height:56px}
+.map-tooltip-name{font-family:var(--font-h);font-size:13px;font-weight:700;color:var(--ink);margin-bottom:4px}
+.map-tooltip-stats{display:flex;gap:14px;flex-wrap:wrap}
+.map-tooltip-stat{font-size:11px;color:var(--ink-mid)}
+.map-tooltip-stat strong{font-weight:700}
+
 .region-layout{padding:0 40px 40px;display:grid;grid-template-columns:repeat(2,1fr);gap:30px;align-items:start}
 .region-section{margin-bottom:10px}
 .region-title{font-family:var(--font-h);font-size:16px;font-weight:700;margin-bottom:10px;color:var(--ink-mid);border-bottom:1px solid var(--border-mid);padding-bottom:6px;display:flex;align-items:baseline;gap:8px}
 .region-count{font-family:var(--font-cond);font-size:12px;font-weight:500;color:var(--ink-light)}
 
-/* TABLE */
 .table-container{background:var(--bg-card);border-radius:var(--rl);overflow:hidden;border:1px solid var(--border);box-shadow:var(--sh)}
 table{width:100%;border-collapse:collapse}
 th{background:#f4f9fb;padding:11px 16px;font-family:var(--font-cond);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-light);text-align:left;border-bottom:1px solid var(--border)}
@@ -109,14 +113,14 @@ td.name-cell{font-weight:700;color:var(--ink)}
 td.num-cell{font-family:var(--font-h);font-size:14px;font-weight:700;color:var(--ink);text-align:center}
 td.badge-cell{text-align:right}
 td.region-cell{font-size:12px;color:var(--ink-light)}
+a.region-link{color:var(--ink-light);text-decoration:underline;text-decoration-color:var(--ink-faint);cursor:pointer;background:none;border:none;font-family:var(--font-body);font-size:12px;padding:0}
+a.region-link:hover{color:var(--ink)}
 
-/* BADGES */
 .badge{display:inline-block;padding:3px 10px;border-radius:999px;font-family:var(--font-cond);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
 .badge-lavt{background:var(--lavt);color:#fff}
 .badge-middels{background:var(--middels);color:#fff}
 .badge-hoyt{background:var(--hoyt);color:#fff}
 
-/* DETAIL ROW */
 .detail-row{display:none}
 .detail-row.open{display:table-row}
 .detail-cell{padding:10px 16px 14px;background:#f4f9fb;font-size:12px;color:var(--ink-mid);border-bottom:1px solid var(--border)}
@@ -125,40 +129,28 @@ td.region-cell{font-size:12px;color:var(--ink-light)}
 .detail-item-label{font-family:var(--font-cond);font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-light)}
 .detail-item-value{font-family:var(--font-h);font-size:16px;font-weight:700;color:var(--ink)}
 
-/* MAP */
-.map-panel{position:sticky;top:84px}
-.map-container{background:var(--bg-card);border-radius:var(--rl);border:1px solid var(--border);box-shadow:var(--sh);overflow:hidden}
-.map-header{padding:16px 20px 12px;border-bottom:1px solid var(--border)}
-.map-title{font-family:var(--font-h);font-size:14px;font-weight:700;color:var(--ink)}
-.map-subtitle{font-size:12px;color:var(--ink-light);margin-top:2px}
-.map-svg-wrap{padding:16px}
-.map-legend{display:flex;gap:16px;padding:0 20px 16px;flex-wrap:wrap}
-.legend-item{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--ink-mid)}
-.legend-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
-.map-tooltip{padding:12px 16px;border-top:1px solid var(--border);min-height:60px}
-.map-tooltip-name{font-family:var(--font-h);font-size:13px;font-weight:700;color:var(--ink);margin-bottom:4px}
-.map-tooltip-stats{display:flex;gap:16px;flex-wrap:wrap}
-.map-tooltip-stat{font-size:11px;color:var(--ink-mid)}
-.map-tooltip-stat strong{font-weight:700}
-
-/* STATES */
 .empty-state{text-align:center;padding:60px;color:var(--ink-mid);grid-column:1/-1}
 .empty-title{font-family:var(--font-h);font-size:18px;margin-bottom:8px}
 .loading-spinner{width:28px;height:28px;border:2.5px solid var(--border-mid);border-top-color:var(--ink);border-radius:50%;animation:spin .75s linear infinite;margin:0 auto 14px}
 @keyframes spin{to{transform:rotate(360deg)}}
 
-/* RESPONSIVE */
+/* fylke path hover */
+.fylke-path{transition:opacity .2s,stroke-width .2s;cursor:pointer}
+.fylke-path:hover{opacity:.85}
+
+@media(max-width:1200px){
+  .priority-layout{grid-template-columns:1fr}
+  .map-panel{position:static}
+}
 @media(max-width:1100px){
-  .priority-layout,.region-layout{grid-template-columns:1fr}
+  .region-layout{grid-template-columns:1fr}
   .stats-bar{grid-template-columns:repeat(2,1fr)}
   .header,.tabs,.stats-bar,.search-bar,.priority-layout,.region-layout{padding-left:20px;padding-right:20px}
-  .map-panel{position:static}
 }
 </style>
 </head>
 <body>
 
-<!-- AUTH -->
 <div id="auth-gate">
   <div class="auth-box">
     <div class="auth-eyebrow">Oris Dental × Amidays</div>
@@ -171,7 +163,6 @@ td.region-cell{font-size:12px;color:var(--ink-light)}
   </div>
 </div>
 
-<!-- APP -->
 <div id="app">
   <header class="header">
     <div class="logo">Oris Dental</div>
@@ -187,7 +178,6 @@ td.region-cell{font-size:12px;color:var(--ink-light)}
     <button class="tab-btn" data-tab="regioner">Oversikt per fylke</button>
   </div>
 
-  <!-- STATS -->
   <div class="stats-bar">
     <div class="stat-card active" data-filter="all">
       <div class="stat-label">Klinikker analysert</div>
@@ -211,7 +201,7 @@ td.region-cell{font-size:12px;color:var(--ink-light)}
     </div>
   </div>
 
-  <!-- TAB 1: PRIORITET -->
+  <!-- TAB 1 -->
   <div class="tab-panel active" id="tab-prioritet">
     <div class="search-bar">
       <div class="search-wrap">
@@ -221,33 +211,31 @@ td.region-cell{font-size:12px;color:var(--ink-light)}
       <span class="results-count" id="results-count-p"></span>
     </div>
     <div class="priority-layout">
-      <div class="priority-tables" id="priority-tables">
+      <div id="priority-tables">
         <div class="loading-spinner" style="margin:60px auto"></div>
       </div>
       <div class="map-panel">
         <div class="map-container">
           <div class="map-header">
-            <div class="map-title">Geografisk oversikt</div>
-            <div class="map-subtitle" id="map-subtitle">Klikk på et fylke i tabellen for å se detaljer</div>
+            <div class="map-title">Norge — kapasitetskart</div>
+            <div class="map-subtitle" id="map-subtitle">Klikk på et fylkenavn i tabellen</div>
           </div>
-          <div class="map-svg-wrap">
-            <svg id="norway-map" viewBox="0 0 300 500" width="100%" style="display:block"></svg>
-          </div>
+          <div id="map-wrap" style="padding:8px 12px"></div>
           <div class="map-legend">
             <div class="legend-item"><div class="legend-dot" style="background:var(--lavt)"></div>Lavt belegg</div>
             <div class="legend-item"><div class="legend-dot" style="background:var(--middels)"></div>Middels</div>
             <div class="legend-item"><div class="legend-dot" style="background:var(--hoyt)"></div>Høyt belegg</div>
-            <div class="legend-item"><div class="legend-dot" style="background:var(--ink-faint)"></div>Ingen data</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#dce8ee"></div>Ingen data</div>
           </div>
           <div class="map-tooltip" id="map-tooltip">
-            <div style="font-size:12px;color:var(--ink-light)">Klikk på et fylkenavn i tabellen for å se detaljer</div>
+            <div style="font-size:12px;color:var(--ink-light)">Klikk på et fylkenavn for å se detaljer</div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- TAB 2: REGIONER -->
+  <!-- TAB 2 -->
   <div class="tab-panel" id="tab-regioner">
     <div class="search-bar">
       <div class="search-wrap">
@@ -262,9 +250,11 @@ td.region-cell{font-size:12px;color:var(--ink-light)}
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
 <script>
 // ── Auth ───────────────────────────────────────────────────────────────────────
-const PW = 'x9Kp#mQ2vL', SK = 'oris_cap_v5', TTL = 24*3600e3;
+const PW='x9Kp#mQ2vL', SK='oris_cap_v5', TTL=24*3600e3;
 function checkAuth(){try{const s=JSON.parse(localStorage.getItem(SK)||'{}');return s.ok&&Date.now()-s.ts<TTL}catch{return false}}
 function doAuth(){
   const pw=document.getElementById('auth-password').value;
@@ -273,14 +263,14 @@ function doAuth(){
   localStorage.setItem(SK,JSON.stringify({ok:true,ts:Date.now()}));
   document.getElementById('auth-gate').classList.add('hidden');
   document.getElementById('app').classList.add('visible');
-  loadData();
+  init();
 }
 document.getElementById('auth-submit').addEventListener('click',doAuth);
 document.getElementById('auth-password').addEventListener('keydown',e=>{if(e.key==='Enter')doAuth()});
-if(checkAuth()){document.getElementById('auth-gate').style.display='none';document.getElementById('app').classList.add('visible');loadData()}
+if(checkAuth()){document.getElementById('auth-gate').style.display='none';document.getElementById('app').classList.add('visible');init()}
 
 // ── State ──────────────────────────────────────────────────────────────────────
-let allClinics=[], activeFilter='all', searchP='', searchR='', openRow=null, selectedRegion=null;
+let allClinics=[], activeFilter='all', searchP='', searchR='', openRow=null, selectedFylke=null;
 
 // ── Tabs ───────────────────────────────────────────────────────────────────────
 document.querySelectorAll('.tab-btn').forEach(btn=>{
@@ -292,7 +282,6 @@ document.querySelectorAll('.tab-btn').forEach(btn=>{
   });
 });
 
-// ── Stat cards ─────────────────────────────────────────────────────────────────
 document.querySelectorAll('.stat-card').forEach(card=>{
   card.addEventListener('click',()=>{
     document.querySelectorAll('.stat-card').forEach(c=>c.classList.remove('active'));
@@ -301,10 +290,15 @@ document.querySelectorAll('.stat-card').forEach(card=>{
     openRow=null;
     renderPriority();
     renderRegions();
+    updateMapColors();
   });
 });
 
-// ── Load data ──────────────────────────────────────────────────────────────────
+// ── Init ───────────────────────────────────────────────────────────────────────
+async function init(){
+  await Promise.all([loadData(), loadMap()]);
+}
+
 async function loadData(){
   try{
     const data=await fetch('capacity.json?v='+Date.now()).then(r=>r.json());
@@ -319,71 +313,197 @@ async function loadData(){
     }
     renderPriority();
     renderRegions();
-    renderMap();
+    updateMapColors();
   }catch(e){
-    document.getElementById('priority-tables').innerHTML='<p style="color:var(--ink-mid);padding:40px">Kunne ikke laste data. Prøv igjen.</p>';
+    document.getElementById('priority-tables').innerHTML='<p style="color:var(--ink-mid);padding:40px">Kunne ikke laste data.</p>';
   }
 }
 
-// ── Filter helpers ─────────────────────────────────────────────────────────────
+// ── Map ────────────────────────────────────────────────────────────────────────
+// Map region name from data → GeoJSON fylke name
+const REGION_MAP = {
+  'Oslo':'Oslo','Akershus':'Akershus','Viken':'Viken','Innlandet':'Innlandet',
+  'Vestfold':'Vestfold og Telemark','Telemark':'Vestfold og Telemark',
+  'Agder':'Agder','Rogaland':'Rogaland','Vestland':'Vestland',
+  'Møre Og Romsdal':'Møre og Romsdal','Trondelag':'Trøndelag',
+  'Nordland':'Nordland','Troms':'Troms og Finnmark','Finnmark':'Troms og Finnmark',
+  'Buskerud':'Viken','Ostfold':'Viken','Sor Vest':'Rogaland',
+  'Nord Vest':'Møre og Romsdal','Haugesund':'Rogaland','Stavanger':'Rogaland',
+  'Bryne':'Rogaland','Alesund':'Møre og Romsdal','Andre':'',
+};
+
+// Reverse: GeoJSON fylke name → signal
+function getFylkeSignal(fylkeName){
+  const clinics=allClinics.filter(c=>{
+    const mapped=REGION_MAP[c.region||'']||'';
+    return mapped===fylkeName;
+  });
+  if(!clinics.length)return null;
+  const lavt=clinics.filter(c=>c.signal==='LAVT').length;
+  const middels=clinics.filter(c=>c.signal==='MIDDELS').length;
+  const total=clinics.length;
+  const lavtPct=Math.round(lavt/total*100);
+  if(lavtPct>=50)return{sig:'LAVT',fill:'#fde8e4',stroke:var_lavt(),lavt,middels,hoyt:total-lavt-middels,total,lavtPct};
+  if(lavtPct>=20||(middels/total)>=0.4)return{sig:'MIDDELS',fill:'#fef3d9',stroke:var_middels(),lavt,middels,hoyt:total-lavt-middels,total,lavtPct};
+  if(total>0)return{sig:'HØYT',fill:'#dff2e8',stroke:var_hoyt(),lavt,middels,hoyt:total-lavt-middels,total,lavtPct};
+  return null;
+}
+
+function var_lavt(){return getComputedStyle(document.documentElement).getPropertyValue('--lavt').trim()||'#E8341A'}
+function var_middels(){return getComputedStyle(document.documentElement).getPropertyValue('--middels').trim()||'#D08C00'}
+function var_hoyt(){return getComputedStyle(document.documentElement).getPropertyValue('--hoyt').trim()||'#1A8A52'}
+
+let geoData=null, svgMap=null, projection=null, pathGen=null;
+
+async function loadMap(){
+  try{
+    // Use a Norway TopoJSON from CDN
+    const topo=await fetch('https://cdn.jsdelivr.net/npm/norway-topojson@1.0.0/norway-counties-2020.json').then(r=>r.json());
+    const features=topojson.feature(topo, Object.values(topo.objects)[0]).features;
+    geoData=features;
+    drawMap();
+  }catch(e){
+    // Fallback: simple placeholder
+    document.getElementById('map-wrap').innerHTML='<div style="padding:40px;text-align:center;font-size:12px;color:var(--ink-light)">Kart ikke tilgjengelig</div>';
+  }
+}
+
+function drawMap(){
+  if(!geoData)return;
+  const wrap=document.getElementById('map-wrap');
+  wrap.innerHTML='';
+  const W=380, H=520;
+  projection=d3.geoMercator().fitSize([W,H],{type:'FeatureCollection',features:geoData});
+  pathGen=d3.geoPath().projection(projection);
+
+  svgMap=d3.select('#map-wrap').append('svg')
+    .attr('viewBox',`0 0 ${W} ${H}`)
+    .attr('width','100%')
+    .style('display','block');
+
+  svgMap.selectAll('path.fylke-path')
+    .data(geoData)
+    .enter().append('path')
+    .attr('class','fylke-path')
+    .attr('d',pathGen)
+    .attr('fill','#dce8ee')
+    .attr('stroke','#263150')
+    .attr('stroke-width',0.6)
+    .attr('data-name',d=>d.properties.name||d.properties.NAME||'')
+    .on('click',function(event,d){
+      const name=d.properties.name||d.properties.NAME||'';
+      handleFylkeClick(name);
+    })
+    .on('mouseover',function(event,d){
+      const name=d.properties.name||d.properties.NAME||'';
+      if(name!==selectedFylke)d3.select(this).attr('stroke-width',1.5);
+    })
+    .on('mouseout',function(event,d){
+      const name=d.properties.name||d.properties.NAME||'';
+      if(name!==selectedFylke)d3.select(this).attr('stroke-width',0.6);
+    });
+
+  updateMapColors();
+}
+
+function updateMapColors(){
+  if(!svgMap)return;
+  svgMap.selectAll('path.fylke-path').each(function(d){
+    const name=d.properties.name||d.properties.NAME||'';
+    const sig=getFylkeSignal(name);
+    const isSelected=name===selectedFylke;
+    d3.select(this)
+      .attr('fill',sig?sig.fill:'#dce8ee')
+      .attr('stroke',isSelected?'#263150':'#263150')
+      .attr('stroke-width',isSelected?2:0.6)
+      .attr('opacity',selectedFylke&&!isSelected?0.5:1);
+  });
+}
+
+function handleFylkeClick(fylkeName){
+  if(selectedFylke===fylkeName){
+    selectedFylke=null;
+    document.getElementById('map-subtitle').textContent='Klikk på et fylkenavn i tabellen';
+    document.getElementById('map-tooltip').innerHTML='<div style="font-size:12px;color:var(--ink-light)">Klikk på et fylkenavn for å se detaljer</div>';
+  }else{
+    selectedFylke=fylkeName;
+    document.getElementById('map-subtitle').textContent=fylkeName;
+    updateMapTooltip(fylkeName);
+  }
+  updateMapColors();
+}
+
+function updateMapTooltip(fylkeName){
+  const clinics=allClinics.filter(c=>{
+    const mapped=REGION_MAP[c.region||'']||'';
+    return mapped===fylkeName;
+  });
+  const t=document.getElementById('map-tooltip');
+  if(!clinics.length){
+    t.innerHTML=`<div class="map-tooltip-name">${fylkeName}</div><div style="font-size:12px;color:var(--ink-light)">Ingen klinikker i datasettet</div>`;
+    return;
+  }
+  const lavt=clinics.filter(c=>c.signal==='LAVT');
+  const middels=clinics.filter(c=>c.signal==='MIDDELS');
+  const hoyt=clinics.filter(c=>c.signal==='HØYT');
+  t.innerHTML=`<div class="map-tooltip-name">${fylkeName}</div>
+    <div class="map-tooltip-stats" style="margin-bottom:6px">
+      <div class="map-tooltip-stat"><strong style="color:var(--lavt)">${lavt.length}</strong> lavt</div>
+      <div class="map-tooltip-stat"><strong style="color:var(--middels)">${middels.length}</strong> middels</div>
+      <div class="map-tooltip-stat"><strong style="color:var(--hoyt)">${hoyt.length}</strong> høyt</div>
+    </div>
+    ${lavt.length?`<div style="font-size:11px;color:var(--lavt);line-height:1.6">${lavt.map(c=>c.name).join(' · ')}</div>`:''}`;
+}
+
+// ── Priority render ────────────────────────────────────────────────────────────
 function getFiltered(search){
   let list=[...allClinics];
   if(activeFilter!=='all')list=list.filter(c=>c.signal===activeFilter);
-  if(search){
-    const q=search.toLowerCase();
-    list=list.filter(c=>c.name.toLowerCase().includes(q)||(c.region||'').toLowerCase().includes(q)||(c.city||'').toLowerCase().includes(q));
-  }
+  if(search){const q=search.toLowerCase();list=list.filter(c=>c.name.toLowerCase().includes(q)||(c.region||'').toLowerCase().includes(q)||(c.city||'').toLowerCase().includes(q))}
   return list;
 }
 
 function sigLabel(s){return s==='LAVT'?'Lavt':s==='MIDDELS'?'Middels':'Høyt'}
-function sigClass(s){return s==='LAVT'?'badge-lavt':s==='MIDDELS'?'badge-middels':'badge-hoyt'}
+function sigCls(s){return s==='LAVT'?'badge-lavt':s==='MIDDELS'?'badge-middels':'badge-hoyt'}
 
-// ── Priority tab ───────────────────────────────────────────────────────────────
 function renderPriority(){
   const list=getFiltered(searchP);
   document.getElementById('results-count-p').textContent=list.length+' klinikker';
   const lavt=list.filter(c=>c.signal==='LAVT').sort((a,b)=>b.free_hours-a.free_hours);
   const middels=list.filter(c=>c.signal==='MIDDELS').sort((a,b)=>b.free_hours-a.free_hours);
-
   let html='';
-  if(lavt.length){
-    html+=`<div class="priority-section">
-      <div class="priority-section-title"><div class="dot dot-lavt"></div>Lavt belegg — ${lavt.length} klinikker</div>
-      <div class="table-container"><table>
-        <thead><tr><th>Klinikk</th><th>Fylke</th><th style="text-align:center">Ledige timer</th><th style="text-align:right">Status</th></tr></thead>
-        <tbody>${lavt.map((c,i)=>clinicRow(c,'lp',i)).join('')}</tbody>
-      </table></div></div>`;
-  }
-  if(middels.length){
-    html+=`<div class="priority-section">
-      <div class="priority-section-title"><div class="dot dot-middels"></div>Middels belegg — ${middels.length} klinikker</div>
-      <div class="table-container"><table>
-        <thead><tr><th>Klinikk</th><th>Fylke</th><th style="text-align:center">Ledige timer</th><th style="text-align:right">Status</th></tr></thead>
-        <tbody>${middels.map((c,i)=>clinicRow(c,'mp',i)).join('')}</tbody>
-      </table></div></div>`;
-  }
-  if(!html)html='<p style="color:var(--ink-mid);padding:40px 0">Ingen klinikker matcher filteret.</p>';
+  if(lavt.length) html+=buildSection('lavt','LAVT',lavt,'lp');
+  if(middels.length) html+=buildSection('middels','MIDDELS',middels,'mp');
+  if(!html) html='<p style="color:var(--ink-mid);padding:20px 0">Ingen klinikker matcher filteret.</p>';
   document.getElementById('priority-tables').innerHTML=html;
   attachRowClicks();
 }
 
-function clinicRow(c,prefix,idx){
-  const rid=`${prefix}-${idx}`;
-  return `<tr class="clinic-row" data-rowid="${rid}" data-region="${c.region||''}">
-    <td class="name-cell">${c.name}</td>
-    <td class="region-cell" style="cursor:pointer;text-decoration:underline;text-decoration-color:var(--ink-faint)" onclick="event.stopPropagation();selectRegion('${(c.region||'').replace(/'/g,"\\'")}',this)">${c.region||'—'}</td>
-    <td class="num-cell">${c.free_hours} t</td>
-    <td class="badge-cell"><span class="badge ${sigClass(c.signal)}">${sigLabel(c.signal)}</span></td>
-  </tr>
-  <tr class="detail-row" id="${rid}">
-    <td class="detail-cell" colspan="4">
-      <div class="detail-grid">
-        <div class="detail-item"><span class="detail-item-label">Ledige slots</span><span class="detail-item-value">${c.free_slots}</span></div>
-        <div class="detail-item"><span class="detail-item-label">Proxy-service</span><span class="detail-item-value" style="font-size:13px;font-family:var(--font-body);font-weight:500">${c.service_used}</span></div>
-      </div>
-    </td>
-  </tr>`;
+function buildSection(dotCls,sig,items,prefix){
+  const rows=items.map((c,i)=>{
+    const rid=`${prefix}-${i}`;
+    const fylke=REGION_MAP[c.region||'']||c.region||'—';
+    return `<tr class="clinic-row" data-rowid="${rid}">
+      <td class="name-cell">${c.name}</td>
+      <td class="region-cell"><button class="region-link" onclick="event.stopPropagation();handleFylkeClick('${fylke.replace(/'/g,"\\'")}')">${c.region||'—'}</button></td>
+      <td class="num-cell">${c.free_hours} t</td>
+      <td class="badge-cell"><span class="badge ${sigCls(sig)}">${sigLabel(sig)}</span></td>
+    </tr>
+    <tr class="detail-row" id="${rid}">
+      <td class="detail-cell" colspan="4">
+        <div class="detail-grid">
+          <div class="detail-item"><span class="detail-item-label">Ledige slots</span><span class="detail-item-value">${c.free_slots}</span></div>
+          <div class="detail-item"><span class="detail-item-label">Proxy-service</span><span class="detail-item-value" style="font-size:13px;font-family:var(--font-body);font-weight:500">${c.service_used}</span></div>
+        </div>
+      </td>
+    </tr>`;
+  }).join('');
+  return `<div class="priority-section">
+    <div class="priority-section-title"><div class="dot dot-${dotCls}"></div>${sig==='LAVT'?'Lavt belegg':'Middels belegg'} — ${items.length} klinikker</div>
+    <div class="table-container"><table>
+      <thead><tr><th>Klinikk</th><th>Fylke</th><th style="text-align:center">Ledige timer</th><th style="text-align:right">Status</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table></div></div>`;
 }
 
 function attachRowClicks(){
@@ -398,7 +518,7 @@ function attachRowClicks(){
   });
 }
 
-// ── Region tab ─────────────────────────────────────────────────────────────────
+// ── Region render ──────────────────────────────────────────────────────────────
 function renderRegions(){
   const list=getFiltered(searchR);
   document.getElementById('results-count-r').textContent=list.length+' klinikker';
@@ -412,7 +532,7 @@ function renderRegions(){
       return `<tr class="clinic-row" data-rowid="${rid}">
         <td class="name-cell">${c.name}</td>
         <td class="num-cell">${c.free_hours} t</td>
-        <td class="badge-cell"><span class="badge ${sigClass(c.signal)}">${sigLabel(c.signal)}</span></td>
+        <td class="badge-cell"><span class="badge ${sigCls(c.signal)}">${sigLabel(c.signal)}</span></td>
       </tr>
       <tr class="detail-row" id="${rid}">
         <td class="detail-cell" colspan="3">
@@ -428,103 +548,13 @@ function renderRegions(){
       <div class="table-container"><table>
         <thead><tr><th>Klinikk</th><th style="text-align:center">Ledige timer</th><th style="text-align:right">Status</th></tr></thead>
         <tbody>${rows}</tbody>
-      </table></div>
-    </section>`;
+      </table></div></section>`;
   }).join('');
   attachRowClicks();
 }
 
-// ── Search ─────────────────────────────────────────────────────────────────────
 document.getElementById('search-p').addEventListener('input',e=>{searchP=e.target.value.trim();openRow=null;renderPriority()});
 document.getElementById('search-r').addEventListener('input',e=>{searchR=e.target.value.trim();openRow=null;renderRegions()});
-
-// ── Norway Map ─────────────────────────────────────────────────────────────────
-// Simplified Norway fylke paths (schematic, not precise — outlines in ink color)
-const FYLKE_PATHS = {
-  'Oslo':         {label:[150,270], path:'M138,258 L162,258 L162,282 L138,282 Z'},
-  'Akershus':     {label:[150,240], path:'M120,222 L180,222 L180,258 L138,258 L138,282 L162,282 L162,258 L180,258 L180,222 L120,222 Z'},
-  'Viken':        {label:[130,210], path:'M90,180 L180,180 L180,222 L120,222 L120,258 L90,258 Z'},
-  'Innlandet':    {label:[165,200], path:'M180,175 L230,175 L230,245 L180,245 Z'},
-  'Vestfold':     {label:[115,275], path:'M90,258 L120,258 L120,300 L90,300 Z'},
-  'Telemark':     {label:[140,300], path:'M120,258 L180,258 L180,320 L120,320 Z'},
-  'Agder':        {label:[140,340], path:'M100,320 L190,320 L190,360 L100,360 Z'},
-  'Rogaland':     {label:[90,355],  path:'M60,335 L110,335 L110,385 L60,385 Z'},
-  'Vestland':     {label:[75,305],  path:'M45,270 L110,270 L110,335 L60,335 L60,385 L45,385 Z'},
-  'Møre Og Romsdal':{label:[75,245],path:'M40,215 L110,215 L110,270 L45,270 Z'},
-  'Trondelag':    {label:[120,195], path:'M85,165 L180,165 L180,220 L85,220 Z'},
-  'Nordland':     {label:[135,130], path:'M100,80  L175,80  L175,165 L100,165 Z'},
-  'Troms':        {label:[155,65],  path:'M115,30  L195,30  L195,80  L115,80  Z'},
-  'Finnmark':     {label:[195,45],  path:'M175,15  L250,15  L250,65  L175,65  Z'},
-  'Buskerud':     {label:[118,238], path:'M90,215 L130,215 L130,260 L90,260 Z'},
-  'Sor Vest':     {label:[80,360],  path:'M55,340 L100,340 L100,380 L55,380 Z'},
-  'Nord Vest':    {label:[65,265],  path:'M35,245 L85,245 L85,285 L35,285 Z'},
-  'Haugesund':    {label:[68,330],  path:'M50,315 L90,315 L90,350 L50,350 Z'},
-  'Stavanger':    {label:[72,370],  path:'M52,355 L92,355 L92,390 L52,390 Z'},
-  'Bryne':        {label:[78,395],  path:'M55,385 L100,385 L100,415 L55,415 Z'},
-  'Alesund':      {label:[65,235],  path:'M40,220 L85,220 L85,250 L40,250 Z'},
-};
-
-function getRegionSignal(region){
-  const clinics=allClinics.filter(c=>(c.region||'Andre')===region);
-  if(!clinics.length)return null;
-  const lavt=clinics.filter(c=>c.signal==='LAVT').length;
-  const middels=clinics.filter(c=>c.signal==='MIDDELS').length;
-  const total=clinics.length;
-  const lavtPct=Math.round(lavt/total*100);
-  if(lavtPct>=50)return{color:'var(--lavt)',fill:'#FEF0ED',lavt,middels,total,lavtPct};
-  if(lavtPct>=20||(middels/total)>=0.4)return{color:'var(--middels)',fill:'#FEF8E7',lavt,middels,total,lavtPct};
-  return{color:'var(--hoyt)',fill:'#E8F7EF',lavt,middels,total,lavtPct};
-}
-
-function renderMap(highlightRegion){
-  const svg=document.getElementById('norway-map');
-  let html='';
-  for(const[region,data]of Object.entries(FYLKE_PATHS)){
-    const sig=getRegionSignal(region);
-    const fill=sig?sig.fill:'#f0f4f8';
-    const stroke=highlightRegion===region?'var(--ink)':'var(--ink-faint)';
-    const sw=highlightRegion===region?2:0.8;
-    const op=highlightRegion&&highlightRegion!==region?0.45:1;
-    html+=`<g class="map-region" data-region="${region}" onclick="selectRegion('${region.replace(/'/g,"\\'")}',null)" style="cursor:pointer;opacity:${op}">
-      <path d="${data.path}" fill="${fill}" stroke="${stroke}" stroke-width="${sw}"/>
-      <text x="${data.label[0]}" y="${data.label[1]}" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="9" font-weight="600" fill="var(--ink-mid)" letter-spacing="0.05em">${region.toUpperCase()}</text>
-      ${sig?`<text x="${data.label[0]}" y="${data.label[1]+10}" text-anchor="middle" font-family="'Barlow',sans-serif" font-size="8" fill="${sig.color}" font-weight="600">${sig.lavtPct}% lavt</text>`:''}
-    </g>`;
-  }
-  svg.innerHTML=html;
-}
-
-function selectRegion(region,el){
-  if(selectedRegion===region){
-    selectedRegion=null;
-    renderMap(null);
-    updateTooltip(null);
-    document.getElementById('map-subtitle').textContent='Klikk på et fylke i tabellen for å se detaljer';
-    return;
-  }
-  selectedRegion=region;
-  renderMap(region);
-  updateTooltip(region);
-  document.getElementById('map-subtitle').textContent=region;
-}
-
-function updateTooltip(region){
-  const t=document.getElementById('map-tooltip');
-  if(!region){t.innerHTML='<div style="font-size:12px;color:var(--ink-light)">Klikk på et fylkenavn for å se detaljer</div>';return}
-  const clinics=allClinics.filter(c=>(c.region||'Andre')===region);
-  if(!clinics.length){t.innerHTML=`<div class="map-tooltip-name">${region}</div><div style="font-size:12px;color:var(--ink-light)">Ingen klinikker</div>`;return}
-  const lavt=clinics.filter(c=>c.signal==='LAVT');
-  const middels=clinics.filter(c=>c.signal==='MIDDELS');
-  const hoyt=clinics.filter(c=>c.signal==='HØYT');
-  t.innerHTML=`<div class="map-tooltip-name">${region}</div>
-    <div class="map-tooltip-stats">
-      <div class="map-tooltip-stat"><strong style="color:var(--lavt)">${lavt.length}</strong> lavt</div>
-      <div class="map-tooltip-stat"><strong style="color:var(--middels)">${middels.length}</strong> middels</div>
-      <div class="map-tooltip-stat"><strong style="color:var(--hoyt)">${hoyt.length}</strong> høyt</div>
-      <div class="map-tooltip-stat"><strong>${clinics.length}</strong> totalt</div>
-    </div>
-    ${lavt.length?`<div style="margin-top:8px;font-size:11px;color:var(--lavt)">${lavt.map(c=>c.name).join(', ')}</div>`:''}`;
-}
 </script>
 </body>
 </html>
