@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-17T12:08:56.769063+02:00",
+  "generated_at": "2026-05-17T15:05:18.164962+02:00",
   "days_analyzed": 14,
   "total_clinics": 60,
   "summary": {
@@ -8,16 +8,6 @@
     "hoyt_count": 29
   },
   "clinics": [
-    {
-      "name": "Lykkegården (Tidligere Trondheim Torg)",
-      "region": "Trondelag",
-      "city": "Trondheim",
-      "slug": "lykkegarden-tidligere-trondheim-torg",
-      "free_slots": 181,
-      "free_hours": 90.5,
-      "signal": "LAVT",
-      "service_used": "Undersøkelse - Faste pasienter"
-    },
     {
       "name": "Mo i Rana",
       "region": "Nordland",
@@ -29,12 +19,22 @@
       "service_used": "Undersøkelse-faste pasienter"
     },
     {
+      "name": "Lykkegården (Tidligere Trondheim Torg)",
+      "region": "Trondelag",
+      "city": "Trondheim",
+      "slug": "lykkegarden-tidligere-trondheim-torg",
+      "free_slots": 180,
+      "free_hours": 90.0,
+      "signal": "LAVT",
+      "service_used": "Undersøkelse - Faste pasienter"
+    },
+    {
       "name": "Arken Åsane",
       "region": "Vestland",
       "city": "UIset",
       "slug": "arken-asane",
-      "free_slots": 165,
-      "free_hours": 82.5,
+      "free_slots": 162,
+      "free_hours": 81.0,
       "signal": "LAVT",
       "service_used": "Førstegangsundersøkelse"
     },
@@ -169,16 +169,6 @@
       "service_used": "Undersøkelse"
     },
     {
-      "name": "Søgne",
-      "region": "Agder",
-      "city": "Søgne",
-      "slug": "sogne",
-      "free_slots": 33,
-      "free_hours": 24.8,
-      "signal": "MIDDELS",
-      "service_used": "Undersøkelse-nye pasienter"
-    },
-    {
       "name": "Broegelmannhuset",
       "region": "Vestland",
       "city": "Bergen",
@@ -197,6 +187,16 @@
       "free_hours": 24.0,
       "signal": "MIDDELS",
       "service_used": "Undersøkelse - faste pasienter "
+    },
+    {
+      "name": "Søgne",
+      "region": "Agder",
+      "city": "Søgne",
+      "slug": "sogne",
+      "free_slots": 32,
+      "free_hours": 24.0,
+      "signal": "MIDDELS",
+      "service_used": "Undersøkelse-nye pasienter"
     },
     {
       "name": "Sirkus Shopping",
@@ -253,8 +253,8 @@
       "region": "Akershus",
       "city": "Lysaker",
       "slug": "lysaker",
-      "free_slots": 27,
-      "free_hours": 18.0,
+      "free_slots": 26,
+      "free_hours": 17.3,
       "signal": "MIDDELS",
       "service_used": "Undersøkelse-faste pasienter"
     },
