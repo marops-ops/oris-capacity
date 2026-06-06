@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-06T08:49:04.448708+02:00",
+  "generated_at": "2026-06-06T15:17:27.442720+02:00",
   "days_analyzed": 14,
   "total_clinics": 63,
   "summary": {
@@ -13,8 +13,8 @@
       "region": "Vestland",
       "city": "UIset",
       "slug": "arken-asane",
-      "free_slots": 237,
-      "free_hours": 118.5,
+      "free_slots": 249,
+      "free_hours": 124.5,
       "signal": "LAVT",
       "service_used": "Førstegangsundersøkelse"
     },
@@ -33,8 +33,8 @@
       "region": "Trondelag",
       "city": "Trondheim",
       "slug": "leutenhaven",
-      "free_slots": 200,
-      "free_hours": 100.0,
+      "free_slots": 196,
+      "free_hours": 98.0,
       "signal": "LAVT",
       "service_used": "Undersøkelse - faste pasienter"
     },
@@ -59,16 +59,6 @@
       "service_used": "Undersøkelse -nye pasienter"
     },
     {
-      "name": "Galleri Oslo",
-      "region": "Oslo",
-      "city": "Oslo",
-      "slug": "galleri-oslo",
-      "free_slots": 92,
-      "free_hours": 46.0,
-      "signal": "LAVT",
-      "service_used": "Implantatkonsultasjon"
-    },
-    {
       "name": "Bodø",
       "region": "Nordland",
       "city": "Bodø",
@@ -89,6 +79,16 @@
       "service_used": "Undersøkelse- nye pasienter"
     },
     {
+      "name": "Galleri Oslo",
+      "region": "Oslo",
+      "city": "Oslo",
+      "slug": "galleri-oslo",
+      "free_slots": 89,
+      "free_hours": 44.5,
+      "signal": "LAVT",
+      "service_used": "Implantatkonsultasjon"
+    },
+    {
       "name": "Bryn",
       "region": "Oslo",
       "city": "Oslo",
@@ -103,8 +103,8 @@
       "region": "Oslo",
       "city": "Oslo",
       "slug": "ryen",
-      "free_slots": 80,
-      "free_hours": 40.0,
+      "free_slots": 78,
+      "free_hours": 39.0,
       "signal": "LAVT",
       "service_used": "Undersøkelse - faste pasienter"
     },
@@ -123,8 +123,8 @@
       "region": "Trondelag",
       "city": "Trondheim",
       "slug": "sanden",
-      "free_slots": 113,
-      "free_hours": 37.7,
+      "free_slots": 112,
+      "free_hours": 37.3,
       "signal": "LAVT",
       "service_used": "Undersøkelse-faste pasienter"
     },
@@ -143,8 +143,8 @@
       "region": "Sor Vest",
       "city": "Stavanger",
       "slug": "lokkeveien",
-      "free_slots": 68,
-      "free_hours": 34.0,
+      "free_slots": 67,
+      "free_hours": 33.5,
       "signal": "LAVT",
       "service_used": "Rutineundersøkelse"
     },
@@ -163,8 +163,8 @@
       "region": "Trondelag",
       "city": "Trondheim",
       "slug": "sirkus-shopping",
-      "free_slots": 63,
-      "free_hours": 31.5,
+      "free_slots": 62,
+      "free_hours": 31.0,
       "signal": "LAVT",
       "service_used": "Undersøkelse- nye pasienter"
     },
@@ -183,8 +183,8 @@
       "region": "Vestland",
       "city": "Bergen",
       "slug": "tarnplassen",
-      "free_slots": 58,
-      "free_hours": 29.0,
+      "free_slots": 57,
+      "free_hours": 28.5,
       "signal": "MIDDELS",
       "service_used": "Undersøkelse-faste pasienter"
     },
@@ -319,16 +319,6 @@
       "service_used": "Undersøkelse-nye pasienter"
     },
     {
-      "name": "Hinna Park",
-      "region": "Stavanger",
-      "city": "Stavanger",
-      "slug": "hinna-park",
-      "free_slots": 22,
-      "free_hours": 11.0,
-      "signal": "MIDDELS",
-      "service_used": "Rutineundersøkelse"
-    },
-    {
       "name": "Aker Brygge",
       "region": "Oslo",
       "city": "Oslo",
@@ -337,6 +327,16 @@
       "free_hours": 10.7,
       "signal": "MIDDELS",
       "service_used": "Undersøkelse-faste pasienter"
+    },
+    {
+      "name": "Hinna Park",
+      "region": "Stavanger",
+      "city": "Stavanger",
+      "slug": "hinna-park",
+      "free_slots": 21,
+      "free_hours": 10.5,
+      "signal": "MIDDELS",
+      "service_used": "Rutineundersøkelse"
     },
     {
       "name": "Tønsberg",
@@ -383,8 +383,8 @@
       "region": "Nord Vest",
       "city": "Nordfjordeid",
       "slug": "eikas",
-      "free_slots": 11,
-      "free_hours": 7.3,
+      "free_slots": 10,
+      "free_hours": 6.7,
       "signal": "HØYT",
       "service_used": "Førstegangsundersøkelse"
     },
@@ -499,16 +499,6 @@
       "service_used": "Undersøkelse - faste pasienter"
     },
     {
-      "name": "Madla",
-      "region": "Sor Vest",
-      "city": "Hafrsfjord",
-      "slug": "madla",
-      "free_slots": 4,
-      "free_hours": 2.0,
-      "signal": "HØYT",
-      "service_used": "Rutineundersøkelse"
-    },
-    {
       "name": "Narvik",
       "region": "Nordland",
       "city": "Narvik",
@@ -519,11 +509,11 @@
       "service_used": "Rutineundersøkelse"
     },
     {
-      "name": "Harstad Torv",
-      "region": "Troms",
-      "city": "Harstad",
-      "slug": "harstad-torv",
-      "free_slots": 2,
+      "name": "Madla",
+      "region": "Sor Vest",
+      "city": "Hafrsfjord",
+      "slug": "madla",
+      "free_slots": 3,
       "free_hours": 1.5,
       "signal": "HØYT",
       "service_used": "Rutineundersøkelse"
@@ -577,6 +567,16 @@
       "free_hours": 1.0,
       "signal": "HØYT",
       "service_used": "Undersøkelse - faste pasienter"
+    },
+    {
+      "name": "Harstad Torv",
+      "region": "Troms",
+      "city": "Harstad",
+      "slug": "harstad-torv",
+      "free_slots": 1,
+      "free_hours": 0.8,
+      "signal": "HØYT",
+      "service_used": "Rutineundersøkelse"
     },
     {
       "name": "Tannteam Spesialistklinikk",
