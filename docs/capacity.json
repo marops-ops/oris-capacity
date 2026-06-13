@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T09:41:24.902142+02:00",
+  "generated_at": "2026-06-13T15:45:07.000904+02:00",
   "days_analyzed": 14,
   "total_clinics": 62,
   "summary": {
@@ -13,8 +13,8 @@
       "region": "Trondelag",
       "city": "Trondheim",
       "slug": "lykkegarden-tidligere-trondheim-torg",
-      "free_slots": 297,
-      "free_hours": 148.5,
+      "free_slots": 296,
+      "free_hours": 148.0,
       "signal": "LAVT",
       "service_used": "Undersøkelse - Faste pasienter"
     },
@@ -23,8 +23,8 @@
       "region": "Vestland",
       "city": "UIset",
       "slug": "arken-asane",
-      "free_slots": 256,
-      "free_hours": 128.0,
+      "free_slots": 255,
+      "free_hours": 127.5,
       "signal": "LAVT",
       "service_used": "Førstegangsundersøkelse"
     },
@@ -53,20 +53,10 @@
       "region": "Trondelag",
       "city": "Trondheim",
       "slug": "leutenhaven",
-      "free_slots": 134,
-      "free_hours": 67.0,
+      "free_slots": 135,
+      "free_hours": 67.5,
       "signal": "LAVT",
       "service_used": "Undersøkelse - faste pasienter"
-    },
-    {
-      "name": "Nesttun",
-      "region": "Vestland",
-      "city": "Nesttun",
-      "slug": "nesttun",
-      "free_slots": 111,
-      "free_hours": 55.5,
-      "signal": "LAVT",
-      "service_used": "Undersøkelse- nye pasienter"
     },
     {
       "name": "Sarpsborg",
@@ -75,6 +65,16 @@
       "slug": "sarpsborg",
       "free_slots": 110,
       "free_hours": 55.0,
+      "signal": "LAVT",
+      "service_used": "Undersøkelse- nye pasienter"
+    },
+    {
+      "name": "Nesttun",
+      "region": "Vestland",
+      "city": "Nesttun",
+      "slug": "nesttun",
+      "free_slots": 109,
+      "free_hours": 54.5,
       "signal": "LAVT",
       "service_used": "Undersøkelse- nye pasienter"
     },
@@ -123,8 +123,8 @@
       "region": "Oslo",
       "city": "Oslo",
       "slug": "skoyen",
-      "free_slots": 70,
-      "free_hours": 35.0,
+      "free_slots": 67,
+      "free_hours": 33.5,
       "signal": "LAVT",
       "service_used": "Undersøkelse-faste pasienter"
     },
@@ -133,8 +133,8 @@
       "region": "Trondelag",
       "city": "Trondheim",
       "slug": "sanden",
-      "free_slots": 101,
-      "free_hours": 33.7,
+      "free_slots": 100,
+      "free_hours": 33.3,
       "signal": "LAVT",
       "service_used": "Undersøkelse-faste pasienter"
     },
@@ -359,16 +359,6 @@
       "service_used": "Rutineundersøkelse"
     },
     {
-      "name": "Sandnes",
-      "region": "Sor Vest",
-      "city": "Sandnes",
-      "slug": "sandnes",
-      "free_slots": 19,
-      "free_hours": 9.5,
-      "signal": "HØYT",
-      "service_used": "Undersøkelse - nye pasienter"
-    },
-    {
       "name": "Kolsås",
       "region": "Akershus",
       "city": "Kolsås",
@@ -377,6 +367,16 @@
       "free_hours": 9.0,
       "signal": "HØYT",
       "service_used": "Førstegangsundersøkelse"
+    },
+    {
+      "name": "Sandnes",
+      "region": "Sor Vest",
+      "city": "Sandnes",
+      "slug": "sandnes",
+      "free_slots": 18,
+      "free_hours": 9.0,
+      "signal": "HØYT",
+      "service_used": "Undersøkelse - nye pasienter"
     },
     {
       "name": "Slemmestad",
