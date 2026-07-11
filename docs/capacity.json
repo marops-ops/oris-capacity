@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-11T08:08:18.874869+02:00",
+  "generated_at": "2026-07-11T15:03:05.631890+02:00",
   "days_analyzed": 14,
   "total_clinics": 61,
   "summary": {
-    "lavt_count": 11,
+    "lavt_count": 10,
     "middels_count": 10,
-    "hoyt_count": 40
+    "hoyt_count": 41
   },
   "clinics": [
     {
@@ -13,8 +13,8 @@
       "region": "Vestland",
       "city": "UIset",
       "slug": "arken-asane",
-      "free_slots": 272,
-      "free_hours": 136.0,
+      "free_slots": 279,
+      "free_hours": 139.5,
       "signal": "LAVT",
       "service_used": "Førstegangsundersøkelse"
     },
@@ -23,8 +23,8 @@
       "region": "Vestland",
       "city": "Kleppestø",
       "slug": "askoy",
-      "free_slots": 123,
-      "free_hours": 92.2,
+      "free_slots": 126,
+      "free_hours": 94.5,
       "signal": "LAVT",
       "service_used": "Førstegangsundersøkelse "
     },
@@ -33,8 +33,8 @@
       "region": "Nordland",
       "city": "Bodø",
       "slug": "bodo",
-      "free_slots": 117,
-      "free_hours": 87.8,
+      "free_slots": 116,
+      "free_hours": 87.0,
       "signal": "LAVT",
       "service_used": "Undersøkelse - faste pasienter "
     },
@@ -43,8 +43,8 @@
       "region": "Trondelag",
       "city": "Trondheim",
       "slug": "sirkus-shopping",
-      "free_slots": 155,
-      "free_hours": 77.5,
+      "free_slots": 153,
+      "free_hours": 76.5,
       "signal": "LAVT",
       "service_used": "Undersøkelse- nye pasienter"
     },
@@ -63,8 +63,8 @@
       "region": "Trondelag",
       "city": "Trondheim",
       "slug": "leutenhaven",
-      "free_slots": 139,
-      "free_hours": 69.5,
+      "free_slots": 136,
+      "free_hours": 68.0,
       "signal": "LAVT",
       "service_used": "Undersøkelse - faste pasienter"
     },
@@ -109,16 +109,6 @@
       "service_used": "Rutineundersøkelse"
     },
     {
-      "name": "Kristiansand",
-      "region": "Agder",
-      "city": "Kristiansand S",
-      "slug": "kristiansand",
-      "free_slots": 46,
-      "free_hours": 30.7,
-      "signal": "LAVT",
-      "service_used": "Undersøkelse -nye pasienter"
-    },
-    {
       "name": "Gressvik",
       "region": "Ostfold",
       "city": "Gressvik",
@@ -127,6 +117,16 @@
       "free_hours": 29.0,
       "signal": "MIDDELS",
       "service_used": "Undersøkelse - Faste pasienter"
+    },
+    {
+      "name": "Kristiansand",
+      "region": "Agder",
+      "city": "Kristiansand S",
+      "slug": "kristiansand",
+      "free_slots": 42,
+      "free_hours": 28.0,
+      "signal": "MIDDELS",
+      "service_used": "Undersøkelse -nye pasienter"
     },
     {
       "name": "Søgne",
@@ -143,8 +143,8 @@
       "region": "Trondelag",
       "city": "Trondheim",
       "slug": "lykkegarden-tidligere-trondheim-torg",
-      "free_slots": 49,
-      "free_hours": 24.5,
+      "free_slots": 48,
+      "free_hours": 24.0,
       "signal": "MIDDELS",
       "service_used": "Undersøkelse - Faste pasienter"
     },
@@ -209,16 +209,6 @@
       "service_used": "Førstegangsundersøkelse"
     },
     {
-      "name": "Madla",
-      "region": "Sor Vest",
-      "city": "Hafrsfjord",
-      "slug": "madla",
-      "free_slots": 20,
-      "free_hours": 10.0,
-      "signal": "MIDDELS",
-      "service_used": "Rutineundersøkelse"
-    },
-    {
       "name": "Egersund",
       "region": "Egersund",
       "city": "Egersund",
@@ -227,6 +217,16 @@
       "free_hours": 9.5,
       "signal": "HØYT",
       "service_used": "Undersøkelse-faste pasienter"
+    },
+    {
+      "name": "Madla",
+      "region": "Sor Vest",
+      "city": "Hafrsfjord",
+      "slug": "madla",
+      "free_slots": 19,
+      "free_hours": 9.5,
+      "signal": "HØYT",
+      "service_used": "Rutineundersøkelse"
     },
     {
       "name": "Brosundet",
@@ -279,16 +279,6 @@
       "service_used": "Førstegangsundersøkelse"
     },
     {
-      "name": "Løkkeveien",
-      "region": "Sor Vest",
-      "city": "Stavanger",
-      "slug": "lokkeveien",
-      "free_slots": 11,
-      "free_hours": 5.5,
-      "signal": "HØYT",
-      "service_used": "Rutineundersøkelse"
-    },
-    {
       "name": "Stoa i Arendal",
       "region": "Agder",
       "city": "Arendal",
@@ -307,6 +297,16 @@
       "free_hours": 5.2,
       "signal": "HØYT",
       "service_used": "Telefonkonsultasjon - Tenner på dagen"
+    },
+    {
+      "name": "Løkkeveien",
+      "region": "Sor Vest",
+      "city": "Stavanger",
+      "slug": "lokkeveien",
+      "free_slots": 10,
+      "free_hours": 5.0,
+      "signal": "HØYT",
+      "service_used": "Rutineundersøkelse"
     },
     {
       "name": "Sandnes",
@@ -359,26 +359,6 @@
       "service_used": "Rutineundersøkelse"
     },
     {
-      "name": "Narvik",
-      "region": "Nordland",
-      "city": "Narvik",
-      "slug": "narvik",
-      "free_slots": 3,
-      "free_hours": 1.5,
-      "signal": "HØYT",
-      "service_used": "Rutineundersøkelse"
-    },
-    {
-      "name": "Aker Brygge",
-      "region": "Oslo",
-      "city": "Oslo",
-      "slug": "aker-brygge",
-      "free_slots": 2,
-      "free_hours": 1.3,
-      "signal": "HØYT",
-      "service_used": "Undersøkelse-faste pasienter"
-    },
-    {
       "name": "Moss Spesialistklinikk",
       "region": "Ostfold",
       "city": "Moss",
@@ -387,6 +367,16 @@
       "free_hours": 1.0,
       "signal": "HØYT",
       "service_used": "Undersøkelse-faste pasienter"
+    },
+    {
+      "name": "Narvik",
+      "region": "Nordland",
+      "city": "Narvik",
+      "slug": "narvik",
+      "free_slots": 2,
+      "free_hours": 1.0,
+      "signal": "HØYT",
+      "service_used": "Rutineundersøkelse"
     },
     {
       "name": "Nesttun",
@@ -407,6 +397,16 @@
       "free_hours": 1.0,
       "signal": "HØYT",
       "service_used": "Undersøkelse - faste pasienter"
+    },
+    {
+      "name": "Aker Brygge",
+      "region": "Oslo",
+      "city": "Oslo",
+      "slug": "aker-brygge",
+      "free_slots": 1,
+      "free_hours": 0.7,
+      "signal": "HØYT",
+      "service_used": "Undersøkelse-faste pasienter"
     },
     {
       "name": "Eikås",
