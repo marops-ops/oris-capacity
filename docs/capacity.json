@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-20T06:29:56.241695+02:00",
+  "generated_at": "2026-08-20T14:33:21.684543+02:00",
   "days_analyzed": 14,
   "total_clinics": 62,
   "summary": {
-    "lavt_count": 17,
-    "middels_count": 19,
-    "hoyt_count": 26
+    "lavt_count": 16,
+    "middels_count": 22,
+    "hoyt_count": 24
   },
   "clinics": [
     {
@@ -13,8 +13,8 @@
       "region": "Vestland",
       "city": "UIset",
       "slug": "arken-asane",
-      "free_slots": 345,
-      "free_hours": 172.5,
+      "free_slots": 337,
+      "free_hours": 168.5,
       "signal": "LAVT",
       "service_used": "Førstegangsundersøkelse"
     },
@@ -23,8 +23,8 @@
       "region": "Trondelag",
       "city": "Trondheim",
       "slug": "lykkegarden-tidligere-trondheim-torg",
-      "free_slots": 184,
-      "free_hours": 92.0,
+      "free_slots": 169,
+      "free_hours": 84.5,
       "signal": "LAVT",
       "service_used": "Undersøkelse - Faste pasienter"
     },
@@ -33,8 +33,8 @@
       "region": "Trondelag",
       "city": "Trondheim",
       "slug": "leutenhaven",
-      "free_slots": 182,
-      "free_hours": 91.0,
+      "free_slots": 162,
+      "free_hours": 81.0,
       "signal": "LAVT",
       "service_used": "Undersøkelse - faste pasienter"
     },
@@ -43,8 +43,8 @@
       "region": "Nordland",
       "city": "Mo i Rana",
       "slug": "mo-i-rana",
-      "free_slots": 138,
-      "free_hours": 69.0,
+      "free_slots": 152,
+      "free_hours": 76.0,
       "signal": "LAVT",
       "service_used": "Undersøkelse-faste pasienter"
     },
@@ -53,70 +53,50 @@
       "region": "Oslo",
       "city": "Oslo",
       "slug": "bryn",
-      "free_slots": 134,
-      "free_hours": 67.0,
+      "free_slots": 127,
+      "free_hours": 63.5,
       "signal": "LAVT",
       "service_used": "Rutineundersøkelse"
-    },
-    {
-      "name": "Kristiansand",
-      "region": "Agder",
-      "city": "Kristiansand S",
-      "slug": "kristiansand",
-      "free_slots": 86,
-      "free_hours": 57.3,
-      "signal": "LAVT",
-      "service_used": "Undersøkelse -nye pasienter"
     },
     {
       "name": "Bodø",
       "region": "Nordland",
       "city": "Bodø",
       "slug": "bodo",
-      "free_slots": 72,
-      "free_hours": 54.0,
+      "free_slots": 83,
+      "free_hours": 62.2,
       "signal": "LAVT",
       "service_used": "Undersøkelse - faste pasienter "
     },
     {
-      "name": "Sarpsborg",
-      "region": "Ostfold",
-      "city": "Sarpsborg",
-      "slug": "sarpsborg",
-      "free_slots": 102,
-      "free_hours": 51.0,
+      "name": "Kristiansand",
+      "region": "Agder",
+      "city": "Kristiansand S",
+      "slug": "kristiansand",
+      "free_slots": 81,
+      "free_hours": 54.0,
       "signal": "LAVT",
-      "service_used": "Undersøkelse- nye pasienter"
+      "service_used": "Undersøkelse -nye pasienter"
     },
     {
       "name": "Skøyen",
       "region": "Oslo",
       "city": "Oslo",
       "slug": "skoyen",
-      "free_slots": 101,
-      "free_hours": 50.5,
+      "free_slots": 106,
+      "free_hours": 53.0,
       "signal": "LAVT",
       "service_used": "Undersøkelse-faste pasienter"
     },
     {
-      "name": "Nesttun",
-      "region": "Vestland",
-      "city": "Nesttun",
-      "slug": "nesttun",
-      "free_slots": 94,
-      "free_hours": 47.0,
+      "name": "Sarpsborg",
+      "region": "Ostfold",
+      "city": "Sarpsborg",
+      "slug": "sarpsborg",
+      "free_slots": 105,
+      "free_hours": 52.5,
       "signal": "LAVT",
       "service_used": "Undersøkelse- nye pasienter"
-    },
-    {
-      "name": "Sanden",
-      "region": "Trondelag",
-      "city": "Trondheim",
-      "slug": "sanden",
-      "free_slots": 133,
-      "free_hours": 44.3,
-      "signal": "LAVT",
-      "service_used": "Undersøkelse-faste pasienter"
     },
     {
       "name": "Ryen",
@@ -129,12 +109,42 @@
       "service_used": "Undersøkelse - faste pasienter"
     },
     {
+      "name": "Nesttun",
+      "region": "Vestland",
+      "city": "Nesttun",
+      "slug": "nesttun",
+      "free_slots": 86,
+      "free_hours": 43.0,
+      "signal": "LAVT",
+      "service_used": "Undersøkelse- nye pasienter"
+    },
+    {
+      "name": "Sanden",
+      "region": "Trondelag",
+      "city": "Trondheim",
+      "slug": "sanden",
+      "free_slots": 123,
+      "free_hours": 41.0,
+      "signal": "LAVT",
+      "service_used": "Undersøkelse-faste pasienter"
+    },
+    {
+      "name": "Sirkus Shopping",
+      "region": "Trondelag",
+      "city": "Trondheim",
+      "slug": "sirkus-shopping",
+      "free_slots": 76,
+      "free_hours": 38.0,
+      "signal": "LAVT",
+      "service_used": "Undersøkelse- nye pasienter"
+    },
+    {
       "name": "Lillehammer",
       "region": "Innlandet",
       "city": "Lillehammer",
       "slug": "lillehammer",
-      "free_slots": 76,
-      "free_hours": 38.0,
+      "free_slots": 67,
+      "free_hours": 33.5,
       "signal": "LAVT",
       "service_used": "Undersøkelse-nye pasienter"
     },
@@ -143,110 +153,40 @@
       "region": "Sor Vest",
       "city": "Sandnes",
       "slug": "sandnes",
-      "free_slots": 72,
-      "free_hours": 36.0,
+      "free_slots": 66,
+      "free_hours": 33.0,
       "signal": "LAVT",
       "service_used": "Undersøkelse - nye pasienter"
-    },
-    {
-      "name": "Galleri Oslo",
-      "region": "Oslo",
-      "city": "Oslo",
-      "slug": "galleri-oslo",
-      "free_slots": 71,
-      "free_hours": 35.5,
-      "signal": "LAVT",
-      "service_used": "Implantatkonsultasjon"
-    },
-    {
-      "name": "Sirkus Shopping",
-      "region": "Trondelag",
-      "city": "Trondheim",
-      "slug": "sirkus-shopping",
-      "free_slots": 71,
-      "free_hours": 35.5,
-      "signal": "LAVT",
-      "service_used": "Undersøkelse- nye pasienter"
-    },
-    {
-      "name": "Søgne",
-      "region": "Agder",
-      "city": "Søgne",
-      "slug": "sogne",
-      "free_slots": 42,
-      "free_hours": 31.5,
-      "signal": "LAVT",
-      "service_used": "Undersøkelse-nye pasienter"
-    },
-    {
-      "name": "Askøy",
-      "region": "Vestland",
-      "city": "Kleppestø",
-      "slug": "askoy",
-      "free_slots": 36,
-      "free_hours": 27.0,
-      "signal": "MIDDELS",
-      "service_used": "Førstegangsundersøkelse "
-    },
-    {
-      "name": "Knapstad",
-      "region": "Ostfold",
-      "city": "Knapstad",
-      "slug": "knapstad",
-      "free_slots": 54,
-      "free_hours": 27.0,
-      "signal": "MIDDELS",
-      "service_used": "Undersøkelse- Faste pasienter"
-    },
-    {
-      "name": "Stoa i Arendal",
-      "region": "Agder",
-      "city": "Arendal",
-      "slug": "stoa-i-arendal",
-      "free_slots": 53,
-      "free_hours": 26.5,
-      "signal": "MIDDELS",
-      "service_used": "Undersøkelse"
     },
     {
       "name": "Moa",
       "region": "Alesund",
       "city": "Ålesund",
       "slug": "moa",
-      "free_slots": 153,
-      "free_hours": 25.5,
-      "signal": "MIDDELS",
+      "free_slots": 182,
+      "free_hours": 30.3,
+      "signal": "LAVT",
       "service_used": "Telefonkonsultasjon - Tenner på dagen"
     },
     {
-      "name": "Aker Brygge",
+      "name": "Galleri Oslo",
       "region": "Oslo",
       "city": "Oslo",
-      "slug": "aker-brygge",
-      "free_slots": 37,
-      "free_hours": 24.7,
+      "slug": "galleri-oslo",
+      "free_slots": 57,
+      "free_hours": 28.5,
       "signal": "MIDDELS",
-      "service_used": "Undersøkelse-faste pasienter"
+      "service_used": "Implantatkonsultasjon"
     },
     {
       "name": "Vågsbygd",
       "region": "Agder",
       "city": "Kristiansand",
       "slug": "vagsbygd",
-      "free_slots": 37,
-      "free_hours": 24.7,
+      "free_slots": 40,
+      "free_hours": 26.7,
       "signal": "MIDDELS",
       "service_used": "Førstegangsundersøkelse"
-    },
-    {
-      "name": "Tårnplassen",
-      "region": "Vestland",
-      "city": "Bergen",
-      "slug": "tarnplassen",
-      "free_slots": 49,
-      "free_hours": 24.5,
-      "signal": "MIDDELS",
-      "service_used": "Undersøkelse-faste pasienter"
     },
     {
       "name": "Bryne",
@@ -263,28 +203,118 @@
       "region": "Sor Vest",
       "city": "Hafrsfjord",
       "slug": "madla",
-      "free_slots": 44,
-      "free_hours": 22.0,
+      "free_slots": 47,
+      "free_hours": 23.5,
       "signal": "MIDDELS",
       "service_used": "Rutineundersøkelse"
+    },
+    {
+      "name": "Søgne",
+      "region": "Agder",
+      "city": "Søgne",
+      "slug": "sogne",
+      "free_slots": 31,
+      "free_hours": 23.2,
+      "signal": "MIDDELS",
+      "service_used": "Undersøkelse-nye pasienter"
+    },
+    {
+      "name": "Aker Brygge",
+      "region": "Oslo",
+      "city": "Oslo",
+      "slug": "aker-brygge",
+      "free_slots": 34,
+      "free_hours": 22.7,
+      "signal": "MIDDELS",
+      "service_used": "Undersøkelse-faste pasienter"
+    },
+    {
+      "name": "Stoa i Arendal",
+      "region": "Agder",
+      "city": "Arendal",
+      "slug": "stoa-i-arendal",
+      "free_slots": 45,
+      "free_hours": 22.5,
+      "signal": "MIDDELS",
+      "service_used": "Undersøkelse"
+    },
+    {
+      "name": "Askøy",
+      "region": "Vestland",
+      "city": "Kleppestø",
+      "slug": "askoy",
+      "free_slots": 29,
+      "free_hours": 21.8,
+      "signal": "MIDDELS",
+      "service_used": "Førstegangsundersøkelse "
+    },
+    {
+      "name": "Tårnplassen",
+      "region": "Vestland",
+      "city": "Bergen",
+      "slug": "tarnplassen",
+      "free_slots": 43,
+      "free_hours": 21.5,
+      "signal": "MIDDELS",
+      "service_used": "Undersøkelse-faste pasienter"
+    },
+    {
+      "name": "Brosundet",
+      "region": "Alesund",
+      "city": "Ålesund",
+      "slug": "brosundet",
+      "free_slots": 28,
+      "free_hours": 21.0,
+      "signal": "MIDDELS",
+      "service_used": "Undersøkelse-nye pasienter"
+    },
+    {
+      "name": "Knapstad",
+      "region": "Ostfold",
+      "city": "Knapstad",
+      "slug": "knapstad",
+      "free_slots": 42,
+      "free_hours": 21.0,
+      "signal": "MIDDELS",
+      "service_used": "Undersøkelse- Faste pasienter"
     },
     {
       "name": "Gressvik",
       "region": "Ostfold",
       "city": "Gressvik",
       "slug": "gressvik",
-      "free_slots": 42,
-      "free_hours": 21.0,
+      "free_slots": 41,
+      "free_hours": 20.5,
       "signal": "MIDDELS",
       "service_used": "Undersøkelse - Faste pasienter"
+    },
+    {
+      "name": "Strandgaten",
+      "region": "Vestland",
+      "city": "Bergen",
+      "slug": "strandgaten",
+      "free_slots": 38,
+      "free_hours": 19.0,
+      "signal": "MIDDELS",
+      "service_used": "Undersøkelse - faste pasienter"
+    },
+    {
+      "name": "Drammen avd. Landfalløya",
+      "region": "Buskerud",
+      "city": "Drammen",
+      "slug": "drammen-avd-landfalloya",
+      "free_slots": 37,
+      "free_hours": 18.5,
+      "signal": "MIDDELS",
+      "service_used": "Undersøkelse- Faste pasienter"
     },
     {
       "name": "Fredrikstad",
       "region": "Ostfold",
       "city": "Kråkerøy",
       "slug": "fredrikstad",
-      "free_slots": 39,
-      "free_hours": 19.5,
+      "free_slots": 34,
+      "free_hours": 17.0,
       "signal": "MIDDELS",
       "service_used": "Undersøkelse- nye paienter"
     },
@@ -293,38 +323,28 @@
       "region": "Vestland",
       "city": "Bergen",
       "slug": "broegelmannhuset",
-      "free_slots": 36,
-      "free_hours": 18.0,
-      "signal": "MIDDELS",
-      "service_used": "Undersøkelse-nye pasienter"
-    },
-    {
-      "name": "Kolsås",
-      "region": "Akershus",
-      "city": "Kolsås",
-      "slug": "kolsas",
-      "free_slots": 22,
+      "free_slots": 33,
       "free_hours": 16.5,
       "signal": "MIDDELS",
-      "service_used": "Førstegangsundersøkelse"
-    },
-    {
-      "name": "Strandgaten",
-      "region": "Vestland",
-      "city": "Bergen",
-      "slug": "strandgaten",
-      "free_slots": 31,
-      "free_hours": 15.5,
-      "signal": "MIDDELS",
-      "service_used": "Undersøkelse - faste pasienter"
+      "service_used": "Undersøkelse-nye pasienter"
     },
     {
       "name": "Lysaker",
       "region": "Akershus",
       "city": "Lysaker",
       "slug": "lysaker",
-      "free_slots": 23,
-      "free_hours": 15.3,
+      "free_slots": 22,
+      "free_hours": 14.7,
+      "signal": "MIDDELS",
+      "service_used": "Undersøkelse-faste pasienter"
+    },
+    {
+      "name": "Rommen",
+      "region": "Oslo",
+      "city": "Oslo",
+      "slug": "rommen",
+      "free_slots": 22,
+      "free_hours": 14.7,
       "signal": "MIDDELS",
       "service_used": "Undersøkelse-faste pasienter"
     },
@@ -333,8 +353,8 @@
       "region": "Akershus",
       "city": "Sandvika",
       "slug": "lokketangen",
-      "free_slots": 22,
-      "free_hours": 14.7,
+      "free_slots": 21,
+      "free_hours": 14.0,
       "signal": "MIDDELS",
       "service_used": "Førstegangsundersøkelse"
     },
@@ -349,122 +369,112 @@
       "service_used": "Undersøkelse -nye pasienter"
     },
     {
-      "name": "Drammen avd. Landfalløya",
-      "region": "Buskerud",
-      "city": "Drammen",
-      "slug": "drammen-avd-landfalloya",
-      "free_slots": 27,
-      "free_hours": 13.5,
-      "signal": "MIDDELS",
-      "service_used": "Undersøkelse- Faste pasienter"
-    },
-    {
-      "name": "Rommen",
-      "region": "Oslo",
-      "city": "Oslo",
-      "slug": "rommen",
+      "name": "Moelv",
+      "region": "Innlandet",
+      "city": "Moelv",
+      "slug": "moelv",
       "free_slots": 20,
       "free_hours": 13.3,
       "signal": "MIDDELS",
-      "service_used": "Undersøkelse-faste pasienter"
-    },
-    {
-      "name": "Brosundet",
-      "region": "Alesund",
-      "city": "Ålesund",
-      "slug": "brosundet",
-      "free_slots": 13,
-      "free_hours": 9.8,
-      "signal": "HØYT",
-      "service_used": "Undersøkelse-nye pasienter"
+      "service_used": "Undersøkelse- faste pasienter"
     },
     {
       "name": "Hamar",
       "region": "Innlandet",
       "city": "Hamar",
       "slug": "hamar",
-      "free_slots": 19,
-      "free_hours": 9.5,
-      "signal": "HØYT",
+      "free_slots": 24,
+      "free_hours": 12.0,
+      "signal": "MIDDELS",
       "service_used": "Undersøkelse- faste pasienter"
-    },
-    {
-      "name": "Arendal Spesialistklinikk",
-      "region": "Agder",
-      "city": "Arendal",
-      "slug": "arendal-spesialistklinikk",
-      "free_slots": 10,
-      "free_hours": 7.5,
-      "signal": "HØYT",
-      "service_used": "Undersøkelse - faste pasienter"
-    },
-    {
-      "name": "Moelv",
-      "region": "Innlandet",
-      "city": "Moelv",
-      "slug": "moelv",
-      "free_slots": 11,
-      "free_hours": 7.3,
-      "signal": "HØYT",
-      "service_used": "Undersøkelse- faste pasienter"
-    },
-    {
-      "name": "Hinna Park",
-      "region": "Stavanger",
-      "city": "Stavanger",
-      "slug": "hinna-park",
-      "free_slots": 14,
-      "free_hours": 7.0,
-      "signal": "HØYT",
-      "service_used": "Rutineundersøkelse"
     },
     {
       "name": "Løkkeveien",
       "region": "Sor Vest",
       "city": "Stavanger",
       "slug": "lokkeveien",
-      "free_slots": 14,
-      "free_hours": 7.0,
+      "free_slots": 19,
+      "free_hours": 9.5,
       "signal": "HØYT",
       "service_used": "Rutineundersøkelse"
+    },
+    {
+      "name": "Arendal Spesialistklinikk",
+      "region": "Agder",
+      "city": "Arendal",
+      "slug": "arendal-spesialistklinikk",
+      "free_slots": 11,
+      "free_hours": 8.2,
+      "signal": "HØYT",
+      "service_used": "Undersøkelse - faste pasienter"
+    },
+    {
+      "name": "Kolsås",
+      "region": "Akershus",
+      "city": "Kolsås",
+      "slug": "kolsas",
+      "free_slots": 11,
+      "free_hours": 8.2,
+      "signal": "HØYT",
+      "service_used": "Førstegangsundersøkelse"
     },
     {
       "name": "Moss Spesialistklinikk",
       "region": "Ostfold",
       "city": "Moss",
       "slug": "moss-spesialistklinikk",
-      "free_slots": 13,
-      "free_hours": 6.5,
+      "free_slots": 14,
+      "free_hours": 7.0,
       "signal": "HØYT",
       "service_used": "Undersøkelse-faste pasienter"
-    },
-    {
-      "name": "Eikås",
-      "region": "Nord Vest",
-      "city": "Nordfjordeid",
-      "slug": "eikas",
-      "free_slots": 9,
-      "free_hours": 6.0,
-      "signal": "HØYT",
-      "service_used": "Førstegangsundersøkelse"
     },
     {
       "name": "Grønnegata Tannlegesenter",
       "region": "Troms",
       "city": "Tromsø",
       "slug": "gronnegata-tannlegesenter",
+      "free_slots": 10,
+      "free_hours": 6.7,
+      "signal": "HØYT",
+      "service_used": "Undersøkelse-nye pasienter"
+    },
+    {
+      "name": "Hinna Park",
+      "region": "Stavanger",
+      "city": "Stavanger",
+      "slug": "hinna-park",
+      "free_slots": 11,
+      "free_hours": 5.5,
+      "signal": "HØYT",
+      "service_used": "Rutineundersøkelse"
+    },
+    {
+      "name": "Tønsberg",
+      "region": "Vestfold",
+      "city": "Tønsberg",
+      "slug": "tonsberg",
       "free_slots": 7,
       "free_hours": 4.7,
       "signal": "HØYT",
-      "service_used": "Undersøkelse-nye pasienter"
+      "service_used": "Førstegangsundersøkelse"
+    },
+    {
+      "name": "Eikås",
+      "region": "Nord Vest",
+      "city": "Nordfjordeid",
+      "slug": "eikas",
+      "free_slots": 6,
+      "free_hours": 4.0,
+      "signal": "HØYT",
+      "service_used": "Førstegangsundersøkelse"
     },
     {
       "name": "Homansbyen",
       "region": "Oslo",
       "city": "Oslo",
       "slug": "homansbyen",
-      "free_slots": 9,
-      "free_hours": 4.5,
+      "free_slots": 8,
+      "free_hours": 4.0,
       "signal": "HØYT",
       "service_used": "Undersøkelse med 2 stk røntgen"
     },
@@ -473,40 +483,10 @@
       "region": "Buskerud",
       "city": "Drammen",
       "slug": "drammen",
-      "free_slots": 8,
-      "free_hours": 4.0,
+      "free_slots": 7,
+      "free_hours": 3.5,
       "signal": "HØYT",
       "service_used": "Undersøkelse - faste pasienter"
-    },
-    {
-      "name": "Haugesund",
-      "region": "Haugesund",
-      "city": "Haugesund",
-      "slug": "haugesund",
-      "free_slots": 8,
-      "free_hours": 4.0,
-      "signal": "HØYT",
-      "service_used": "Førstegangsundersøkelse"
-    },
-    {
-      "name": "Stord Leirvik",
-      "region": "Vestland",
-      "city": "Stord",
-      "slug": "stord-leirvik",
-      "free_slots": 8,
-      "free_hours": 4.0,
-      "signal": "HØYT",
-      "service_used": "Undersøkelse - nye pasienter"
-    },
-    {
-      "name": "Vøyenenga",
-      "region": "Akershus",
-      "city": "Vøyenenga",
-      "slug": "voyenenga",
-      "free_slots": 5,
-      "free_hours": 3.8,
-      "signal": "HØYT",
-      "service_used": "Undersøkelse-faste pasienter (45)"
     },
     {
       "name": "Måløy",
@@ -519,12 +499,42 @@
       "service_used": "Førstegangsundersøkelse"
     },
     {
-      "name": "Tønsberg",
-      "region": "Vestfold",
-      "city": "Tønsberg",
-      "slug": "tonsberg",
+      "name": "Slemmestad",
+      "region": "Akershus",
+      "city": "Slemmestad",
+      "slug": "slemmestad",
+      "free_slots": 6,
+      "free_hours": 3.0,
+      "signal": "HØYT",
+      "service_used": "Undersøkelse- faste pasienter"
+    },
+    {
+      "name": "Stord Leirvik",
+      "region": "Vestland",
+      "city": "Stord",
+      "slug": "stord-leirvik",
+      "free_slots": 5,
+      "free_hours": 2.5,
+      "signal": "HØYT",
+      "service_used": "Undersøkelse - nye pasienter"
+    },
+    {
+      "name": "Vøyenenga",
+      "region": "Akershus",
+      "city": "Vøyenenga",
+      "slug": "voyenenga",
+      "free_slots": 3,
+      "free_hours": 2.2,
+      "signal": "HØYT",
+      "service_used": "Undersøkelse-faste pasienter (45)"
+    },
+    {
+      "name": "Haugesund",
+      "region": "Haugesund",
+      "city": "Haugesund",
+      "slug": "haugesund",
       "free_slots": 4,
-      "free_hours": 2.7,
+      "free_hours": 2.0,
       "signal": "HØYT",
       "service_used": "Førstegangsundersøkelse"
     },
@@ -549,34 +559,24 @@
       "service_used": "Undersøkelse - faste pasienter"
     },
     {
-      "name": "Slemmestad",
-      "region": "Akershus",
-      "city": "Slemmestad",
-      "slug": "slemmestad",
-      "free_slots": 4,
-      "free_hours": 2.0,
-      "signal": "HØYT",
-      "service_used": "Undersøkelse- faste pasienter"
-    },
-    {
       "name": "Narvik",
       "region": "Nordland",
       "city": "Narvik",
       "slug": "narvik",
-      "free_slots": 3,
-      "free_hours": 1.5,
+      "free_slots": 4,
+      "free_hours": 2.0,
       "signal": "HØYT",
       "service_used": "Rutineundersøkelse"
     },
     {
-      "name": "Vestkanten",
-      "region": "Vestland",
-      "city": "Loddefjord",
-      "slug": "vestkanten",
+      "name": "Raufoss",
+      "region": "Innlandet",
+      "city": "Raufoss",
+      "slug": "raufoss",
       "free_slots": 3,
       "free_hours": 1.5,
       "signal": "HØYT",
-      "service_used": "Undersøkelse-faste pasienter"
+      "service_used": "Undersøkelse - faste pasienter"
     },
     {
       "name": "Harstad Torv",
@@ -589,14 +589,14 @@
       "service_used": "Rutineundersøkelse"
     },
     {
-      "name": "Raufoss",
-      "region": "Innlandet",
-      "city": "Raufoss",
-      "slug": "raufoss",
+      "name": "Vestkanten",
+      "region": "Vestland",
+      "city": "Loddefjord",
+      "slug": "vestkanten",
       "free_slots": 1,
       "free_hours": 0.5,
       "signal": "HØYT",
-      "service_used": "Undersøkelse - faste pasienter"
+      "service_used": "Undersøkelse-faste pasienter"
     },
     {
       "name": "Egersund",
