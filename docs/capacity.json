@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-13T10:41:16.828092+02:00",
+  "generated_at": "2026-09-13T17:25:50.454316+02:00",
   "days_analyzed": 14,
   "total_clinics": 65,
   "summary": {
@@ -53,8 +53,8 @@
       "region": "Trondelag",
       "city": "Trondheim",
       "slug": "leutenhaven",
-      "free_slots": 126,
-      "free_hours": 63.0,
+      "free_slots": 124,
+      "free_hours": 62.0,
       "signal": "LAVT",
       "service_used": "Undersøkelse - faste pasienter"
     },
@@ -193,8 +193,8 @@
       "region": "Trondelag",
       "city": "Orkanger",
       "slug": "orkanger",
-      "free_slots": 49,
-      "free_hours": 32.7,
+      "free_slots": 48,
+      "free_hours": 32.0,
       "signal": "LAVT",
       "service_used": "Undersøkelse -nye pasienter"
     },
@@ -249,16 +249,6 @@
       "service_used": "Undersøkelse-faste pasienter"
     },
     {
-      "name": "Sarpsborg",
-      "region": "Ostfold",
-      "city": "Sarpsborg",
-      "slug": "sarpsborg",
-      "free_slots": 53,
-      "free_hours": 26.5,
-      "signal": "MIDDELS",
-      "service_used": "Undersøkelse- nye pasienter"
-    },
-    {
       "name": "Vågsbygd",
       "region": "Agder",
       "city": "Kristiansand",
@@ -267,6 +257,16 @@
       "free_hours": 25.3,
       "signal": "MIDDELS",
       "service_used": "Førstegangsundersøkelse"
+    },
+    {
+      "name": "Sarpsborg",
+      "region": "Ostfold",
+      "city": "Sarpsborg",
+      "slug": "sarpsborg",
+      "free_slots": 49,
+      "free_hours": 24.5,
+      "signal": "MIDDELS",
+      "service_used": "Undersøkelse- nye pasienter"
     },
     {
       "name": "Broegelmannhuset",
@@ -283,8 +283,8 @@
       "region": "Alesund",
       "city": "Ålesund",
       "slug": "moa",
-      "free_slots": 133,
-      "free_hours": 22.2,
+      "free_slots": 129,
+      "free_hours": 21.5,
       "signal": "MIDDELS",
       "service_used": "Telefonkonsultasjon - Tenner på dagen"
     },
@@ -295,16 +295,6 @@
       "slug": "lokkeveien",
       "free_slots": 41,
       "free_hours": 20.5,
-      "signal": "MIDDELS",
-      "service_used": "Rutineundersøkelse"
-    },
-    {
-      "name": "Madla",
-      "region": "Sor Vest",
-      "city": "Hafrsfjord",
-      "slug": "madla",
-      "free_slots": 37,
-      "free_hours": 18.5,
       "signal": "MIDDELS",
       "service_used": "Rutineundersøkelse"
     },
@@ -329,12 +319,22 @@
       "service_used": "Førstegangsundersøkelse"
     },
     {
+      "name": "Madla",
+      "region": "Sor Vest",
+      "city": "Hafrsfjord",
+      "slug": "madla",
+      "free_slots": 36,
+      "free_hours": 18.0,
+      "signal": "MIDDELS",
+      "service_used": "Rutineundersøkelse"
+    },
+    {
       "name": "Sanden",
       "region": "Trondelag",
       "city": "Trondheim",
       "slug": "sanden",
-      "free_slots": 43,
-      "free_hours": 14.3,
+      "free_slots": 42,
+      "free_hours": 14.0,
       "signal": "MIDDELS",
       "service_used": "Undersøkelse-faste pasienter"
     },
@@ -363,8 +363,8 @@
       "region": "Vestland",
       "city": "Bergen",
       "slug": "strandgaten",
-      "free_slots": 25,
-      "free_hours": 12.5,
+      "free_slots": 24,
+      "free_hours": 12.0,
       "signal": "MIDDELS",
       "service_used": "Undersøkelse - faste pasienter"
     },
@@ -419,16 +419,6 @@
       "service_used": "Undersøkelse-faste pasienter (45)"
     },
     {
-      "name": "Slemmestad",
-      "region": "Akershus",
-      "city": "Slemmestad",
-      "slug": "slemmestad",
-      "free_slots": 17,
-      "free_hours": 8.5,
-      "signal": "HØYT",
-      "service_used": "Undersøkelse- faste pasienter"
-    },
-    {
       "name": "Drammen avd. Landfalløya",
       "region": "Buskerud",
       "city": "Drammen",
@@ -437,6 +427,16 @@
       "free_hours": 8.0,
       "signal": "HØYT",
       "service_used": "Undersøkelse- Faste pasienter"
+    },
+    {
+      "name": "Slemmestad",
+      "region": "Akershus",
+      "city": "Slemmestad",
+      "slug": "slemmestad",
+      "free_slots": 16,
+      "free_hours": 8.0,
+      "signal": "HØYT",
+      "service_used": "Undersøkelse- faste pasienter"
     },
     {
       "name": "Arendal Spesialistklinikk",
@@ -609,16 +609,6 @@
       "service_used": "Undersøkelse - faste pasienter"
     },
     {
-      "name": "Vestkanten",
-      "region": "Vestland",
-      "city": "Loddefjord",
-      "slug": "vestkanten",
-      "free_slots": 2,
-      "free_hours": 1.0,
-      "signal": "HØYT",
-      "service_used": "Undersøkelse-faste pasienter"
-    },
-    {
       "name": "Måløy",
       "region": "Nord Vest",
       "city": "Måløy",
@@ -627,6 +617,16 @@
       "free_hours": 0.8,
       "signal": "HØYT",
       "service_used": "Førstegangsundersøkelse"
+    },
+    {
+      "name": "Vestkanten",
+      "region": "Vestland",
+      "city": "Loddefjord",
+      "slug": "vestkanten",
+      "free_slots": 1,
+      "free_hours": 0.5,
+      "signal": "HØYT",
+      "service_used": "Undersøkelse-faste pasienter"
     },
     {
       "name": "Hamar",
