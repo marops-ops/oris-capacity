@@ -28,7 +28,6 @@ HEADERS = {
     "Sec-Fetch-Site": "same-site",
 }
 
-# Alle varianter av "tannundersøkelse" på tvers av klinikker
 EXAMINATION_KEYWORDS = [
     "undersøk", "undersok",
     "ny pas", "ny-pas", "nypas",
@@ -64,21 +63,60 @@ def get_months(days):
         current = current.replace(month=current.month+1) if current.month < 12 else current.replace(year=current.year+1, month=1)
     return sorted(months)
 
+def build_daily(valid_slots, duration_min, now, days_ahead):
+    """
+    Bygger daily-lista med én rad per dag i analyseperioden (norsk tid).
+    closed: true settes kun på dager uten ledige timer OG som er helg.
+    Har en klinikk ledige timer på lørdag/søndag er den åpen — ingen closed-markering.
+    Summen av daily free_slots og free_hours valideres mot totaltallene.
+    """
+    # Grupper slots på dato i norsk tid
+    slots_by_date = {}
+    for slot in valid_slots:
+        dt   = datetime.fromisoformat(slot["time_from"].replace("Z", "+00:00")).astimezone(OSLO_TZ)
+        date = dt.date()
+        slots_by_date[date] = slots_by_date.get(date, 0) + 1
+
+    daily = []
+    for d in range(days_ahead):
+        date  = (now + timedelta(days=d+1)).date()
+        count = slots_by_date.get(date, 0)
+        hours = round(count * duration_min / 60, 1)
+
+        row = {
+            "date":       date.isoformat(),
+            "free_slots": count,
+            "free_hours": hours,
+        }
+        # Marker som stengt kun hvis ingen ledige timer OG helgedag
+        if count == 0 and date.weekday() >= 5:
+            row["closed"] = True
+
+        daily.append(row)
+
+    # Summesjekk — stopper hvis daily ikke stemmer med totaltallene
+    daily_slots = sum(r["free_slots"] for r in daily)
+    daily_hours = round(sum(r["free_hours"] for r in daily), 1)
+    total_slots = len(valid_slots)
+    total_hours = round(total_slots * duration_min / 60, 1)
+
+    assert daily_slots == total_slots, (
+        f"Summesjekk feilet: daily_slots={daily_slots} != total_slots={total_slots}"
+    )
+    assert daily_hours == total_hours, (
+        f"Summesjekk feilet: daily_hours={daily_hours} != total_hours={total_hours}"
+    )
+
+    return daily
+
 def pick_service(services):
-    """
-    Finn tannundersøkelse/ny pasient-service.
-    Velger korteste blant treff.
-    Returnerer None hvis ingen treff — klinikken hoppes over.
-    """
     candidates = []
     for s in services:
         name = s.get("name", "").lower().strip()
         if any(k in name for k in EXAMINATION_KEYWORDS):
             candidates.append(s)
-
     if not candidates:
         return None
-
     return min(candidates, key=lambda s: s.get("duration", 999))
 
 def compute_signal(free_hours):
@@ -114,8 +152,8 @@ def analyze():
         print(f"✗ {e}")
         return
 
-    results      = []
-    no_match     = []
+    results  = []
+    no_match = []
 
     for i, clinic in enumerate(clinics):
         name    = clinic.get("name", "Ukjent")
@@ -149,7 +187,8 @@ def analyze():
                 no_match.append({"name": name, "services": all_names})
                 continue
 
-            print(f"  → '{service.get('name')}' ({service.get('duration')} min)")
+            duration = service.get("duration", 30)
+            print(f"  → '{service.get('name')}' ({duration} min)")
 
             all_slots = []
             for year, month in months:
@@ -158,7 +197,7 @@ def analyze():
                     t_resp = session.get(f"{API_BASE}/timeslotmonth", params={
                         "clinic_id":  opus_id,
                         "service_id": service["id"],
-                        "duration":   service.get("duration", 30),
+                        "duration":   duration,
                         "year":       year,
                         "month":      month,
                     }, timeout=15)
@@ -175,8 +214,9 @@ def analyze():
             ]
 
             free_slots = len(valid_slots)
-            free_hours = round(free_slots * service.get("duration", 30) / 60, 1)
+            free_hours = round(free_slots * duration / 60, 1)
             signal     = compute_signal(free_hours)
+            daily      = build_daily(valid_slots, duration, now, DAYS_AHEAD)
 
             results.append({
                 "name":         name,
@@ -187,6 +227,7 @@ def analyze():
                 "free_hours":   free_hours,
                 "signal":       signal,
                 "service_used": service.get("name", ""),
+                "daily":        daily,
             })
 
             print(f"  ✓ {free_slots} slots | {free_hours}t | {signal}")
