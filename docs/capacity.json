@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-26T19:02:57.433523+01:00",
+  "generated_at": "2026-10-27T10:40:22.542099+01:00",
   "days_analyzed": 14,
   "total_clinics": 64,
   "summary": {
     "lavt_count": 19,
-    "middels_count": 19,
-    "hoyt_count": 26
+    "middels_count": 20,
+    "hoyt_count": 25
   },
   "clinics": [
     {
@@ -13,16 +13,11 @@
       "region": "Vestland",
       "city": "UIset",
       "slug": "arken-asane",
-      "free_slots": 224,
-      "free_hours": 112.0,
+      "free_slots": 219,
+      "free_hours": 109.5,
       "signal": "LAVT",
       "service_used": "Førstegangsundersøkelse",
       "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 32,
-          "free_hours": 16.0
-        },
         {
           "date": "2026-10-28",
           "free_slots": 15,
@@ -30,18 +25,18 @@
         },
         {
           "date": "2026-10-29",
-          "free_slots": 25,
-          "free_hours": 12.5
+          "free_slots": 24,
+          "free_hours": 12.0
         },
         {
           "date": "2026-10-30",
-          "free_slots": 19,
-          "free_hours": 9.5
+          "free_slots": 22,
+          "free_hours": 11.0
         },
         {
           "date": "2026-10-31",
-          "free_slots": 12,
-          "free_hours": 6.0
+          "free_slots": 10,
+          "free_hours": 5.0
         },
         {
           "date": "2026-11-01",
@@ -50,28 +45,28 @@
         },
         {
           "date": "2026-11-02",
-          "free_slots": 2,
-          "free_hours": 1.0
+          "free_slots": 1,
+          "free_hours": 0.5
         },
         {
           "date": "2026-11-03",
-          "free_slots": 14,
-          "free_hours": 7.0
+          "free_slots": 13,
+          "free_hours": 6.5
         },
         {
           "date": "2026-11-04",
-          "free_slots": 11,
-          "free_hours": 5.5
+          "free_slots": 9,
+          "free_hours": 4.5
         },
         {
           "date": "2026-11-05",
-          "free_slots": 28,
-          "free_hours": 14.0
+          "free_slots": 25,
+          "free_hours": 12.5
         },
         {
           "date": "2026-11-06",
-          "free_slots": 25,
-          "free_hours": 12.5
+          "free_slots": 24,
+          "free_hours": 12.0
         },
         {
           "date": "2026-11-07",
@@ -86,8 +81,185 @@
         },
         {
           "date": "2026-11-09",
+          "free_slots": 19,
+          "free_hours": 9.5
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 8,
+          "free_hours": 4.0
+        }
+      ]
+    },
+    {
+      "name": "Bodø",
+      "region": "Nordland",
+      "city": "Bodø",
+      "slug": "bodo",
+      "free_slots": 109,
+      "free_hours": 81.8,
+      "signal": "LAVT",
+      "service_used": "Undersøkelse - faste pasienter ",
+      "daily": [
+        {
+          "date": "2026-10-28",
+          "free_slots": 7,
+          "free_hours": 5.2
+        },
+        {
+          "date": "2026-10-29",
+          "free_slots": 11,
+          "free_hours": 8.2
+        },
+        {
+          "date": "2026-10-30",
+          "free_slots": 8,
+          "free_hours": 6.0
+        },
+        {
+          "date": "2026-10-31",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-01",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-02",
+          "free_slots": 12,
+          "free_hours": 9.0
+        },
+        {
+          "date": "2026-11-03",
+          "free_slots": 13,
+          "free_hours": 9.8
+        },
+        {
+          "date": "2026-11-04",
+          "free_slots": 6,
+          "free_hours": 4.5
+        },
+        {
+          "date": "2026-11-05",
+          "free_slots": 10,
+          "free_hours": 7.5
+        },
+        {
+          "date": "2026-11-06",
+          "free_slots": 14,
+          "free_hours": 10.5
+        },
+        {
+          "date": "2026-11-07",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-08",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-09",
           "free_slots": 16,
-          "free_hours": 8.0
+          "free_hours": 12.0
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 11,
+          "free_hours": 8.2
+        }
+      ]
+    },
+    {
+      "name": "Lykkegården (Tidligere Trondheim Torg)",
+      "region": "Trondelag",
+      "city": "Trondheim",
+      "slug": "lykkegarden-tidligere-trondheim-torg",
+      "free_slots": 159,
+      "free_hours": 79.5,
+      "signal": "LAVT",
+      "service_used": "Undersøkelse - Faste pasienter",
+      "daily": [
+        {
+          "date": "2026-10-28",
+          "free_slots": 8,
+          "free_hours": 4.0
+        },
+        {
+          "date": "2026-10-29",
+          "free_slots": 7,
+          "free_hours": 3.5
+        },
+        {
+          "date": "2026-10-30",
+          "free_slots": 11,
+          "free_hours": 5.5
+        },
+        {
+          "date": "2026-10-31",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-01",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-02",
+          "free_slots": 14,
+          "free_hours": 7.0
+        },
+        {
+          "date": "2026-11-03",
+          "free_slots": 20,
+          "free_hours": 10.0
+        },
+        {
+          "date": "2026-11-04",
+          "free_slots": 14,
+          "free_hours": 7.0
+        },
+        {
+          "date": "2026-11-05",
+          "free_slots": 17,
+          "free_hours": 8.5
+        },
+        {
+          "date": "2026-11-06",
+          "free_slots": 26,
+          "free_hours": 13.0
+        },
+        {
+          "date": "2026-11-07",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-08",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-09",
+          "free_slots": 25,
+          "free_hours": 12.5
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 15,
+          "free_hours": 7.5
         }
       ]
     },
@@ -96,30 +268,25 @@
       "region": "Nordland",
       "city": "Mo i Rana",
       "slug": "mo-i-rana",
-      "free_slots": 158,
-      "free_hours": 79.0,
+      "free_slots": 154,
+      "free_hours": 77.0,
       "signal": "LAVT",
       "service_used": "Undersøkelse-faste pasienter",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 4,
-          "free_hours": 2.0
-        },
-        {
           "date": "2026-10-28",
-          "free_slots": 22,
-          "free_hours": 11.0
+          "free_slots": 14,
+          "free_hours": 7.0
         },
         {
           "date": "2026-10-29",
-          "free_slots": 9,
-          "free_hours": 4.5
+          "free_slots": 11,
+          "free_hours": 5.5
         },
         {
           "date": "2026-10-30",
-          "free_slots": 8,
-          "free_hours": 4.0
+          "free_slots": 7,
+          "free_hours": 3.5
         },
         {
           "date": "2026-10-31",
@@ -140,13 +307,13 @@
         },
         {
           "date": "2026-11-03",
-          "free_slots": 19,
-          "free_hours": 9.5
+          "free_slots": 16,
+          "free_hours": 8.0
         },
         {
           "date": "2026-11-04",
-          "free_slots": 19,
-          "free_hours": 9.5
+          "free_slots": 18,
+          "free_hours": 9.0
         },
         {
           "date": "2026-11-05",
@@ -172,180 +339,13 @@
         },
         {
           "date": "2026-11-09",
-          "free_slots": 23,
-          "free_hours": 11.5
-        }
-      ]
-    },
-    {
-      "name": "Bodø",
-      "region": "Nordland",
-      "city": "Bodø",
-      "slug": "bodo",
-      "free_slots": 102,
-      "free_hours": 76.5,
-      "signal": "LAVT",
-      "service_used": "Undersøkelse - faste pasienter ",
-      "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 2,
-          "free_hours": 1.5
+          "free_slots": 22,
+          "free_hours": 11.0
         },
         {
-          "date": "2026-10-28",
+          "date": "2026-11-10",
           "free_slots": 7,
-          "free_hours": 5.2
-        },
-        {
-          "date": "2026-10-29",
-          "free_slots": 14,
-          "free_hours": 10.5
-        },
-        {
-          "date": "2026-10-30",
-          "free_slots": 9,
-          "free_hours": 6.8
-        },
-        {
-          "date": "2026-10-31",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-01",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-02",
-          "free_slots": 12,
-          "free_hours": 9.0
-        },
-        {
-          "date": "2026-11-03",
-          "free_slots": 12,
-          "free_hours": 9.0
-        },
-        {
-          "date": "2026-11-04",
-          "free_slots": 7,
-          "free_hours": 5.2
-        },
-        {
-          "date": "2026-11-05",
-          "free_slots": 10,
-          "free_hours": 7.5
-        },
-        {
-          "date": "2026-11-06",
-          "free_slots": 15,
-          "free_hours": 11.2
-        },
-        {
-          "date": "2026-11-07",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-08",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-09",
-          "free_slots": 14,
-          "free_hours": 10.5
-        }
-      ]
-    },
-    {
-      "name": "Lykkegården (Tidligere Trondheim Torg)",
-      "region": "Trondelag",
-      "city": "Trondheim",
-      "slug": "lykkegarden-tidligere-trondheim-torg",
-      "free_slots": 148,
-      "free_hours": 74.0,
-      "signal": "LAVT",
-      "service_used": "Undersøkelse - Faste pasienter",
-      "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 5,
-          "free_hours": 2.5
-        },
-        {
-          "date": "2026-10-28",
-          "free_slots": 11,
-          "free_hours": 5.5
-        },
-        {
-          "date": "2026-10-29",
-          "free_slots": 8,
-          "free_hours": 4.0
-        },
-        {
-          "date": "2026-10-30",
-          "free_slots": 12,
-          "free_hours": 6.0
-        },
-        {
-          "date": "2026-10-31",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-01",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-02",
-          "free_slots": 11,
-          "free_hours": 5.5
-        },
-        {
-          "date": "2026-11-03",
-          "free_slots": 21,
-          "free_hours": 10.5
-        },
-        {
-          "date": "2026-11-04",
-          "free_slots": 13,
-          "free_hours": 6.5
-        },
-        {
-          "date": "2026-11-05",
-          "free_slots": 18,
-          "free_hours": 9.0
-        },
-        {
-          "date": "2026-11-06",
-          "free_slots": 25,
-          "free_hours": 12.5
-        },
-        {
-          "date": "2026-11-07",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-08",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-09",
-          "free_slots": 24,
-          "free_hours": 12.0
+          "free_hours": 3.5
         }
       ]
     },
@@ -354,30 +354,25 @@
       "region": "Trondelag",
       "city": "Trondheim",
       "slug": "sirkus-shopping",
-      "free_slots": 125,
-      "free_hours": 62.5,
+      "free_slots": 121,
+      "free_hours": 60.5,
       "signal": "LAVT",
       "service_used": "Undersøkelse- nye pasienter",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 5,
-          "free_hours": 2.5
-        },
-        {
           "date": "2026-10-28",
-          "free_slots": 9,
-          "free_hours": 4.5
-        },
-        {
-          "date": "2026-10-29",
           "free_slots": 7,
           "free_hours": 3.5
         },
         {
-          "date": "2026-10-30",
+          "date": "2026-10-29",
           "free_slots": 6,
           "free_hours": 3.0
+        },
+        {
+          "date": "2026-10-30",
+          "free_slots": 5,
+          "free_hours": 2.5
         },
         {
           "date": "2026-10-31",
@@ -393,23 +388,23 @@
         },
         {
           "date": "2026-11-02",
+          "free_slots": 12,
+          "free_hours": 6.0
+        },
+        {
+          "date": "2026-11-03",
           "free_slots": 13,
           "free_hours": 6.5
         },
         {
-          "date": "2026-11-03",
-          "free_slots": 15,
-          "free_hours": 7.5
-        },
-        {
           "date": "2026-11-04",
-          "free_slots": 17,
-          "free_hours": 8.5
+          "free_slots": 18,
+          "free_hours": 9.0
         },
         {
           "date": "2026-11-05",
-          "free_slots": 16,
-          "free_hours": 8.0
+          "free_slots": 12,
+          "free_hours": 6.0
         },
         {
           "date": "2026-11-06",
@@ -430,8 +425,13 @@
         },
         {
           "date": "2026-11-09",
-          "free_slots": 15,
-          "free_hours": 7.5
+          "free_slots": 16,
+          "free_hours": 8.0
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 8,
+          "free_hours": 4.0
         }
       ]
     },
@@ -440,16 +440,11 @@
       "region": "Vestland",
       "city": "Nesttun",
       "slug": "nesttun",
-      "free_slots": 101,
-      "free_hours": 50.5,
+      "free_slots": 97,
+      "free_hours": 48.5,
       "signal": "LAVT",
       "service_used": "Undersøkelse- nye pasienter",
       "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 1,
-          "free_hours": 0.5
-        },
         {
           "date": "2026-10-28",
           "free_slots": 3,
@@ -457,13 +452,13 @@
         },
         {
           "date": "2026-10-29",
-          "free_slots": 6,
-          "free_hours": 3.0
+          "free_slots": 7,
+          "free_hours": 3.5
         },
         {
           "date": "2026-10-30",
-          "free_slots": 4,
-          "free_hours": 2.0
+          "free_slots": 5,
+          "free_hours": 2.5
         },
         {
           "date": "2026-10-31",
@@ -479,23 +474,23 @@
         },
         {
           "date": "2026-11-02",
-          "free_slots": 9,
-          "free_hours": 4.5
+          "free_slots": 8,
+          "free_hours": 4.0
         },
         {
           "date": "2026-11-03",
-          "free_slots": 17,
-          "free_hours": 8.5
+          "free_slots": 16,
+          "free_hours": 8.0
         },
         {
           "date": "2026-11-04",
-          "free_slots": 11,
-          "free_hours": 5.5
+          "free_slots": 7,
+          "free_hours": 3.5
         },
         {
           "date": "2026-11-05",
-          "free_slots": 15,
-          "free_hours": 7.5
+          "free_slots": 12,
+          "free_hours": 6.0
         },
         {
           "date": "2026-11-06",
@@ -518,6 +513,11 @@
           "date": "2026-11-09",
           "free_slots": 18,
           "free_hours": 9.0
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 3,
+          "free_hours": 1.5
         }
       ]
     },
@@ -526,16 +526,11 @@
       "region": "Vestland",
       "city": "Kleppestø",
       "slug": "askoy",
-      "free_slots": 67,
-      "free_hours": 50.2,
+      "free_slots": 62,
+      "free_hours": 46.5,
       "signal": "LAVT",
       "service_used": "Førstegangsundersøkelse ",
       "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 8,
-          "free_hours": 6.0
-        },
         {
           "date": "2026-10-28",
           "free_slots": 8,
@@ -580,8 +575,8 @@
         },
         {
           "date": "2026-11-05",
-          "free_slots": 13,
-          "free_hours": 9.8
+          "free_slots": 11,
+          "free_hours": 8.2
         },
         {
           "date": "2026-11-06",
@@ -602,6 +597,11 @@
         },
         {
           "date": "2026-11-09",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-10",
           "free_slots": 0,
           "free_hours": 0.0
         }
@@ -612,17 +612,12 @@
       "region": "Trondelag",
       "city": "Orkanger",
       "slug": "orkanger",
-      "free_slots": 74,
-      "free_hours": 49.3,
+      "free_slots": 69,
+      "free_hours": 46.0,
       "signal": "LAVT",
       "service_used": "Undersøkelse -nye pasienter",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 4,
-          "free_hours": 2.7
-        },
-        {
           "date": "2026-10-28",
           "free_slots": 9,
           "free_hours": 6.0
@@ -636,178 +631,6 @@
           "date": "2026-10-30",
           "free_slots": 7,
           "free_hours": 4.7
-        },
-        {
-          "date": "2026-10-31",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-01",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-02",
-          "free_slots": 4,
-          "free_hours": 2.7
-        },
-        {
-          "date": "2026-11-03",
-          "free_slots": 10,
-          "free_hours": 6.7
-        },
-        {
-          "date": "2026-11-04",
-          "free_slots": 8,
-          "free_hours": 5.3
-        },
-        {
-          "date": "2026-11-05",
-          "free_slots": 7,
-          "free_hours": 4.7
-        },
-        {
-          "date": "2026-11-06",
-          "free_slots": 7,
-          "free_hours": 4.7
-        },
-        {
-          "date": "2026-11-07",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-08",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-09",
-          "free_slots": 8,
-          "free_hours": 5.3
-        }
-      ]
-    },
-    {
-      "name": "Skøyen",
-      "region": "Oslo",
-      "city": "Oslo",
-      "slug": "skoyen",
-      "free_slots": 98,
-      "free_hours": 49.0,
-      "signal": "LAVT",
-      "service_used": "Undersøkelse-faste pasienter",
-      "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 5,
-          "free_hours": 2.5
-        },
-        {
-          "date": "2026-10-28",
-          "free_slots": 21,
-          "free_hours": 10.5
-        },
-        {
-          "date": "2026-10-29",
-          "free_slots": 13,
-          "free_hours": 6.5
-        },
-        {
-          "date": "2026-10-30",
-          "free_slots": 15,
-          "free_hours": 7.5
-        },
-        {
-          "date": "2026-10-31",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-01",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-02",
-          "free_slots": 5,
-          "free_hours": 2.5
-        },
-        {
-          "date": "2026-11-03",
-          "free_slots": 8,
-          "free_hours": 4.0
-        },
-        {
-          "date": "2026-11-04",
-          "free_slots": 11,
-          "free_hours": 5.5
-        },
-        {
-          "date": "2026-11-05",
-          "free_slots": 6,
-          "free_hours": 3.0
-        },
-        {
-          "date": "2026-11-06",
-          "free_slots": 7,
-          "free_hours": 3.5
-        },
-        {
-          "date": "2026-11-07",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-08",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-09",
-          "free_slots": 7,
-          "free_hours": 3.5
-        }
-      ]
-    },
-    {
-      "name": "Ryen",
-      "region": "Oslo",
-      "city": "Oslo",
-      "slug": "ryen",
-      "free_slots": 93,
-      "free_hours": 46.5,
-      "signal": "LAVT",
-      "service_used": "Undersøkelse - faste pasienter",
-      "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 6,
-          "free_hours": 3.0
-        },
-        {
-          "date": "2026-10-28",
-          "free_slots": 9,
-          "free_hours": 4.5
-        },
-        {
-          "date": "2026-10-29",
-          "free_slots": 12,
-          "free_hours": 6.0
-        },
-        {
-          "date": "2026-10-30",
-          "free_slots": 14,
-          "free_hours": 7.0
         },
         {
           "date": "2026-10-31",
@@ -824,27 +647,27 @@
         {
           "date": "2026-11-02",
           "free_slots": 2,
-          "free_hours": 1.0
+          "free_hours": 1.3
         },
         {
           "date": "2026-11-03",
           "free_slots": 8,
-          "free_hours": 4.0
+          "free_hours": 5.3
         },
         {
           "date": "2026-11-04",
-          "free_slots": 11,
-          "free_hours": 5.5
+          "free_slots": 8,
+          "free_hours": 5.3
         },
         {
           "date": "2026-11-05",
-          "free_slots": 9,
-          "free_hours": 4.5
+          "free_slots": 6,
+          "free_hours": 4.0
         },
         {
           "date": "2026-11-06",
-          "free_slots": 4,
-          "free_hours": 2.0
+          "free_slots": 5,
+          "free_hours": 3.3
         },
         {
           "date": "2026-11-07",
@@ -860,8 +683,13 @@
         },
         {
           "date": "2026-11-09",
-          "free_slots": 18,
-          "free_hours": 9.0
+          "free_slots": 8,
+          "free_hours": 5.3
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 4,
+          "free_hours": 2.7
         }
       ]
     },
@@ -870,16 +698,11 @@
       "region": "Trondelag",
       "city": "Trondheim",
       "slug": "leutenhaven",
-      "free_slots": 85,
-      "free_hours": 42.5,
+      "free_slots": 86,
+      "free_hours": 43.0,
       "signal": "LAVT",
       "service_used": "Undersøkelse - faste pasienter",
       "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 2,
-          "free_hours": 1.0
-        },
         {
           "date": "2026-10-28",
           "free_slots": 1,
@@ -887,13 +710,13 @@
         },
         {
           "date": "2026-10-29",
-          "free_slots": 8,
-          "free_hours": 4.0
+          "free_slots": 9,
+          "free_hours": 4.5
         },
         {
           "date": "2026-10-30",
-          "free_slots": 6,
-          "free_hours": 3.0
+          "free_slots": 5,
+          "free_hours": 2.5
         },
         {
           "date": "2026-10-31",
@@ -909,8 +732,8 @@
         },
         {
           "date": "2026-11-02",
-          "free_slots": 7,
-          "free_hours": 3.5
+          "free_slots": 5,
+          "free_hours": 2.5
         },
         {
           "date": "2026-11-03",
@@ -946,8 +769,185 @@
         },
         {
           "date": "2026-11-09",
-          "free_slots": 13,
-          "free_hours": 6.5
+          "free_slots": 11,
+          "free_hours": 5.5
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 5,
+          "free_hours": 2.5
+        }
+      ]
+    },
+    {
+      "name": "Skøyen",
+      "region": "Oslo",
+      "city": "Oslo",
+      "slug": "skoyen",
+      "free_slots": 86,
+      "free_hours": 43.0,
+      "signal": "LAVT",
+      "service_used": "Undersøkelse-faste pasienter",
+      "daily": [
+        {
+          "date": "2026-10-28",
+          "free_slots": 20,
+          "free_hours": 10.0
+        },
+        {
+          "date": "2026-10-29",
+          "free_slots": 9,
+          "free_hours": 4.5
+        },
+        {
+          "date": "2026-10-30",
+          "free_slots": 15,
+          "free_hours": 7.5
+        },
+        {
+          "date": "2026-10-31",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-01",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-02",
+          "free_slots": 3,
+          "free_hours": 1.5
+        },
+        {
+          "date": "2026-11-03",
+          "free_slots": 6,
+          "free_hours": 3.0
+        },
+        {
+          "date": "2026-11-04",
+          "free_slots": 11,
+          "free_hours": 5.5
+        },
+        {
+          "date": "2026-11-05",
+          "free_slots": 6,
+          "free_hours": 3.0
+        },
+        {
+          "date": "2026-11-06",
+          "free_slots": 7,
+          "free_hours": 3.5
+        },
+        {
+          "date": "2026-11-07",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-08",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-09",
+          "free_slots": 5,
+          "free_hours": 2.5
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 1,
+          "free_hours": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Ryen",
+      "region": "Oslo",
+      "city": "Oslo",
+      "slug": "ryen",
+      "free_slots": 84,
+      "free_hours": 42.0,
+      "signal": "LAVT",
+      "service_used": "Undersøkelse - faste pasienter",
+      "daily": [
+        {
+          "date": "2026-10-28",
+          "free_slots": 9,
+          "free_hours": 4.5
+        },
+        {
+          "date": "2026-10-29",
+          "free_slots": 12,
+          "free_hours": 6.0
+        },
+        {
+          "date": "2026-10-30",
+          "free_slots": 11,
+          "free_hours": 5.5
+        },
+        {
+          "date": "2026-10-31",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-01",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-02",
+          "free_slots": 2,
+          "free_hours": 1.0
+        },
+        {
+          "date": "2026-11-03",
+          "free_slots": 8,
+          "free_hours": 4.0
+        },
+        {
+          "date": "2026-11-04",
+          "free_slots": 9,
+          "free_hours": 4.5
+        },
+        {
+          "date": "2026-11-05",
+          "free_slots": 8,
+          "free_hours": 4.0
+        },
+        {
+          "date": "2026-11-06",
+          "free_slots": 4,
+          "free_hours": 2.0
+        },
+        {
+          "date": "2026-11-07",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-08",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-09",
+          "free_slots": 18,
+          "free_hours": 9.0
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 2,
+          "free_hours": 1.0
         }
       ]
     },
@@ -956,30 +956,25 @@
       "region": "Oslo",
       "city": "Oslo",
       "slug": "aker-brygge",
-      "free_slots": 63,
-      "free_hours": 42.0,
+      "free_slots": 60,
+      "free_hours": 40.0,
       "signal": "LAVT",
       "service_used": "Undersøkelse-faste pasienter",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 2,
-          "free_hours": 1.3
-        },
-        {
           "date": "2026-10-28",
-          "free_slots": 7,
-          "free_hours": 4.7
+          "free_slots": 6,
+          "free_hours": 4.0
         },
         {
           "date": "2026-10-29",
-          "free_slots": 14,
-          "free_hours": 9.3
+          "free_slots": 10,
+          "free_hours": 6.7
         },
         {
           "date": "2026-10-30",
-          "free_slots": 5,
-          "free_hours": 3.3
+          "free_slots": 7,
+          "free_hours": 4.7
         },
         {
           "date": "2026-10-31",
@@ -1010,8 +1005,8 @@
         },
         {
           "date": "2026-11-05",
-          "free_slots": 5,
-          "free_hours": 3.3
+          "free_slots": 4,
+          "free_hours": 2.7
         },
         {
           "date": "2026-11-06",
@@ -1034,6 +1029,97 @@
           "date": "2026-11-09",
           "free_slots": 9,
           "free_hours": 6.0
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 3,
+          "free_hours": 2.0
+        }
+      ]
+    },
+    {
+      "name": "Sandnes",
+      "region": "Sor Vest",
+      "city": "Sandnes",
+      "slug": "sandnes",
+      "free_slots": 77,
+      "free_hours": 38.5,
+      "signal": "LAVT",
+      "service_used": "Undersøkelse - nye pasienter",
+      "daily": [
+        {
+          "date": "2026-10-28",
+          "free_slots": 11,
+          "free_hours": 5.5
+        },
+        {
+          "date": "2026-10-29",
+          "free_slots": 3,
+          "free_hours": 1.5
+        },
+        {
+          "date": "2026-10-30",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-10-31",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-01",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-02",
+          "free_slots": 8,
+          "free_hours": 4.0
+        },
+        {
+          "date": "2026-11-03",
+          "free_slots": 3,
+          "free_hours": 1.5
+        },
+        {
+          "date": "2026-11-04",
+          "free_slots": 8,
+          "free_hours": 4.0
+        },
+        {
+          "date": "2026-11-05",
+          "free_slots": 10,
+          "free_hours": 5.0
+        },
+        {
+          "date": "2026-11-06",
+          "free_slots": 9,
+          "free_hours": 4.5
+        },
+        {
+          "date": "2026-11-07",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-08",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-09",
+          "free_slots": 15,
+          "free_hours": 7.5
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 9,
+          "free_hours": 4.5
         }
       ]
     },
@@ -1042,30 +1128,25 @@
       "region": "Oslo",
       "city": "Oslo",
       "slug": "bryn",
-      "free_slots": 80,
-      "free_hours": 40.0,
+      "free_slots": 76,
+      "free_hours": 38.0,
       "signal": "LAVT",
       "service_used": "Rutineundersøkelse",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 3,
-          "free_hours": 1.5
-        },
-        {
           "date": "2026-10-28",
-          "free_slots": 8,
-          "free_hours": 4.0
+          "free_slots": 5,
+          "free_hours": 2.5
         },
         {
           "date": "2026-10-29",
-          "free_slots": 10,
-          "free_hours": 5.0
+          "free_slots": 7,
+          "free_hours": 3.5
         },
         {
           "date": "2026-10-30",
-          "free_slots": 4,
-          "free_hours": 2.0
+          "free_slots": 5,
+          "free_hours": 2.5
         },
         {
           "date": "2026-10-31",
@@ -1081,18 +1162,18 @@
         },
         {
           "date": "2026-11-02",
-          "free_slots": 11,
-          "free_hours": 5.5
+          "free_slots": 10,
+          "free_hours": 5.0
         },
         {
           "date": "2026-11-03",
-          "free_slots": 7,
-          "free_hours": 3.5
+          "free_slots": 6,
+          "free_hours": 3.0
         },
         {
           "date": "2026-11-04",
-          "free_slots": 8,
-          "free_hours": 4.0
+          "free_slots": 6,
+          "free_hours": 3.0
         },
         {
           "date": "2026-11-05",
@@ -1101,8 +1182,8 @@
         },
         {
           "date": "2026-11-06",
-          "free_slots": 9,
-          "free_hours": 4.5
+          "free_slots": 8,
+          "free_hours": 4.0
         },
         {
           "date": "2026-11-07",
@@ -1120,6 +1201,11 @@
           "date": "2026-11-09",
           "free_slots": 14,
           "free_hours": 7.0
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 8,
+          "free_hours": 4.0
         }
       ]
     },
@@ -1128,25 +1214,20 @@
       "region": "Bryne",
       "city": "Bryne",
       "slug": "bryne",
-      "free_slots": 77,
-      "free_hours": 38.5,
+      "free_slots": 76,
+      "free_hours": 38.0,
       "signal": "LAVT",
       "service_used": "Rutineundersøkelse",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 2,
-          "free_hours": 1.0
-        },
-        {
           "date": "2026-10-28",
-          "free_slots": 6,
-          "free_hours": 3.0
+          "free_slots": 4,
+          "free_hours": 2.0
         },
         {
           "date": "2026-10-29",
-          "free_slots": 6,
-          "free_hours": 3.0
+          "free_slots": 7,
+          "free_hours": 3.5
         },
         {
           "date": "2026-10-30",
@@ -1167,28 +1248,28 @@
         },
         {
           "date": "2026-11-02",
-          "free_slots": 12,
-          "free_hours": 6.0
+          "free_slots": 9,
+          "free_hours": 4.5
         },
         {
           "date": "2026-11-03",
-          "free_slots": 12,
-          "free_hours": 6.0
+          "free_slots": 9,
+          "free_hours": 4.5
         },
         {
           "date": "2026-11-04",
-          "free_slots": 6,
-          "free_hours": 3.0
+          "free_slots": 5,
+          "free_hours": 2.5
         },
         {
           "date": "2026-11-05",
-          "free_slots": 6,
-          "free_hours": 3.0
+          "free_slots": 8,
+          "free_hours": 4.0
         },
         {
           "date": "2026-11-06",
-          "free_slots": 5,
-          "free_hours": 2.5
+          "free_slots": 6,
+          "free_hours": 3.0
         },
         {
           "date": "2026-11-07",
@@ -1204,8 +1285,13 @@
         },
         {
           "date": "2026-11-09",
-          "free_slots": 15,
-          "free_hours": 7.5
+          "free_slots": 16,
+          "free_hours": 8.0
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 5,
+          "free_hours": 2.5
         }
       ]
     },
@@ -1214,16 +1300,11 @@
       "region": "Oslo",
       "city": "Oslo",
       "slug": "galleri-oslo",
-      "free_slots": 77,
-      "free_hours": 38.5,
+      "free_slots": 76,
+      "free_hours": 38.0,
       "signal": "LAVT",
       "service_used": "Implantatkonsultasjon",
       "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 1,
-          "free_hours": 0.5
-        },
         {
           "date": "2026-10-28",
           "free_slots": 9,
@@ -1236,8 +1317,8 @@
         },
         {
           "date": "2026-10-30",
-          "free_slots": 12,
-          "free_hours": 6.0
+          "free_slots": 9,
+          "free_hours": 4.5
         },
         {
           "date": "2026-10-31",
@@ -1268,8 +1349,8 @@
         },
         {
           "date": "2026-11-05",
-          "free_slots": 7,
-          "free_hours": 3.5
+          "free_slots": 5,
+          "free_hours": 2.5
         },
         {
           "date": "2026-11-06",
@@ -1292,6 +1373,11 @@
           "date": "2026-11-09",
           "free_slots": 15,
           "free_hours": 7.5
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 5,
+          "free_hours": 2.5
         }
       ]
     },
@@ -1300,16 +1386,11 @@
       "region": "Oslo",
       "city": "Oslo",
       "slug": "homansbyen",
-      "free_slots": 74,
-      "free_hours": 37.0,
+      "free_slots": 72,
+      "free_hours": 36.0,
       "signal": "LAVT",
       "service_used": "Undersøkelse med 2 stk røntgen",
       "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 5,
-          "free_hours": 2.5
-        },
         {
           "date": "2026-10-28",
           "free_slots": 11,
@@ -1339,18 +1420,18 @@
         },
         {
           "date": "2026-11-02",
-          "free_slots": 9,
-          "free_hours": 4.5
+          "free_slots": 10,
+          "free_hours": 5.0
         },
         {
           "date": "2026-11-03",
-          "free_slots": 12,
-          "free_hours": 6.0
+          "free_slots": 11,
+          "free_hours": 5.5
         },
         {
           "date": "2026-11-04",
-          "free_slots": 7,
-          "free_hours": 3.5
+          "free_slots": 6,
+          "free_hours": 3.0
         },
         {
           "date": "2026-11-05",
@@ -1376,8 +1457,13 @@
         },
         {
           "date": "2026-11-09",
-          "free_slots": 13,
-          "free_hours": 6.5
+          "free_slots": 12,
+          "free_hours": 6.0
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 3,
+          "free_hours": 1.5
         }
       ]
     },
@@ -1386,30 +1472,25 @@
       "region": "Akershus",
       "city": "Sandvika",
       "slug": "lokketangen",
-      "free_slots": 51,
-      "free_hours": 34.0,
+      "free_slots": 46,
+      "free_hours": 30.7,
       "signal": "LAVT",
       "service_used": "Førstegangsundersøkelse",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 2,
-          "free_hours": 1.3
-        },
-        {
           "date": "2026-10-28",
-          "free_slots": 3,
-          "free_hours": 2.0
+          "free_slots": 1,
+          "free_hours": 0.7
         },
         {
           "date": "2026-10-29",
-          "free_slots": 2,
-          "free_hours": 1.3
+          "free_slots": 1,
+          "free_hours": 0.7
         },
         {
           "date": "2026-10-30",
-          "free_slots": 5,
-          "free_hours": 3.3
+          "free_slots": 4,
+          "free_hours": 2.7
         },
         {
           "date": "2026-10-31",
@@ -1425,13 +1506,13 @@
         },
         {
           "date": "2026-11-02",
-          "free_slots": 5,
-          "free_hours": 3.3
+          "free_slots": 4,
+          "free_hours": 2.7
         },
         {
           "date": "2026-11-03",
-          "free_slots": 10,
-          "free_hours": 6.7
+          "free_slots": 6,
+          "free_hours": 4.0
         },
         {
           "date": "2026-11-04",
@@ -1464,92 +1545,11 @@
           "date": "2026-11-09",
           "free_slots": 12,
           "free_hours": 8.0
-        }
-      ]
-    },
-    {
-      "name": "Sandnes",
-      "region": "Sor Vest",
-      "city": "Sandnes",
-      "slug": "sandnes",
-      "free_slots": 68,
-      "free_hours": 34.0,
-      "signal": "LAVT",
-      "service_used": "Undersøkelse - nye pasienter",
-      "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 2,
-          "free_hours": 1.0
         },
         {
-          "date": "2026-10-28",
-          "free_slots": 9,
-          "free_hours": 4.5
-        },
-        {
-          "date": "2026-10-29",
-          "free_slots": 1,
-          "free_hours": 0.5
-        },
-        {
-          "date": "2026-10-30",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-10-31",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-01",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-02",
-          "free_slots": 8,
-          "free_hours": 4.0
-        },
-        {
-          "date": "2026-11-03",
-          "free_slots": 3,
-          "free_hours": 1.5
-        },
-        {
-          "date": "2026-11-04",
-          "free_slots": 7,
-          "free_hours": 3.5
-        },
-        {
-          "date": "2026-11-05",
-          "free_slots": 11,
-          "free_hours": 5.5
-        },
-        {
-          "date": "2026-11-06",
-          "free_slots": 12,
-          "free_hours": 6.0
-        },
-        {
-          "date": "2026-11-07",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-08",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-09",
-          "free_slots": 15,
-          "free_hours": 7.5
+          "date": "2026-11-10",
+          "free_slots": 5,
+          "free_hours": 3.3
         }
       ]
     },
@@ -1558,20 +1558,15 @@
       "region": "Ostfold",
       "city": "Kråkerøy",
       "slug": "fredrikstad",
-      "free_slots": 62,
-      "free_hours": 31.0,
+      "free_slots": 61,
+      "free_hours": 30.5,
       "signal": "LAVT",
       "service_used": "Undersøkelse- nye paienter",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
           "date": "2026-10-28",
-          "free_slots": 2,
-          "free_hours": 1.0
+          "free_slots": 1,
+          "free_hours": 0.5
         },
         {
           "date": "2026-10-29",
@@ -1636,92 +1631,11 @@
           "date": "2026-11-09",
           "free_slots": 1,
           "free_hours": 0.5
-        }
-      ]
-    },
-    {
-      "name": "Vågsbygd",
-      "region": "Agder",
-      "city": "Kristiansand",
-      "slug": "vagsbygd",
-      "free_slots": 40,
-      "free_hours": 26.7,
-      "signal": "MIDDELS",
-      "service_used": "Førstegangsundersøkelse",
-      "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 1,
-          "free_hours": 0.7
         },
         {
-          "date": "2026-10-28",
-          "free_slots": 4,
-          "free_hours": 2.7
-        },
-        {
-          "date": "2026-10-29",
-          "free_slots": 5,
-          "free_hours": 3.3
-        },
-        {
-          "date": "2026-10-30",
-          "free_slots": 5,
-          "free_hours": 3.3
-        },
-        {
-          "date": "2026-10-31",
+          "date": "2026-11-10",
           "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-01",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-02",
-          "free_slots": 6,
-          "free_hours": 4.0
-        },
-        {
-          "date": "2026-11-03",
-          "free_slots": 2,
-          "free_hours": 1.3
-        },
-        {
-          "date": "2026-11-04",
-          "free_slots": 6,
-          "free_hours": 4.0
-        },
-        {
-          "date": "2026-11-05",
-          "free_slots": 5,
-          "free_hours": 3.3
-        },
-        {
-          "date": "2026-11-06",
-          "free_slots": 3,
-          "free_hours": 2.0
-        },
-        {
-          "date": "2026-11-07",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-08",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-09",
-          "free_slots": 3,
-          "free_hours": 2.0
+          "free_hours": 0.0
         }
       ]
     },
@@ -1730,20 +1644,15 @@
       "region": "Agder",
       "city": "Arendal",
       "slug": "stoa-i-arendal",
-      "free_slots": 51,
-      "free_hours": 25.5,
+      "free_slots": 57,
+      "free_hours": 28.5,
       "signal": "MIDDELS",
       "service_used": "Undersøkelse",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 3,
-          "free_hours": 1.5
-        },
-        {
           "date": "2026-10-28",
-          "free_slots": 5,
-          "free_hours": 2.5
+          "free_slots": 6,
+          "free_hours": 3.0
         },
         {
           "date": "2026-10-29",
@@ -1789,8 +1698,8 @@
         },
         {
           "date": "2026-11-06",
-          "free_slots": 9,
-          "free_hours": 4.5
+          "free_slots": 7,
+          "free_hours": 3.5
         },
         {
           "date": "2026-11-07",
@@ -1806,94 +1715,13 @@
         },
         {
           "date": "2026-11-09",
-          "free_slots": 18,
-          "free_hours": 9.0
-        }
-      ]
-    },
-    {
-      "name": "Tårnplassen",
-      "region": "Vestland",
-      "city": "Bergen",
-      "slug": "tarnplassen",
-      "free_slots": 47,
-      "free_hours": 23.5,
-      "signal": "MIDDELS",
-      "service_used": "Undersøkelse-faste pasienter",
-      "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 4,
-          "free_hours": 2.0
+          "free_slots": 19,
+          "free_hours": 9.5
         },
         {
-          "date": "2026-10-28",
-          "free_slots": 3,
-          "free_hours": 1.5
-        },
-        {
-          "date": "2026-10-29",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-10-30",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-10-31",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-01",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-02",
+          "date": "2026-11-10",
           "free_slots": 7,
           "free_hours": 3.5
-        },
-        {
-          "date": "2026-11-03",
-          "free_slots": 9,
-          "free_hours": 4.5
-        },
-        {
-          "date": "2026-11-04",
-          "free_slots": 7,
-          "free_hours": 3.5
-        },
-        {
-          "date": "2026-11-05",
-          "free_slots": 5,
-          "free_hours": 2.5
-        },
-        {
-          "date": "2026-11-06",
-          "free_slots": 2,
-          "free_hours": 1.0
-        },
-        {
-          "date": "2026-11-07",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-08",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-09",
-          "free_slots": 10,
-          "free_hours": 5.0
         }
       ]
     },
@@ -1902,25 +1730,20 @@
       "region": "Vestland",
       "city": "Bergen",
       "slug": "broegelmannhuset",
-      "free_slots": 46,
-      "free_hours": 23.0,
+      "free_slots": 48,
+      "free_hours": 24.0,
       "signal": "MIDDELS",
       "service_used": "Undersøkelse-nye pasienter",
       "daily": [
         {
-          "date": "2026-10-27",
+          "date": "2026-10-28",
           "free_slots": 0,
           "free_hours": 0.0
         },
         {
-          "date": "2026-10-28",
-          "free_slots": 2,
-          "free_hours": 1.0
-        },
-        {
           "date": "2026-10-29",
-          "free_slots": 2,
-          "free_hours": 1.0
+          "free_slots": 3,
+          "free_hours": 1.5
         },
         {
           "date": "2026-10-30",
@@ -1956,8 +1779,8 @@
         },
         {
           "date": "2026-11-05",
-          "free_slots": 7,
-          "free_hours": 3.5
+          "free_slots": 9,
+          "free_hours": 4.5
         },
         {
           "date": "2026-11-06",
@@ -1980,28 +1803,28 @@
           "date": "2026-11-09",
           "free_slots": 11,
           "free_hours": 5.5
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 1,
+          "free_hours": 0.5
         }
       ]
     },
     {
-      "name": "Haugesund",
-      "region": "Haugesund",
-      "city": "Haugesund",
-      "slug": "haugesund",
-      "free_slots": 44,
-      "free_hours": 22.0,
+      "name": "Tårnplassen",
+      "region": "Vestland",
+      "city": "Bergen",
+      "slug": "tarnplassen",
+      "free_slots": 43,
+      "free_hours": 21.5,
       "signal": "MIDDELS",
-      "service_used": "Førstegangsundersøkelse",
+      "service_used": "Undersøkelse-faste pasienter",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
           "date": "2026-10-28",
-          "free_slots": 8,
-          "free_hours": 4.0
+          "free_slots": 2,
+          "free_hours": 1.0
         },
         {
           "date": "2026-10-29",
@@ -2010,8 +1833,8 @@
         },
         {
           "date": "2026-10-30",
-          "free_slots": 1,
-          "free_hours": 0.5
+          "free_slots": 0,
+          "free_hours": 0.0
         },
         {
           "date": "2026-10-31",
@@ -2027,13 +1850,99 @@
         },
         {
           "date": "2026-11-02",
-          "free_slots": 1,
-          "free_hours": 0.5
+          "free_slots": 7,
+          "free_hours": 3.5
         },
         {
           "date": "2026-11-03",
+          "free_slots": 8,
+          "free_hours": 4.0
+        },
+        {
+          "date": "2026-11-04",
+          "free_slots": 6,
+          "free_hours": 3.0
+        },
+        {
+          "date": "2026-11-05",
+          "free_slots": 5,
+          "free_hours": 2.5
+        },
+        {
+          "date": "2026-11-06",
+          "free_slots": 2,
+          "free_hours": 1.0
+        },
+        {
+          "date": "2026-11-07",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-08",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-09",
+          "free_slots": 10,
+          "free_hours": 5.0
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 1,
+          "free_hours": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Haugesund",
+      "region": "Haugesund",
+      "city": "Haugesund",
+      "slug": "haugesund",
+      "free_slots": 42,
+      "free_hours": 21.0,
+      "signal": "MIDDELS",
+      "service_used": "Førstegangsundersøkelse",
+      "daily": [
+        {
+          "date": "2026-10-28",
           "free_slots": 4,
           "free_hours": 2.0
+        },
+        {
+          "date": "2026-10-29",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-10-30",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-10-31",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-01",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-02",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-03",
+          "free_slots": 1,
+          "free_hours": 0.5
         },
         {
           "date": "2026-11-04",
@@ -2064,8 +1973,13 @@
         },
         {
           "date": "2026-11-09",
-          "free_slots": 8,
-          "free_hours": 4.0
+          "free_slots": 9,
+          "free_hours": 4.5
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 6,
+          "free_hours": 3.0
         }
       ]
     },
@@ -2080,19 +1994,14 @@
       "service_used": "Undersøkelse-faste pasienter",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 2,
-          "free_hours": 1.3
-        },
-        {
           "date": "2026-10-28",
           "free_slots": 5,
           "free_hours": 3.3
         },
         {
           "date": "2026-10-29",
-          "free_slots": 4,
-          "free_hours": 2.7
+          "free_slots": 5,
+          "free_hours": 3.3
         },
         {
           "date": "2026-10-30",
@@ -2128,99 +2037,13 @@
         },
         {
           "date": "2026-11-05",
-          "free_slots": 3,
-          "free_hours": 2.0
-        },
-        {
-          "date": "2026-11-06",
-          "free_slots": 3,
-          "free_hours": 2.0
-        },
-        {
-          "date": "2026-11-07",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-08",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-09",
-          "free_slots": 4,
-          "free_hours": 2.7
-        }
-      ]
-    },
-    {
-      "name": "Knapstad",
-      "region": "Ostfold",
-      "city": "Knapstad",
-      "slug": "knapstad",
-      "free_slots": 40,
-      "free_hours": 20.0,
-      "signal": "MIDDELS",
-      "service_used": "Undersøkelse- Faste pasienter",
-      "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 3,
-          "free_hours": 1.5
-        },
-        {
-          "date": "2026-10-28",
           "free_slots": 1,
-          "free_hours": 0.5
-        },
-        {
-          "date": "2026-10-29",
-          "free_slots": 12,
-          "free_hours": 6.0
-        },
-        {
-          "date": "2026-10-30",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-10-31",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-01",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-02",
-          "free_slots": 4,
-          "free_hours": 2.0
-        },
-        {
-          "date": "2026-11-03",
-          "free_slots": 3,
-          "free_hours": 1.5
-        },
-        {
-          "date": "2026-11-04",
-          "free_slots": 2,
-          "free_hours": 1.0
-        },
-        {
-          "date": "2026-11-05",
-          "free_slots": 9,
-          "free_hours": 4.5
+          "free_hours": 0.7
         },
         {
           "date": "2026-11-06",
-          "free_slots": 0,
-          "free_hours": 0.0
+          "free_slots": 3,
+          "free_hours": 2.0
         },
         {
           "date": "2026-11-07",
@@ -2236,8 +2059,13 @@
         },
         {
           "date": "2026-11-09",
-          "free_slots": 6,
-          "free_hours": 3.0
+          "free_slots": 4,
+          "free_hours": 2.7
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 3,
+          "free_hours": 2.0
         }
       ]
     },
@@ -2246,30 +2074,25 @@
       "region": "Trondelag",
       "city": "Trondheim",
       "slug": "sanden",
-      "free_slots": 52,
-      "free_hours": 17.3,
+      "free_slots": 59,
+      "free_hours": 19.7,
       "signal": "MIDDELS",
       "service_used": "Undersøkelse-faste pasienter",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 3,
-          "free_hours": 1.0
+          "date": "2026-10-28",
+          "free_slots": 12,
+          "free_hours": 4.0
         },
         {
-          "date": "2026-10-28",
+          "date": "2026-10-29",
           "free_slots": 13,
           "free_hours": 4.3
         },
         {
-          "date": "2026-10-29",
-          "free_slots": 9,
-          "free_hours": 3.0
-        },
-        {
           "date": "2026-10-30",
-          "free_slots": 2,
-          "free_hours": 0.7
+          "free_slots": 4,
+          "free_hours": 1.3
         },
         {
           "date": "2026-10-31",
@@ -2290,8 +2113,8 @@
         },
         {
           "date": "2026-11-03",
-          "free_slots": 10,
-          "free_hours": 3.3
+          "free_slots": 11,
+          "free_hours": 3.7
         },
         {
           "date": "2026-11-04",
@@ -2324,6 +2147,183 @@
           "date": "2026-11-09",
           "free_slots": 2,
           "free_hours": 0.7
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 1,
+          "free_hours": 0.3
+        }
+      ]
+    },
+    {
+      "name": "Vågsbygd",
+      "region": "Agder",
+      "city": "Kristiansand",
+      "slug": "vagsbygd",
+      "free_slots": 29,
+      "free_hours": 19.3,
+      "signal": "MIDDELS",
+      "service_used": "Førstegangsundersøkelse",
+      "daily": [
+        {
+          "date": "2026-10-28",
+          "free_slots": 1,
+          "free_hours": 0.7
+        },
+        {
+          "date": "2026-10-29",
+          "free_slots": 3,
+          "free_hours": 2.0
+        },
+        {
+          "date": "2026-10-30",
+          "free_slots": 3,
+          "free_hours": 2.0
+        },
+        {
+          "date": "2026-10-31",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-01",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-02",
+          "free_slots": 4,
+          "free_hours": 2.7
+        },
+        {
+          "date": "2026-11-03",
+          "free_slots": 2,
+          "free_hours": 1.3
+        },
+        {
+          "date": "2026-11-04",
+          "free_slots": 6,
+          "free_hours": 4.0
+        },
+        {
+          "date": "2026-11-05",
+          "free_slots": 3,
+          "free_hours": 2.0
+        },
+        {
+          "date": "2026-11-06",
+          "free_slots": 3,
+          "free_hours": 2.0
+        },
+        {
+          "date": "2026-11-07",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-08",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-09",
+          "free_slots": 3,
+          "free_hours": 2.0
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 1,
+          "free_hours": 0.7
+        }
+      ]
+    },
+    {
+      "name": "Knapstad",
+      "region": "Ostfold",
+      "city": "Knapstad",
+      "slug": "knapstad",
+      "free_slots": 38,
+      "free_hours": 19.0,
+      "signal": "MIDDELS",
+      "service_used": "Undersøkelse- Faste pasienter",
+      "daily": [
+        {
+          "date": "2026-10-28",
+          "free_slots": 1,
+          "free_hours": 0.5
+        },
+        {
+          "date": "2026-10-29",
+          "free_slots": 12,
+          "free_hours": 6.0
+        },
+        {
+          "date": "2026-10-30",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-10-31",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-01",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-02",
+          "free_slots": 4,
+          "free_hours": 2.0
+        },
+        {
+          "date": "2026-11-03",
+          "free_slots": 3,
+          "free_hours": 1.5
+        },
+        {
+          "date": "2026-11-04",
+          "free_slots": 2,
+          "free_hours": 1.0
+        },
+        {
+          "date": "2026-11-05",
+          "free_slots": 9,
+          "free_hours": 4.5
+        },
+        {
+          "date": "2026-11-06",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-07",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-08",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-09",
+          "free_slots": 6,
+          "free_hours": 3.0
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 0,
+          "free_hours": 0.0
         }
       ]
     },
@@ -2332,20 +2332,15 @@
       "region": "Troms",
       "city": "Tromsø",
       "slug": "gronnegata-tannlegesenter",
-      "free_slots": 25,
-      "free_hours": 16.7,
+      "free_slots": 28,
+      "free_hours": 18.7,
       "signal": "MIDDELS",
       "service_used": "Undersøkelse-nye pasienter",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
           "date": "2026-10-28",
-          "free_slots": 0,
-          "free_hours": 0.0
+          "free_slots": 3,
+          "free_hours": 2.0
         },
         {
           "date": "2026-10-29",
@@ -2391,8 +2386,8 @@
         },
         {
           "date": "2026-11-06",
-          "free_slots": 5,
-          "free_hours": 3.3
+          "free_slots": 4,
+          "free_hours": 2.7
         },
         {
           "date": "2026-11-07",
@@ -2410,210 +2405,38 @@
           "date": "2026-11-09",
           "free_slots": 4,
           "free_hours": 2.7
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 1,
+          "free_hours": 0.7
         }
       ]
     },
     {
-      "name": "Gressvik",
-      "region": "Ostfold",
-      "city": "Gressvik",
-      "slug": "gressvik",
-      "free_slots": 22,
-      "free_hours": 16.5,
-      "signal": "MIDDELS",
-      "service_used": "Undersøkelse -  Nye pasienter",
-      "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 2,
-          "free_hours": 1.5
-        },
-        {
-          "date": "2026-10-28",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-10-29",
-          "free_slots": 1,
-          "free_hours": 0.8
-        },
-        {
-          "date": "2026-10-30",
-          "free_slots": 1,
-          "free_hours": 0.8
-        },
-        {
-          "date": "2026-10-31",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-01",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-02",
-          "free_slots": 3,
-          "free_hours": 2.2
-        },
-        {
-          "date": "2026-11-03",
-          "free_slots": 2,
-          "free_hours": 1.5
-        },
-        {
-          "date": "2026-11-04",
-          "free_slots": 2,
-          "free_hours": 1.5
-        },
-        {
-          "date": "2026-11-05",
-          "free_slots": 2,
-          "free_hours": 1.5
-        },
-        {
-          "date": "2026-11-06",
-          "free_slots": 3,
-          "free_hours": 2.2
-        },
-        {
-          "date": "2026-11-07",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-08",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-09",
-          "free_slots": 6,
-          "free_hours": 4.5
-        }
-      ]
-    },
-    {
-      "name": "Slemmestad",
-      "region": "Akershus",
-      "city": "Slemmestad",
-      "slug": "slemmestad",
-      "free_slots": 32,
-      "free_hours": 16.0,
-      "signal": "MIDDELS",
-      "service_used": "Undersøkelse- faste pasienter",
-      "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 1,
-          "free_hours": 0.5
-        },
-        {
-          "date": "2026-10-28",
-          "free_slots": 1,
-          "free_hours": 0.5
-        },
-        {
-          "date": "2026-10-29",
-          "free_slots": 1,
-          "free_hours": 0.5
-        },
-        {
-          "date": "2026-10-30",
-          "free_slots": 5,
-          "free_hours": 2.5
-        },
-        {
-          "date": "2026-10-31",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-01",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-02",
-          "free_slots": 6,
-          "free_hours": 3.0
-        },
-        {
-          "date": "2026-11-03",
-          "free_slots": 3,
-          "free_hours": 1.5
-        },
-        {
-          "date": "2026-11-04",
-          "free_slots": 2,
-          "free_hours": 1.0
-        },
-        {
-          "date": "2026-11-05",
-          "free_slots": 2,
-          "free_hours": 1.0
-        },
-        {
-          "date": "2026-11-06",
-          "free_slots": 1,
-          "free_hours": 0.5
-        },
-        {
-          "date": "2026-11-07",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-08",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-09",
-          "free_slots": 10,
-          "free_hours": 5.0
-        }
-      ]
-    },
-    {
-      "name": "Sandvika Storsenter",
-      "region": "Akershus",
-      "city": "Sandvika",
-      "slug": "sandvika-storsenter",
+      "name": "Stord Leirvik",
+      "region": "Vestland",
+      "city": "Stord",
+      "slug": "stord-leirvik",
       "free_slots": 31,
       "free_hours": 15.5,
       "signal": "MIDDELS",
-      "service_used": "Undersøkelse",
+      "service_used": "Undersøkelse - nye pasienter",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 3,
-          "free_hours": 1.5
-        },
-        {
           "date": "2026-10-28",
-          "free_slots": 12,
-          "free_hours": 6.0
+          "free_slots": 0,
+          "free_hours": 0.0
         },
         {
           "date": "2026-10-29",
-          "free_slots": 0,
-          "free_hours": 0.0
+          "free_slots": 7,
+          "free_hours": 3.5
         },
         {
           "date": "2026-10-30",
-          "free_slots": 0,
-          "free_hours": 0.0
+          "free_slots": 3,
+          "free_hours": 1.5
         },
         {
           "date": "2026-10-31",
@@ -2629,13 +2452,13 @@
         },
         {
           "date": "2026-11-02",
-          "free_slots": 0,
-          "free_hours": 0.0
+          "free_slots": 1,
+          "free_hours": 0.5
         },
         {
           "date": "2026-11-03",
-          "free_slots": 0,
-          "free_hours": 0.0
+          "free_slots": 6,
+          "free_hours": 3.0
         },
         {
           "date": "2026-11-04",
@@ -2644,8 +2467,8 @@
         },
         {
           "date": "2026-11-05",
-          "free_slots": 9,
-          "free_hours": 4.5
+          "free_slots": 3,
+          "free_hours": 1.5
         },
         {
           "date": "2026-11-06",
@@ -2666,180 +2489,13 @@
         },
         {
           "date": "2026-11-09",
-          "free_slots": 0,
-          "free_hours": 0.0
-        }
-      ]
-    },
-    {
-      "name": "Harstad Torv",
-      "region": "Troms",
-      "city": "Harstad",
-      "slug": "harstad-torv",
-      "free_slots": 20,
-      "free_hours": 15.0,
-      "signal": "MIDDELS",
-      "service_used": "Rutineundersøkelse",
-      "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-10-28",
-          "free_slots": 4,
-          "free_hours": 3.0
-        },
-        {
-          "date": "2026-10-29",
-          "free_slots": 4,
-          "free_hours": 3.0
-        },
-        {
-          "date": "2026-10-30",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-10-31",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-01",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-02",
-          "free_slots": 1,
-          "free_hours": 0.8
-        },
-        {
-          "date": "2026-11-03",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-11-04",
-          "free_slots": 1,
-          "free_hours": 0.8
-        },
-        {
-          "date": "2026-11-05",
-          "free_slots": 2,
-          "free_hours": 1.5
-        },
-        {
-          "date": "2026-11-06",
-          "free_slots": 4,
-          "free_hours": 3.0
-        },
-        {
-          "date": "2026-11-07",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-08",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-09",
-          "free_slots": 4,
-          "free_hours": 3.0
-        }
-      ]
-    },
-    {
-      "name": "Sarpsborg",
-      "region": "Ostfold",
-      "city": "Sarpsborg",
-      "slug": "sarpsborg",
-      "free_slots": 30,
-      "free_hours": 15.0,
-      "signal": "MIDDELS",
-      "service_used": "Undersøkelse- nye pasienter",
-      "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 1,
-          "free_hours": 0.5
-        },
-        {
-          "date": "2026-10-28",
-          "free_slots": 5,
-          "free_hours": 2.5
-        },
-        {
-          "date": "2026-10-29",
           "free_slots": 2,
           "free_hours": 1.0
         },
         {
-          "date": "2026-10-30",
-          "free_slots": 1,
-          "free_hours": 0.5
-        },
-        {
-          "date": "2026-10-31",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-01",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-02",
-          "free_slots": 1,
-          "free_hours": 0.5
-        },
-        {
-          "date": "2026-11-03",
-          "free_slots": 1,
-          "free_hours": 0.5
-        },
-        {
-          "date": "2026-11-04",
-          "free_slots": 1,
-          "free_hours": 0.5
-        },
-        {
-          "date": "2026-11-05",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-11-06",
-          "free_slots": 5,
-          "free_hours": 2.5
-        },
-        {
-          "date": "2026-11-07",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-08",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-09",
-          "free_slots": 13,
-          "free_hours": 6.5
+          "date": "2026-11-10",
+          "free_slots": 2,
+          "free_hours": 1.0
         }
       ]
     },
@@ -2848,16 +2504,11 @@
       "region": "Vestfold",
       "city": "Tønsberg",
       "slug": "tonsberg",
-      "free_slots": 22,
-      "free_hours": 14.7,
+      "free_slots": 23,
+      "free_hours": 15.3,
       "signal": "MIDDELS",
       "service_used": "Førstegangsundersøkelse",
       "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 3,
-          "free_hours": 2.0
-        },
         {
           "date": "2026-10-28",
           "free_slots": 2,
@@ -2865,8 +2516,8 @@
         },
         {
           "date": "2026-10-29",
-          "free_slots": 2,
-          "free_hours": 1.3
+          "free_slots": 1,
+          "free_hours": 0.7
         },
         {
           "date": "2026-10-30",
@@ -2887,8 +2538,8 @@
         },
         {
           "date": "2026-11-02",
-          "free_slots": 4,
-          "free_hours": 2.7
+          "free_slots": 3,
+          "free_hours": 2.0
         },
         {
           "date": "2026-11-03",
@@ -2897,8 +2548,8 @@
         },
         {
           "date": "2026-11-04",
-          "free_slots": 1,
-          "free_hours": 0.7
+          "free_slots": 2,
+          "free_hours": 1.3
         },
         {
           "date": "2026-11-05",
@@ -2907,8 +2558,8 @@
         },
         {
           "date": "2026-11-06",
-          "free_slots": 2,
-          "free_hours": 1.3
+          "free_slots": 3,
+          "free_hours": 2.0
         },
         {
           "date": "2026-11-07",
@@ -2926,6 +2577,269 @@
           "date": "2026-11-09",
           "free_slots": 5,
           "free_hours": 3.3
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 4,
+          "free_hours": 2.7
+        }
+      ]
+    },
+    {
+      "name": "Slemmestad",
+      "region": "Akershus",
+      "city": "Slemmestad",
+      "slug": "slemmestad",
+      "free_slots": 30,
+      "free_hours": 15.0,
+      "signal": "MIDDELS",
+      "service_used": "Undersøkelse- faste pasienter",
+      "daily": [
+        {
+          "date": "2026-10-28",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-10-29",
+          "free_slots": 1,
+          "free_hours": 0.5
+        },
+        {
+          "date": "2026-10-30",
+          "free_slots": 2,
+          "free_hours": 1.0
+        },
+        {
+          "date": "2026-10-31",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-01",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-02",
+          "free_slots": 7,
+          "free_hours": 3.5
+        },
+        {
+          "date": "2026-11-03",
+          "free_slots": 3,
+          "free_hours": 1.5
+        },
+        {
+          "date": "2026-11-04",
+          "free_slots": 1,
+          "free_hours": 0.5
+        },
+        {
+          "date": "2026-11-05",
+          "free_slots": 2,
+          "free_hours": 1.0
+        },
+        {
+          "date": "2026-11-06",
+          "free_slots": 1,
+          "free_hours": 0.5
+        },
+        {
+          "date": "2026-11-07",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-08",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-09",
+          "free_slots": 9,
+          "free_hours": 4.5
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 4,
+          "free_hours": 2.0
+        }
+      ]
+    },
+    {
+      "name": "Sarpsborg",
+      "region": "Ostfold",
+      "city": "Sarpsborg",
+      "slug": "sarpsborg",
+      "free_slots": 29,
+      "free_hours": 14.5,
+      "signal": "MIDDELS",
+      "service_used": "Undersøkelse- nye pasienter",
+      "daily": [
+        {
+          "date": "2026-10-28",
+          "free_slots": 3,
+          "free_hours": 1.5
+        },
+        {
+          "date": "2026-10-29",
+          "free_slots": 2,
+          "free_hours": 1.0
+        },
+        {
+          "date": "2026-10-30",
+          "free_slots": 1,
+          "free_hours": 0.5
+        },
+        {
+          "date": "2026-10-31",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-01",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-02",
+          "free_slots": 1,
+          "free_hours": 0.5
+        },
+        {
+          "date": "2026-11-03",
+          "free_slots": 2,
+          "free_hours": 1.0
+        },
+        {
+          "date": "2026-11-04",
+          "free_slots": 2,
+          "free_hours": 1.0
+        },
+        {
+          "date": "2026-11-05",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-06",
+          "free_slots": 4,
+          "free_hours": 2.0
+        },
+        {
+          "date": "2026-11-07",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-08",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-09",
+          "free_slots": 12,
+          "free_hours": 6.0
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 1,
+          "free_hours": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Harstad Torv",
+      "region": "Troms",
+      "city": "Harstad",
+      "slug": "harstad-torv",
+      "free_slots": 19,
+      "free_hours": 14.2,
+      "signal": "MIDDELS",
+      "service_used": "Rutineundersøkelse",
+      "daily": [
+        {
+          "date": "2026-10-28",
+          "free_slots": 3,
+          "free_hours": 2.2
+        },
+        {
+          "date": "2026-10-29",
+          "free_slots": 3,
+          "free_hours": 2.2
+        },
+        {
+          "date": "2026-10-30",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-10-31",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-01",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-02",
+          "free_slots": 1,
+          "free_hours": 0.8
+        },
+        {
+          "date": "2026-11-03",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-04",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-05",
+          "free_slots": 2,
+          "free_hours": 1.5
+        },
+        {
+          "date": "2026-11-06",
+          "free_slots": 4,
+          "free_hours": 3.0
+        },
+        {
+          "date": "2026-11-07",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-08",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-09",
+          "free_slots": 5,
+          "free_hours": 3.8
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 0,
+          "free_hours": 0.0
         }
       ]
     },
@@ -2939,11 +2853,6 @@
       "signal": "MIDDELS",
       "service_used": "Undersøkelse-nye pasienter",
       "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
         {
           "date": "2026-10-28",
           "free_slots": 0,
@@ -3012,6 +2921,183 @@
           "date": "2026-11-09",
           "free_slots": 0,
           "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 0,
+          "free_hours": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Sandvika Storsenter",
+      "region": "Akershus",
+      "city": "Sandvika",
+      "slug": "sandvika-storsenter",
+      "free_slots": 28,
+      "free_hours": 14.0,
+      "signal": "MIDDELS",
+      "service_used": "Undersøkelse",
+      "daily": [
+        {
+          "date": "2026-10-28",
+          "free_slots": 12,
+          "free_hours": 6.0
+        },
+        {
+          "date": "2026-10-29",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-10-30",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-10-31",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-01",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-02",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-03",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-04",
+          "free_slots": 3,
+          "free_hours": 1.5
+        },
+        {
+          "date": "2026-11-05",
+          "free_slots": 9,
+          "free_hours": 4.5
+        },
+        {
+          "date": "2026-11-06",
+          "free_slots": 3,
+          "free_hours": 1.5
+        },
+        {
+          "date": "2026-11-07",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-08",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-09",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 0,
+          "free_hours": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Gressvik",
+      "region": "Ostfold",
+      "city": "Gressvik",
+      "slug": "gressvik",
+      "free_slots": 17,
+      "free_hours": 12.8,
+      "signal": "MIDDELS",
+      "service_used": "Undersøkelse -  Nye pasienter",
+      "daily": [
+        {
+          "date": "2026-10-28",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-10-29",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-10-30",
+          "free_slots": 2,
+          "free_hours": 1.5
+        },
+        {
+          "date": "2026-10-31",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-01",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-02",
+          "free_slots": 2,
+          "free_hours": 1.5
+        },
+        {
+          "date": "2026-11-03",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-04",
+          "free_slots": 1,
+          "free_hours": 0.8
+        },
+        {
+          "date": "2026-11-05",
+          "free_slots": 1,
+          "free_hours": 0.8
+        },
+        {
+          "date": "2026-11-06",
+          "free_slots": 3,
+          "free_hours": 2.2
+        },
+        {
+          "date": "2026-11-07",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-08",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-09",
+          "free_slots": 6,
+          "free_hours": 4.5
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 2,
+          "free_hours": 1.5
         }
       ]
     },
@@ -3020,116 +3106,25 @@
       "region": "Oslo",
       "city": "Oslo",
       "slug": "rommen",
-      "free_slots": 17,
-      "free_hours": 11.3,
+      "free_slots": 19,
+      "free_hours": 12.7,
       "signal": "MIDDELS",
       "service_used": "Undersøkelse-faste pasienter",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 5,
-          "free_hours": 3.3
-        },
-        {
           "date": "2026-10-28",
-          "free_slots": 1,
-          "free_hours": 0.7
-        },
-        {
-          "date": "2026-10-29",
-          "free_slots": 1,
-          "free_hours": 0.7
-        },
-        {
-          "date": "2026-10-30",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-10-31",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-01",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-02",
           "free_slots": 2,
           "free_hours": 1.3
         },
         {
-          "date": "2026-11-03",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-11-04",
-          "free_slots": 3,
-          "free_hours": 2.0
-        },
-        {
-          "date": "2026-11-05",
-          "free_slots": 1,
-          "free_hours": 0.7
-        },
-        {
-          "date": "2026-11-06",
-          "free_slots": 3,
-          "free_hours": 2.0
-        },
-        {
-          "date": "2026-11-07",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-08",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-09",
-          "free_slots": 1,
-          "free_hours": 0.7
-        }
-      ]
-    },
-    {
-      "name": "Drammen",
-      "region": "Buskerud",
-      "city": "Drammen",
-      "slug": "drammen",
-      "free_slots": 22,
-      "free_hours": 11.0,
-      "signal": "MIDDELS",
-      "service_used": "Undersøkelse - faste pasienter",
-      "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 1,
-          "free_hours": 0.5
-        },
-        {
-          "date": "2026-10-28",
-          "free_slots": 1,
-          "free_hours": 0.5
-        },
-        {
           "date": "2026-10-29",
           "free_slots": 2,
-          "free_hours": 1.0
+          "free_hours": 1.3
         },
         {
           "date": "2026-10-30",
-          "free_slots": 5,
-          "free_hours": 2.5
+          "free_slots": 0,
+          "free_hours": 0.0
         },
         {
           "date": "2026-10-31",
@@ -3145,8 +3140,8 @@
         },
         {
           "date": "2026-11-02",
-          "free_slots": 5,
-          "free_hours": 2.5
+          "free_slots": 3,
+          "free_hours": 2.0
         },
         {
           "date": "2026-11-03",
@@ -3155,17 +3150,17 @@
         },
         {
           "date": "2026-11-04",
-          "free_slots": 0,
-          "free_hours": 0.0
+          "free_slots": 3,
+          "free_hours": 2.0
         },
         {
           "date": "2026-11-05",
           "free_slots": 1,
-          "free_hours": 0.5
+          "free_hours": 0.7
         },
         {
           "date": "2026-11-06",
-          "free_slots": 4,
+          "free_slots": 3,
           "free_hours": 2.0
         },
         {
@@ -3182,8 +3177,13 @@
         },
         {
           "date": "2026-11-09",
-          "free_slots": 3,
-          "free_hours": 1.5
+          "free_slots": 1,
+          "free_hours": 0.7
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 0,
+          "free_hours": 0.0
         }
       ]
     },
@@ -3192,25 +3192,20 @@
       "region": "Sor Vest",
       "city": "Hafrsfjord",
       "slug": "madla",
-      "free_slots": 20,
-      "free_hours": 10.0,
+      "free_slots": 22,
+      "free_hours": 11.0,
       "signal": "MIDDELS",
       "service_used": "Rutineundersøkelse",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
           "date": "2026-10-28",
-          "free_slots": 6,
-          "free_hours": 3.0
+          "free_slots": 7,
+          "free_hours": 3.5
         },
         {
           "date": "2026-10-29",
-          "free_slots": 0,
-          "free_hours": 0.0
+          "free_slots": 2,
+          "free_hours": 1.0
         },
         {
           "date": "2026-10-30",
@@ -3236,8 +3231,8 @@
         },
         {
           "date": "2026-11-03",
-          "free_slots": 1,
-          "free_hours": 0.5
+          "free_slots": 0,
+          "free_hours": 0.0
         },
         {
           "date": "2026-11-04",
@@ -3246,13 +3241,13 @@
         },
         {
           "date": "2026-11-05",
-          "free_slots": 3,
-          "free_hours": 1.5
+          "free_slots": 4,
+          "free_hours": 2.0
         },
         {
           "date": "2026-11-06",
-          "free_slots": 1,
-          "free_hours": 0.5
+          "free_slots": 0,
+          "free_hours": 0.0
         },
         {
           "date": "2026-11-07",
@@ -3270,6 +3265,97 @@
           "date": "2026-11-09",
           "free_slots": 5,
           "free_hours": 2.5
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 0,
+          "free_hours": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Drammen",
+      "region": "Buskerud",
+      "city": "Drammen",
+      "slug": "drammen",
+      "free_slots": 20,
+      "free_hours": 10.0,
+      "signal": "MIDDELS",
+      "service_used": "Undersøkelse - faste pasienter",
+      "daily": [
+        {
+          "date": "2026-10-28",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-10-29",
+          "free_slots": 3,
+          "free_hours": 1.5
+        },
+        {
+          "date": "2026-10-30",
+          "free_slots": 4,
+          "free_hours": 2.0
+        },
+        {
+          "date": "2026-10-31",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-01",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-02",
+          "free_slots": 4,
+          "free_hours": 2.0
+        },
+        {
+          "date": "2026-11-03",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-04",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-05",
+          "free_slots": 1,
+          "free_hours": 0.5
+        },
+        {
+          "date": "2026-11-06",
+          "free_slots": 3,
+          "free_hours": 1.5
+        },
+        {
+          "date": "2026-11-07",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-08",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-09",
+          "free_slots": 3,
+          "free_hours": 1.5
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 1,
+          "free_hours": 0.5
         }
       ]
     },
@@ -3278,25 +3364,20 @@
       "region": "Alesund",
       "city": "Ålesund",
       "slug": "moa",
-      "free_slots": 56,
-      "free_hours": 9.3,
+      "free_slots": 55,
+      "free_hours": 9.2,
       "signal": "HØYT",
       "service_used": "Telefonkonsultasjon - Tenner på dagen",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 5,
-          "free_hours": 0.8
-        },
-        {
           "date": "2026-10-28",
-          "free_slots": 0,
-          "free_hours": 0.0
+          "free_slots": 3,
+          "free_hours": 0.5
         },
         {
           "date": "2026-10-29",
-          "free_slots": 6,
-          "free_hours": 1.0
+          "free_slots": 2,
+          "free_hours": 0.3
         },
         {
           "date": "2026-10-30",
@@ -3317,8 +3398,8 @@
         },
         {
           "date": "2026-11-02",
-          "free_slots": 5,
-          "free_hours": 0.8
+          "free_slots": 0,
+          "free_hours": 0.0
         },
         {
           "date": "2026-11-03",
@@ -3356,38 +3437,38 @@
           "date": "2026-11-09",
           "free_slots": 25,
           "free_hours": 4.2
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 10,
+          "free_hours": 1.7
         }
       ]
     },
     {
-      "name": "Stord Leirvik",
-      "region": "Vestland",
-      "city": "Stord",
-      "slug": "stord-leirvik",
-      "free_slots": 17,
-      "free_hours": 8.5,
+      "name": "Kolsås",
+      "region": "Akershus",
+      "city": "Kolsås",
+      "slug": "kolsas",
+      "free_slots": 12,
+      "free_hours": 9.0,
       "signal": "HØYT",
-      "service_used": "Undersøkelse - nye pasienter",
+      "service_used": "Førstegangsundersøkelse",
       "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
         {
           "date": "2026-10-28",
           "free_slots": 1,
-          "free_hours": 0.5
+          "free_hours": 0.8
         },
         {
           "date": "2026-10-29",
-          "free_slots": 8,
-          "free_hours": 4.0
+          "free_slots": 3,
+          "free_hours": 2.2
         },
         {
           "date": "2026-10-30",
-          "free_slots": 1,
-          "free_hours": 0.5
+          "free_slots": 0,
+          "free_hours": 0.0
         },
         {
           "date": "2026-10-31",
@@ -3403,18 +3484,18 @@
         },
         {
           "date": "2026-11-02",
-          "free_slots": 1,
-          "free_hours": 0.5
+          "free_slots": 0,
+          "free_hours": 0.0
         },
         {
           "date": "2026-11-03",
-          "free_slots": 3,
-          "free_hours": 1.5
+          "free_slots": 0,
+          "free_hours": 0.0
         },
         {
           "date": "2026-11-04",
-          "free_slots": 3,
-          "free_hours": 1.5
+          "free_slots": 1,
+          "free_hours": 0.8
         },
         {
           "date": "2026-11-05",
@@ -3423,8 +3504,8 @@
         },
         {
           "date": "2026-11-06",
-          "free_slots": 0,
-          "free_hours": 0.0
+          "free_slots": 3,
+          "free_hours": 2.2
         },
         {
           "date": "2026-11-07",
@@ -3440,6 +3521,11 @@
         },
         {
           "date": "2026-11-09",
+          "free_slots": 4,
+          "free_hours": 3.0
+        },
+        {
+          "date": "2026-11-10",
           "free_slots": 0,
           "free_hours": 0.0
         }
@@ -3456,19 +3542,14 @@
       "service_used": "Undersøkelse-faste pasienter (45)",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 2,
-          "free_hours": 1.5
-        },
-        {
           "date": "2026-10-28",
           "free_slots": 2,
           "free_hours": 1.5
         },
         {
           "date": "2026-10-29",
-          "free_slots": 2,
-          "free_hours": 1.5
+          "free_slots": 1,
+          "free_hours": 0.8
         },
         {
           "date": "2026-10-30",
@@ -3489,8 +3570,8 @@
         },
         {
           "date": "2026-11-02",
-          "free_slots": 0,
-          "free_hours": 0.0
+          "free_slots": 2,
+          "free_hours": 1.5
         },
         {
           "date": "2026-11-03",
@@ -3526,26 +3607,198 @@
         },
         {
           "date": "2026-11-09",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-10",
           "free_slots": 0,
           "free_hours": 0.0
         }
       ]
     },
     {
-      "name": "Kolsås",
-      "region": "Akershus",
-      "city": "Kolsås",
-      "slug": "kolsas",
-      "free_slots": 10,
+      "name": "Hinna Park",
+      "region": "Stavanger",
+      "city": "Stavanger",
+      "slug": "hinna-park",
+      "free_slots": 15,
       "free_hours": 7.5,
       "signal": "HØYT",
-      "service_used": "Førstegangsundersøkelse",
+      "service_used": "Rutineundersøkelse",
       "daily": [
         {
-          "date": "2026-10-27",
+          "date": "2026-10-28",
+          "free_slots": 1,
+          "free_hours": 0.5
+        },
+        {
+          "date": "2026-10-29",
           "free_slots": 0,
           "free_hours": 0.0
         },
+        {
+          "date": "2026-10-30",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-10-31",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-01",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-02",
+          "free_slots": 3,
+          "free_hours": 1.5
+        },
+        {
+          "date": "2026-11-03",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-04",
+          "free_slots": 2,
+          "free_hours": 1.0
+        },
+        {
+          "date": "2026-11-05",
+          "free_slots": 2,
+          "free_hours": 1.0
+        },
+        {
+          "date": "2026-11-06",
+          "free_slots": 2,
+          "free_hours": 1.0
+        },
+        {
+          "date": "2026-11-07",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-08",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-09",
+          "free_slots": 4,
+          "free_hours": 2.0
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 1,
+          "free_hours": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Moelv",
+      "region": "Innlandet",
+      "city": "Moelv",
+      "slug": "moelv",
+      "free_slots": 9,
+      "free_hours": 6.0,
+      "signal": "HØYT",
+      "service_used": "Undersøkelse- faste pasienter",
+      "daily": [
+        {
+          "date": "2026-10-28",
+          "free_slots": 1,
+          "free_hours": 0.7
+        },
+        {
+          "date": "2026-10-29",
+          "free_slots": 2,
+          "free_hours": 1.3
+        },
+        {
+          "date": "2026-10-30",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-10-31",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-01",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-02",
+          "free_slots": 3,
+          "free_hours": 2.0
+        },
+        {
+          "date": "2026-11-03",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-04",
+          "free_slots": 1,
+          "free_hours": 0.7
+        },
+        {
+          "date": "2026-11-05",
+          "free_slots": 1,
+          "free_hours": 0.7
+        },
+        {
+          "date": "2026-11-06",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-07",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-08",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-09",
+          "free_slots": 1,
+          "free_hours": 0.7
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 0,
+          "free_hours": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Arendal Spesialistklinikk",
+      "region": "Agder",
+      "city": "Arendal",
+      "slug": "arendal-spesialistklinikk",
+      "free_slots": 7,
+      "free_hours": 5.2,
+      "signal": "HØYT",
+      "service_used": "Undersøkelse - faste pasienter",
+      "daily": [
         {
           "date": "2026-10-28",
           "free_slots": 1,
@@ -3553,8 +3806,8 @@
         },
         {
           "date": "2026-10-29",
-          "free_slots": 3,
-          "free_hours": 2.2
+          "free_slots": 2,
+          "free_hours": 1.5
         },
         {
           "date": "2026-10-30",
@@ -3595,8 +3848,8 @@
         },
         {
           "date": "2026-11-06",
-          "free_slots": 3,
-          "free_hours": 2.2
+          "free_slots": 2,
+          "free_hours": 1.5
         },
         {
           "date": "2026-11-07",
@@ -3612,8 +3865,99 @@
         },
         {
           "date": "2026-11-09",
+          "free_slots": 2,
+          "free_hours": 1.5
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 0,
+          "free_hours": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Drammen avd. Landfalløya",
+      "region": "Buskerud",
+      "city": "Drammen",
+      "slug": "drammen-avd-landfalloya",
+      "free_slots": 10,
+      "free_hours": 5.0,
+      "signal": "HØYT",
+      "service_used": "Undersøkelse- Faste pasienter",
+      "daily": [
+        {
+          "date": "2026-10-28",
+          "free_slots": 1,
+          "free_hours": 0.5
+        },
+        {
+          "date": "2026-10-29",
+          "free_slots": 1,
+          "free_hours": 0.5
+        },
+        {
+          "date": "2026-10-30",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-10-31",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-01",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-02",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-03",
+          "free_slots": 1,
+          "free_hours": 0.5
+        },
+        {
+          "date": "2026-11-04",
+          "free_slots": 2,
+          "free_hours": 1.0
+        },
+        {
+          "date": "2026-11-05",
+          "free_slots": 1,
+          "free_hours": 0.5
+        },
+        {
+          "date": "2026-11-06",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-07",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-08",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-09",
+          "free_slots": 1,
+          "free_hours": 0.5
+        },
+        {
+          "date": "2026-11-10",
           "free_slots": 3,
-          "free_hours": 2.2
+          "free_hours": 1.5
         }
       ]
     },
@@ -3622,16 +3966,11 @@
       "region": "Nord Vest",
       "city": "Måløy",
       "slug": "maloy",
-      "free_slots": 8,
-      "free_hours": 6.0,
+      "free_slots": 6,
+      "free_hours": 4.5,
       "signal": "HØYT",
       "service_used": "Førstegangsundersøkelse",
       "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
         {
           "date": "2026-10-28",
           "free_slots": 0,
@@ -3644,8 +3983,8 @@
         },
         {
           "date": "2026-10-30",
-          "free_slots": 2,
-          "free_hours": 1.5
+          "free_slots": 0,
+          "free_hours": 0.0
         },
         {
           "date": "2026-10-31",
@@ -3666,8 +4005,8 @@
         },
         {
           "date": "2026-11-03",
-          "free_slots": 2,
-          "free_hours": 1.5
+          "free_slots": 1,
+          "free_hours": 0.8
         },
         {
           "date": "2026-11-04",
@@ -3676,8 +4015,8 @@
         },
         {
           "date": "2026-11-05",
-          "free_slots": 2,
-          "free_hours": 1.5
+          "free_slots": 1,
+          "free_hours": 0.8
         },
         {
           "date": "2026-11-06",
@@ -3698,6 +4037,11 @@
         },
         {
           "date": "2026-11-09",
+          "free_slots": 2,
+          "free_hours": 1.5
+        },
+        {
+          "date": "2026-11-10",
           "free_slots": 1,
           "free_hours": 0.8
         }
@@ -3708,20 +4052,15 @@
       "region": "Vestland",
       "city": "Bergen",
       "slug": "strandgaten",
-      "free_slots": 12,
-      "free_hours": 6.0,
+      "free_slots": 9,
+      "free_hours": 4.5,
       "signal": "HØYT",
       "service_used": "Undersøkelse - faste pasienter",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
           "date": "2026-10-28",
-          "free_slots": 2,
-          "free_hours": 1.0
+          "free_slots": 1,
+          "free_hours": 0.5
         },
         {
           "date": "2026-10-29",
@@ -3757,8 +4096,8 @@
         },
         {
           "date": "2026-11-04",
-          "free_slots": 3,
-          "free_hours": 1.5
+          "free_slots": 1,
+          "free_hours": 0.5
         },
         {
           "date": "2026-11-05",
@@ -3786,264 +4125,11 @@
           "date": "2026-11-09",
           "free_slots": 0,
           "free_hours": 0.0
-        }
-      ]
-    },
-    {
-      "name": "Hinna Park",
-      "region": "Stavanger",
-      "city": "Stavanger",
-      "slug": "hinna-park",
-      "free_slots": 11,
-      "free_hours": 5.5,
-      "signal": "HØYT",
-      "service_used": "Rutineundersøkelse",
-      "daily": [
+        },
         {
-          "date": "2026-10-27",
+          "date": "2026-11-10",
           "free_slots": 0,
           "free_hours": 0.0
-        },
-        {
-          "date": "2026-10-28",
-          "free_slots": 1,
-          "free_hours": 0.5
-        },
-        {
-          "date": "2026-10-29",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-10-30",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-10-31",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-01",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-02",
-          "free_slots": 2,
-          "free_hours": 1.0
-        },
-        {
-          "date": "2026-11-03",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-11-04",
-          "free_slots": 2,
-          "free_hours": 1.0
-        },
-        {
-          "date": "2026-11-05",
-          "free_slots": 3,
-          "free_hours": 1.5
-        },
-        {
-          "date": "2026-11-06",
-          "free_slots": 1,
-          "free_hours": 0.5
-        },
-        {
-          "date": "2026-11-07",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-08",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-09",
-          "free_slots": 2,
-          "free_hours": 1.0
-        }
-      ]
-    },
-    {
-      "name": "Moelv",
-      "region": "Innlandet",
-      "city": "Moelv",
-      "slug": "moelv",
-      "free_slots": 8,
-      "free_hours": 5.3,
-      "signal": "HØYT",
-      "service_used": "Undersøkelse- faste pasienter",
-      "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-10-28",
-          "free_slots": 1,
-          "free_hours": 0.7
-        },
-        {
-          "date": "2026-10-29",
-          "free_slots": 2,
-          "free_hours": 1.3
-        },
-        {
-          "date": "2026-10-30",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-10-31",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-01",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-02",
-          "free_slots": 2,
-          "free_hours": 1.3
-        },
-        {
-          "date": "2026-11-03",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-11-04",
-          "free_slots": 1,
-          "free_hours": 0.7
-        },
-        {
-          "date": "2026-11-05",
-          "free_slots": 1,
-          "free_hours": 0.7
-        },
-        {
-          "date": "2026-11-06",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-11-07",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-08",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-09",
-          "free_slots": 1,
-          "free_hours": 0.7
-        }
-      ]
-    },
-    {
-      "name": "Arendal Spesialistklinikk",
-      "region": "Agder",
-      "city": "Arendal",
-      "slug": "arendal-spesialistklinikk",
-      "free_slots": 7,
-      "free_hours": 5.2,
-      "signal": "HØYT",
-      "service_used": "Undersøkelse - faste pasienter",
-      "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-10-28",
-          "free_slots": 1,
-          "free_hours": 0.8
-        },
-        {
-          "date": "2026-10-29",
-          "free_slots": 2,
-          "free_hours": 1.5
-        },
-        {
-          "date": "2026-10-30",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-10-31",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-01",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-02",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-11-03",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-11-04",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-11-05",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-11-06",
-          "free_slots": 2,
-          "free_hours": 1.5
-        },
-        {
-          "date": "2026-11-07",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-08",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-09",
-          "free_slots": 2,
-          "free_hours": 1.5
         }
       ]
     },
@@ -4052,20 +4138,15 @@
       "region": "Nord Vest",
       "city": "Nordfjordeid",
       "slug": "eikas",
-      "free_slots": 7,
-      "free_hours": 4.7,
+      "free_slots": 6,
+      "free_hours": 4.0,
       "signal": "HØYT",
       "service_used": "Førstegangsundersøkelse",
       "daily": [
         {
-          "date": "2026-10-27",
+          "date": "2026-10-28",
           "free_slots": 1,
           "free_hours": 0.7
-        },
-        {
-          "date": "2026-10-28",
-          "free_slots": 0,
-          "free_hours": 0.0
         },
         {
           "date": "2026-10-29",
@@ -4106,8 +4187,8 @@
         },
         {
           "date": "2026-11-05",
-          "free_slots": 1,
-          "free_hours": 0.7
+          "free_slots": 0,
+          "free_hours": 0.0
         },
         {
           "date": "2026-11-06",
@@ -4128,6 +4209,11 @@
         },
         {
           "date": "2026-11-09",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-10",
           "free_slots": 0,
           "free_hours": 0.0
         }
@@ -4138,16 +4224,11 @@
       "region": "Vestland",
       "city": "Bergen",
       "slug": "tannteam-spesialistklinikk",
-      "free_slots": 9,
-      "free_hours": 4.5,
+      "free_slots": 8,
+      "free_hours": 4.0,
       "signal": "HØYT",
       "service_used": "Undersøkelse - faste pasienter",
       "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
         {
           "date": "2026-10-28",
           "free_slots": 0,
@@ -4157,6 +4238,92 @@
           "date": "2026-10-29",
           "free_slots": 0,
           "free_hours": 0.0
+        },
+        {
+          "date": "2026-10-30",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-10-31",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-01",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-02",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-03",
+          "free_slots": 3,
+          "free_hours": 1.5
+        },
+        {
+          "date": "2026-11-04",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-05",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-06",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-07",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-08",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-09",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 5,
+          "free_hours": 2.5
+        }
+      ]
+    },
+    {
+      "name": "Løkkeveien",
+      "region": "Sor Vest",
+      "city": "Stavanger",
+      "slug": "lokkeveien",
+      "free_slots": 7,
+      "free_hours": 3.5,
+      "signal": "HØYT",
+      "service_used": "Rutineundersøkelse",
+      "daily": [
+        {
+          "date": "2026-10-28",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-10-29",
+          "free_slots": 1,
+          "free_hours": 0.5
         },
         {
           "date": "2026-10-30",
@@ -4182,94 +4349,8 @@
         },
         {
           "date": "2026-11-03",
-          "free_slots": 6,
-          "free_hours": 3.0
-        },
-        {
-          "date": "2026-11-04",
           "free_slots": 0,
           "free_hours": 0.0
-        },
-        {
-          "date": "2026-11-05",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-11-06",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-11-07",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-08",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-09",
-          "free_slots": 0,
-          "free_hours": 0.0
-        }
-      ]
-    },
-    {
-      "name": "Drammen avd. Landfalløya",
-      "region": "Buskerud",
-      "city": "Drammen",
-      "slug": "drammen-avd-landfalloya",
-      "free_slots": 7,
-      "free_hours": 3.5,
-      "signal": "HØYT",
-      "service_used": "Undersøkelse- Faste pasienter",
-      "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-10-28",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-10-29",
-          "free_slots": 1,
-          "free_hours": 0.5
-        },
-        {
-          "date": "2026-10-30",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-10-31",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-01",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-02",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-11-03",
-          "free_slots": 1,
-          "free_hours": 0.5
         },
         {
           "date": "2026-11-04",
@@ -4278,94 +4359,8 @@
         },
         {
           "date": "2026-11-05",
-          "free_slots": 2,
-          "free_hours": 1.0
-        },
-        {
-          "date": "2026-11-06",
           "free_slots": 0,
           "free_hours": 0.0
-        },
-        {
-          "date": "2026-11-07",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-08",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-09",
-          "free_slots": 2,
-          "free_hours": 1.0
-        }
-      ]
-    },
-    {
-      "name": "Indre Arna",
-      "region": "Vestland",
-      "city": "Indre Arna",
-      "slug": "indre-arna",
-      "free_slots": 7,
-      "free_hours": 3.5,
-      "signal": "HØYT",
-      "service_used": "Undersøkelse - faste pasienter",
-      "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-10-28",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-10-29",
-          "free_slots": 1,
-          "free_hours": 0.5
-        },
-        {
-          "date": "2026-10-30",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-10-31",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-01",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-02",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-11-03",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-11-04",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-11-05",
-          "free_slots": 4,
-          "free_hours": 2.0
         },
         {
           "date": "2026-11-06",
@@ -4388,6 +4383,11 @@
           "date": "2026-11-09",
           "free_slots": 1,
           "free_hours": 0.5
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 0,
+          "free_hours": 0.0
         }
       ]
     },
@@ -4402,14 +4402,9 @@
       "service_used": "Undersøkelse- faste pasienter",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
           "date": "2026-10-28",
-          "free_slots": 0,
-          "free_hours": 0.0
+          "free_slots": 1,
+          "free_hours": 0.5
         },
         {
           "date": "2026-10-29",
@@ -4450,13 +4445,13 @@
         },
         {
           "date": "2026-11-05",
-          "free_slots": 2,
-          "free_hours": 1.0
+          "free_slots": 0,
+          "free_hours": 0.0
         },
         {
           "date": "2026-11-06",
-          "free_slots": 1,
-          "free_hours": 0.5
+          "free_slots": 0,
+          "free_hours": 0.0
         },
         {
           "date": "2026-11-07",
@@ -4472,35 +4467,35 @@
         },
         {
           "date": "2026-11-09",
+          "free_slots": 2,
+          "free_hours": 1.0
+        },
+        {
+          "date": "2026-11-10",
           "free_slots": 2,
           "free_hours": 1.0
         }
       ]
     },
     {
-      "name": "Kristiansand",
-      "region": "Agder",
-      "city": "Kristiansand S",
-      "slug": "kristiansand",
+      "name": "Indre Arna",
+      "region": "Vestland",
+      "city": "Indre Arna",
+      "slug": "indre-arna",
       "free_slots": 6,
       "free_hours": 3.0,
       "signal": "HØYT",
-      "service_used": "Invisalign: Førstegangskonsultasjon",
+      "service_used": "Undersøkelse - faste pasienter",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 3,
-          "free_hours": 1.5
-        },
-        {
           "date": "2026-10-28",
-          "free_slots": 3,
-          "free_hours": 1.5
+          "free_slots": 1,
+          "free_hours": 0.5
         },
         {
           "date": "2026-10-29",
-          "free_slots": 0,
-          "free_hours": 0.0
+          "free_slots": 1,
+          "free_hours": 0.5
         },
         {
           "date": "2026-10-30",
@@ -4536,8 +4531,8 @@
         },
         {
           "date": "2026-11-05",
-          "free_slots": 0,
-          "free_hours": 0.0
+          "free_slots": 3,
+          "free_hours": 1.5
         },
         {
           "date": "2026-11-06",
@@ -4558,94 +4553,13 @@
         },
         {
           "date": "2026-11-09",
-          "free_slots": 0,
-          "free_hours": 0.0
-        }
-      ]
-    },
-    {
-      "name": "Løkkeveien",
-      "region": "Sor Vest",
-      "city": "Stavanger",
-      "slug": "lokkeveien",
-      "free_slots": 6,
-      "free_hours": 3.0,
-      "signal": "HØYT",
-      "service_used": "Rutineundersøkelse",
-      "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-10-28",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-10-29",
           "free_slots": 1,
           "free_hours": 0.5
         },
         {
-          "date": "2026-10-30",
+          "date": "2026-11-10",
           "free_slots": 0,
           "free_hours": 0.0
-        },
-        {
-          "date": "2026-10-31",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-01",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-02",
-          "free_slots": 2,
-          "free_hours": 1.0
-        },
-        {
-          "date": "2026-11-03",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-11-04",
-          "free_slots": 1,
-          "free_hours": 0.5
-        },
-        {
-          "date": "2026-11-05",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-11-06",
-          "free_slots": 1,
-          "free_hours": 0.5
-        },
-        {
-          "date": "2026-11-07",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-08",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-09",
-          "free_slots": 1,
-          "free_hours": 0.5
         }
       ]
     },
@@ -4660,14 +4574,9 @@
       "service_used": "Undersøkelse-faste pasienter",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
           "date": "2026-10-28",
-          "free_slots": 2,
-          "free_hours": 1.0
+          "free_slots": 1,
+          "free_hours": 0.5
         },
         {
           "date": "2026-10-29",
@@ -4676,8 +4585,8 @@
         },
         {
           "date": "2026-10-30",
-          "free_slots": 1,
-          "free_hours": 0.5
+          "free_slots": 0,
+          "free_hours": 0.0
         },
         {
           "date": "2026-10-31",
@@ -4693,8 +4602,8 @@
         },
         {
           "date": "2026-11-02",
-          "free_slots": 0,
-          "free_hours": 0.0
+          "free_slots": 1,
+          "free_hours": 0.5
         },
         {
           "date": "2026-11-03",
@@ -4732,92 +4641,11 @@
           "date": "2026-11-09",
           "free_slots": 0,
           "free_hours": 0.0
-        }
-      ]
-    },
-    {
-      "name": "Hvalertannlegene",
-      "region": "Ostfold",
-      "city": "Vesterøy",
-      "slug": "hvalertannlegene",
-      "free_slots": 4,
-      "free_hours": 2.0,
-      "signal": "HØYT",
-      "service_used": "Undersøkelse-faste pasienter",
-      "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 0,
-          "free_hours": 0.0
         },
         {
-          "date": "2026-10-28",
+          "date": "2026-11-10",
           "free_slots": 1,
           "free_hours": 0.5
-        },
-        {
-          "date": "2026-10-29",
-          "free_slots": 1,
-          "free_hours": 0.5
-        },
-        {
-          "date": "2026-10-30",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-10-31",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-01",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-02",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-11-03",
-          "free_slots": 1,
-          "free_hours": 0.5
-        },
-        {
-          "date": "2026-11-04",
-          "free_slots": 1,
-          "free_hours": 0.5
-        },
-        {
-          "date": "2026-11-05",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-11-06",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
-          "date": "2026-11-07",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-08",
-          "free_slots": 0,
-          "free_hours": 0.0,
-          "closed": true
-        },
-        {
-          "date": "2026-11-09",
-          "free_slots": 0,
-          "free_hours": 0.0
         }
       ]
     },
@@ -4826,16 +4654,11 @@
       "region": "Akershus",
       "city": "Hagan",
       "slug": "nittedal",
-      "free_slots": 4,
-      "free_hours": 2.0,
+      "free_slots": 6,
+      "free_hours": 3.0,
       "signal": "HØYT",
       "service_used": "Invisalign konsultasjon",
       "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
         {
           "date": "2026-10-28",
           "free_slots": 0,
@@ -4848,8 +4671,8 @@
         },
         {
           "date": "2026-10-30",
-          "free_slots": 0,
-          "free_hours": 0.0
+          "free_slots": 2,
+          "free_hours": 1.0
         },
         {
           "date": "2026-10-31",
@@ -4902,6 +4725,183 @@
         },
         {
           "date": "2026-11-09",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 0,
+          "free_hours": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Kristiansand",
+      "region": "Agder",
+      "city": "Kristiansand S",
+      "slug": "kristiansand",
+      "free_slots": 5,
+      "free_hours": 2.5,
+      "signal": "HØYT",
+      "service_used": "Invisalign: Førstegangskonsultasjon",
+      "daily": [
+        {
+          "date": "2026-10-28",
+          "free_slots": 3,
+          "free_hours": 1.5
+        },
+        {
+          "date": "2026-10-29",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-10-30",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-10-31",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-01",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-02",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-03",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-04",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-05",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-06",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-07",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-08",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-09",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-10",
+          "free_slots": 0,
+          "free_hours": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Hvalertannlegene",
+      "region": "Ostfold",
+      "city": "Vesterøy",
+      "slug": "hvalertannlegene",
+      "free_slots": 3,
+      "free_hours": 1.5,
+      "signal": "HØYT",
+      "service_used": "Undersøkelse-faste pasienter",
+      "daily": [
+        {
+          "date": "2026-10-28",
+          "free_slots": 1,
+          "free_hours": 0.5
+        },
+        {
+          "date": "2026-10-29",
+          "free_slots": 1,
+          "free_hours": 0.5
+        },
+        {
+          "date": "2026-10-30",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-10-31",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-01",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-02",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-03",
+          "free_slots": 1,
+          "free_hours": 0.5
+        },
+        {
+          "date": "2026-11-04",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-05",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-06",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-07",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-08",
+          "free_slots": 0,
+          "free_hours": 0.0,
+          "closed": true
+        },
+        {
+          "date": "2026-11-09",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-10",
           "free_slots": 0,
           "free_hours": 0.0
         }
@@ -4918,11 +4918,6 @@
       "service_used": "Undersøkelse - faste pasienter",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
           "date": "2026-10-28",
           "free_slots": 0,
           "free_hours": 0.0
@@ -4988,6 +4983,11 @@
         },
         {
           "date": "2026-11-09",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-10",
           "free_slots": 0,
           "free_hours": 0.0
         }
@@ -4998,16 +4998,11 @@
       "region": "Vestland",
       "city": "Loddefjord",
       "slug": "vestkanten",
-      "free_slots": 2,
-      "free_hours": 1.0,
+      "free_slots": 1,
+      "free_hours": 0.5,
       "signal": "HØYT",
       "service_used": "Undersøkelse-faste pasienter",
       "daily": [
-        {
-          "date": "2026-10-27",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
         {
           "date": "2026-10-28",
           "free_slots": 0,
@@ -5020,8 +5015,8 @@
         },
         {
           "date": "2026-10-30",
-          "free_slots": 2,
-          "free_hours": 1.0
+          "free_slots": 1,
+          "free_hours": 0.5
         },
         {
           "date": "2026-10-31",
@@ -5074,6 +5069,11 @@
         },
         {
           "date": "2026-11-09",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-10",
           "free_slots": 0,
           "free_hours": 0.0
         }
@@ -5090,11 +5090,6 @@
       "service_used": "Undersøkelse-nye pasienter",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
           "date": "2026-10-28",
           "free_slots": 0,
           "free_hours": 0.0
@@ -5160,6 +5155,11 @@
         },
         {
           "date": "2026-11-09",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-10",
           "free_slots": 0,
           "free_hours": 0.0
         }
@@ -5176,11 +5176,6 @@
       "service_used": "Undersøkelse-faste pasienter",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
           "date": "2026-10-28",
           "free_slots": 0,
           "free_hours": 0.0
@@ -5246,6 +5241,11 @@
         },
         {
           "date": "2026-11-09",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-10",
           "free_slots": 0,
           "free_hours": 0.0
         }
@@ -5262,11 +5262,6 @@
       "service_used": "Rutineundersøkelse",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
           "date": "2026-10-28",
           "free_slots": 0,
           "free_hours": 0.0
@@ -5332,6 +5327,11 @@
         },
         {
           "date": "2026-11-09",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-10",
           "free_slots": 0,
           "free_hours": 0.0
         }
@@ -5348,11 +5348,6 @@
       "service_used": "Tannregulering for barn/ungdom, ny pasient",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
           "date": "2026-10-28",
           "free_slots": 0,
           "free_hours": 0.0
@@ -5418,6 +5413,11 @@
         },
         {
           "date": "2026-11-09",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-10",
           "free_slots": 0,
           "free_hours": 0.0
         }
@@ -5434,11 +5434,6 @@
       "service_used": "Førstegangsundersøkelse",
       "daily": [
         {
-          "date": "2026-10-27",
-          "free_slots": 0,
-          "free_hours": 0.0
-        },
-        {
           "date": "2026-10-28",
           "free_slots": 0,
           "free_hours": 0.0
@@ -5504,6 +5499,11 @@
         },
         {
           "date": "2026-11-09",
+          "free_slots": 0,
+          "free_hours": 0.0
+        },
+        {
+          "date": "2026-11-10",
           "free_slots": 0,
           "free_hours": 0.0
         }
